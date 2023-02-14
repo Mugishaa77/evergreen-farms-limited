@@ -1,9 +1,9 @@
 .footer {
-    color: orange;
+    color: #65BB46;
 }
 
 .footer  .svg-inline--fa {
-    color: orange;
+    color:#65BB46;
 }
 .footer .navbar-text {
     margin-right: 0!important;
@@ -12,7 +12,7 @@
 }
 
 .footer .navbar {
-    background-color: #03989E !important;
+    background-color: orange !important;
     width: 100% !important;
     white-space: nowrap;
 }
@@ -23,7 +23,7 @@
 
 .footer .socials {
     cursor: pointer;
-        color: #FF8904!important;
+        color: #65BB46!important;
         font-size: 18px;
         transition: all 150ms ease-in-out;
 }
@@ -34,13 +34,13 @@
 }
 
 .footer h1 {
-    color: #FF8904;
+    color: #65BB46;
     font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
 .footer a {
-    color: #FF8904;
+    color: #65BB46;
 }
 
 .footer:hover {
