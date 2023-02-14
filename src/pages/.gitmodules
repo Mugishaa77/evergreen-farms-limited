@@ -1,3 +1,4 @@
-[submodule "evergreen-farms-limited"]
-    path = path/to/evergreen-farms-limited
+[submodule "evergreen-farms"]
+    path = evergreen-farms
     url = https://github.com/Mugishaa77/evergreen-farms-limited.git
+
