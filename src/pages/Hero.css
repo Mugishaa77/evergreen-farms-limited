@@ -1,0 +1,43 @@
+.hero {
+    background-image: url("../images/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+    height: 500px;
+    align-items: flex-end;
+    font-family: 'Playfair Display', serif;
+
+}
+
+.hero h2,
+h3 {
+    color: #FF8904;
+}
+
+
+.hero .btn-outline {
+    background-color: #03989E !important;
+}
+
+.hero .btn-primary {
+    background-color: #03989E !important;
+}
+
+.hero button {
+    margin: 25px !important;
+    transition: all 200ms ease;
+    opacity: 1;
+}
+
+.hero button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    background-color: #FF8904 !important;
+
+
+}
+
+.hero .call-to-action {
+    font-family: 'Poppins', serif;
+    margin: 70px;
+}
