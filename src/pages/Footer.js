@@ -16,7 +16,7 @@ export default function Footer() {
     <div className="footer">
       <div className="container">
         <div className="last-nav">
-           <h1>Let's get in Touch!</h1>
+           <h1>Let's Talk Green</h1>
         </div>
        
         <div className="row">
