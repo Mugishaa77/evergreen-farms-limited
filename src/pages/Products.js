@@ -58,7 +58,8 @@ export default function Products () {
     </div>
   </div>
 </nav>
-      <div className="product-scroll-container" style={{ overflowX: "auto", display: "flex", flexWrap: "nowrap", whiteSpace: "nowrap" }}>
+      <div className="product-scroll-container" 
+      style={{ display: "flex", flexWrap: "nowrap", whiteSpace: "nowrap", overflowX: "scroll", width: "100%" }}>
         {products.map(product => (
           <div className="product" style={{ minWidth: "8rem", marginRight: "1rem" }}>
             <div className="card border-warning">
