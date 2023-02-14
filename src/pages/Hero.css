@@ -4,8 +4,12 @@
     background-size: cover;
     background-color: black;
     height: 500px;
-    align-items: flex-end;
     font-family: 'Playfair Display', serif;
+    margin-right: 0;
+    display: flex;
+    justify-content: flex-end;
+    
+            
 
 }
 

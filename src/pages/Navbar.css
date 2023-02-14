@@ -1,4 +1,4 @@
-.container {
+.navbar .container {
     width: 100% !important;
     white-space: nowrap;
 
@@ -9,6 +9,6 @@
     background-color: #03989E !important;
 }
 
-li {
-    font-family: 'Poppins', serif;
+.navbar li {
+font-family: 'Poppins', serif;    ;
 }

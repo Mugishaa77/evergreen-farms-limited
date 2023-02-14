@@ -1,1 +1,40 @@
 
+.products {
+    
+    font-family: 'Poppins', serif;
+    color: #FF8904 !important;
+    text-align:center;
+    
+        
+
+}
+
+.products .text-warning, .border-warning  {
+    color: #FF8904 !important;
+}
+
+.products .btn, .btn-outline-success {
+    background-color: #03989E !important;
+
+}
+
+.products .btn {
+    cursor: pointer;
+        opacity: 1;
+        background-color: #FF8904 !important;
+}
+
+.products .btn:hover {
+    transition: all 200ms ease;
+    opacity: 0.7;
+}
+
+.products img {
+    height: 200px;
+    width: 200px;
+}
+
+.products .card-body {
+    height: 135px;
+}
+

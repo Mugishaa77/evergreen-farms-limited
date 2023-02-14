@@ -1,5 +1,6 @@
 import React from 'react';
 import './Hero.css';
+import open from "../logo/open.png";
 
 export default function Hero () {
     return(
@@ -7,6 +8,12 @@ export default function Hero () {
             
             <div className="container">
                 <div className="contents">
+                    <div className="d-flex justify-content-end">
+                        <div className="open-logo">
+                            <img src={open}  width="150" height="130" alt="open-24Hrs"/>
+
+                        </div>
+                    </div>
                 <h2 className="d-flex justify-content-end">Your one-stop shop for all your wholesale
              <br/> and retail grocery and vegetable needs</h2>
              <hr/>

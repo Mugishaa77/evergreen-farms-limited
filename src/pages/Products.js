@@ -5,6 +5,7 @@ import sagaa from '../produce/sagaa.jpg';
 import springOnions from '../produce/spring-onions.jpg';
 import tomatoes from '../produce/tomatoes.jpg';
 import './Products.css';
+import { BasketFill } from "react-bootstrap-icons";
 
 export default function Products () {
     const products = [
@@ -28,34 +29,52 @@ export default function Products () {
     name: 'Spring Onions',
     image: springOnions,
     price: 'Ksh 10.00'
-  },
-  {
-    name: 'Tomatoes',
-    image: tomatoes,
-    price: 'Ksh 10.00'
   }
+  
 ];
         return (
   <div className="products">
-    <div className="container">
-      <h2><strong>Products</strong></h2>
-      <div className="product-scroll-container" style={{ overflow: "scroll", display: "grid", 
-      gridTemplateColumns: "repeat(auto-fit, minmax(18rem, 1fr))", gridGap: "1rem" }}>
+    <div className="container-fluid">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-warning" href="#">
+      <h1>Market</h1> </a>
+   
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"> 
+          <a class="nav-link active" aria-current="page" href="#">
+            <BasketFill color="#FF8904" size={28} />
+            
+            </a>
+        </li>
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Find in market" aria-label="Search"/>
+        <button class="btn btn-outline-success text-light" type="submit">Find</button>
+      </form>
+    </div>
+  </div>
+</nav>
+      <div className="product-scroll-container" style={{ overflowX: "auto", display: "flex", flexWrap: "nowrap", whiteSpace: "nowrap" }}>
         {products.map(product => (
-          <div className="product">
-            <div className="card">
+          <div className="product" style={{ minWidth: "8rem", marginRight: "1rem" }}>
+            <div className="card border-warning">
               <img src={product.image} className="card-img-top product-image" alt={product.name} />
               <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">{product.price}</p>
+                <h5 className="card-title text-info-emphasis">{product.name}</h5>
+                <p className="card-text text-info-emphasis">{product.price}</p>
                 <a href="#" className="btn btn-primary">Add to Basket</a>
               </div>
             </div>
           </div>
         ))}
       </div>
-    </div>
-  </div>
+</div>
+</div>
+
+
+
 );
 
 
