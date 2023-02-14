@@ -1,5 +1,36 @@
 
 
 .footer .instagram-icon .svg-inline--fa {
-    color: purple;
+    color: purple!important;
+}
+.footer .navbar-text {
+    margin-right: 0!important;
+        display: flex!important;
+        justify-content: flex-end!important;
+}
+
+.footer .navbar {
+    background-color: #03989E !important;
+    width: 100% !important;
+    white-space: nowrap;
+}
+
+.footer body {
+    background-color: #03989E;
+}
+
+.footer .socials {
+    margin: 0 20px;
+    cursor: pointer;
+        color: #FF8904;
+        background-color: #99FFCD;
+        padding: 10px 14px;
+        font-size: 18px;
+        border-radius: 50%;
+        transition: all 150ms ease-in-out;
+}
+
+.footer .socials:hover {
+    color: white;
+        background-color: #03989E;
 }
