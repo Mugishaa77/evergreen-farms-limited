@@ -1,4 +1,6 @@
-
+.footer {
+    color: orange;
+}
 
 .footer  .svg-inline--fa {
     color: orange;
@@ -35,6 +37,14 @@
     color: #FF8904;
     font-family: 'Playfair Display', serif;
     text-align: center;
+}
+
+.footer a {
+    color: #FF8904;
+}
+
+.footer:hover {
+    color: #03989E;
 }
 
 .last-nav {

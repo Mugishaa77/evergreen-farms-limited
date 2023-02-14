@@ -60,21 +60,24 @@ export default function Products () {
 </nav>
       <div className="product-scroll-container" 
       style={{ display: "flex", flexWrap: "nowrap", whiteSpace: "nowrap", overflowX: "scroll", width: "100%" }}>
-        {products.map(product => (
-          <div className="product" style={{ minWidth: "8rem", marginRight: "1rem" }}>
-            <div className="card border-warning">
-              <img src={product.image} className="card-img-top product-image" alt={product.name} />
-              <div className="card-body">
-                <h5 className="card-title text-info-emphasis">{product.name}</h5>
-                <p className="card-text text-info-emphasis">{product.price}</p>
-                <a href="#" className="btn btn-primary">Add to Basket</a>
-              </div>
-            </div>
-          </div>
-        ))}
+  {products.map(product => (
+    <div className="product" style={{ minWidth: "8rem", marginRight: "1rem" }}>
+      <div className="card border-warning">
+        <img src={product.image} className="card-img-top product-image" alt={product.name} />
+        <div className="card-body">
+          <h5 className="card-title text-info-emphasis">{product.name}</h5>
+          <p className="card-text text-info-emphasis">{product.price}</p>
+          <a href="#" className="btn btn-primary">Add to Basket</a>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
+
+
       </div>
 </div>
-</div>
+
 
 
 
