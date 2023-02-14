@@ -1,12 +1,8 @@
-
 .products {
-    
     font-family: 'Poppins', serif;
     color: #FF8904 !important;
     text-align:center;
-    
-        
-
+    margin-top: 40px;
 }
 
 .products .text-warning, .border-warning  {
@@ -17,6 +13,11 @@
     background-color: #03989E !important;
 
 }
+
+.products h1 {
+    font-family: 'Playfair Display', serif;
+}
+
 
 .products .btn {
     cursor: pointer;
@@ -38,3 +39,7 @@
     height: 135px;
 }
 
+.products .navbar {
+    width: 100% !important;
+        white-space: nowrap;
+}

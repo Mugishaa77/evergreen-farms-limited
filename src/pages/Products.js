@@ -9,7 +9,9 @@ import { BasketFill } from "react-bootstrap-icons";
 
 export default function Products () {
     const products = [
-  
+  {name: 'Tomatoes',
+   image: tomatoes,
+  price: 'Ksh 10.00'},
   {
     name: 'Garlic',
     image: garlic,

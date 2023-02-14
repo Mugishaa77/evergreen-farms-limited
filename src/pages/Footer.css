@@ -1,7 +1,7 @@
 
 
-.footer .instagram-icon .svg-inline--fa {
-    color: purple!important;
+.footer  .svg-inline--fa {
+    color: orange;
 }
 .footer .navbar-text {
     margin-right: 0!important;
@@ -20,17 +20,24 @@
 }
 
 .footer .socials {
-    margin: 0 20px;
     cursor: pointer;
-        color: #FF8904;
-        background-color: #99FFCD;
-        padding: 10px 14px;
+        color: #FF8904!important;
         font-size: 18px;
-        border-radius: 50%;
         transition: all 150ms ease-in-out;
 }
 
 .footer .socials:hover {
     color: white;
         background-color: #03989E;
+}
+
+.footer h1 {
+    color: #FF8904;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+.last-nav {
+    height: 100px;
+    margin: 30px;
 }

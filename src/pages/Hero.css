@@ -5,13 +5,9 @@
     background-color: black;
     height: 500px;
     font-family: 'Playfair Display', serif;
-    margin-right: 0;
-    display: flex;
-    justify-content: flex-end;
-    
-            
-
 }
+
+
 
 .hero h2,
 h3 {
@@ -20,11 +16,12 @@ h3 {
 
 
 .hero .btn-outline {
-    background-color: #03989E !important;
+    background-color: #FF8904 !important;
+        
 }
 
 .hero .btn-primary {
-    background-color: #03989E !important;
+    background-color: #FF8904 !important;
 }
 
 .hero button {
