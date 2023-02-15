@@ -1,0 +1,53 @@
+.products {
+    font-family: 'Poppins', serif;
+    color: #389238 !important;
+    text-align:center;
+    margin-top: 40px;
+}
+
+.products .text-warning, .border-warning  {
+    color: #389238 !important;
+}
+
+.products .btn, .btn-outline-success {
+    background-color: #03989E !important;
+
+}
+
+.product:hover {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.selected {
+    box-shadow: 0 0 0.5rem rgba(0, 0, 255, 0.5);
+}
+
+.products h1 {
+    font-family: 'Noto Serif', serif
+}
+
+
+.products .btn {
+    cursor: pointer;
+        opacity: 1;
+        background-color: #389238 !important;
+}
+
+.products .btn:hover {
+    transition: all 200ms ease;
+    opacity: 0.7;
+}
+
+.products img {
+    height: 200px;
+    width: 200px;
+}
+
+.products .card-body {
+    height: 135px;
+}
+
+.products .navbar {
+    width: 100% !important;
+        white-space: nowrap;
+}
