@@ -4,6 +4,7 @@ import Navbar from './pages/Navbar';
 import Hero from './pages/Hero';
 import Footer from './pages/Footer';
 import Products from './pages/Products';
+import Category from './pages/Category';
 
 
 
@@ -13,6 +14,7 @@ function App() {
       <Navbar />
       <Hero />
       <div className="row">
+        <Category />
       <Products />
        </div>
        <Footer />

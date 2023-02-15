@@ -1,0 +1,25 @@
+.category {
+    height: 350px;
+    
+}
+
+.category h1 {
+    font-family: 'Playfair Display', serif;
+    color: #357402!important;
+    
+}
+
+.category .btn-success {
+    background-color: orange!important;
+    color: white!important;
+    font-family: 'Poppins',
+        serif;
+
+}
+
+.category li {
+    list-style: none;
+    color: #357402;
+    font-size: 28px;
+    
+}

@@ -15,7 +15,7 @@ export default function Hero() {
             <hr/>
             <h3>Available in Wholesale and Retail!</h3>
 
-            <button type="button" class="btn btn-primary btn-lg">Shop now</button>
+            <button type="button" class="btn btn-primary btn-lg rounded-5">Shop now</button>
                 </div>
       </div>
     </div>

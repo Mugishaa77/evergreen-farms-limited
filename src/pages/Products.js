@@ -53,7 +53,7 @@ export default function Products () {
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Find in market" aria-label="Search"/>
-        <button class="btn btn-outline-success text-light" type="submit">Find</button>
+        <button class="btn btn-outline-success rounded-end-circle text-light" type="submit">Find</button>
       </form>
     </div>
   </div>
@@ -67,7 +67,7 @@ export default function Products () {
         <div className="card-body">
           <h5 className="card-title text-info-emphasis">{product.name}</h5>
           <p className="card-text text-info-emphasis">{product.price}</p>
-          <a href="#" className="btn btn-primary">Add to Basket</a>
+          <a href="#" className="btn btn-primary rounded-5">Add to Basket</a>
         </div>
       </div>
     </div>
