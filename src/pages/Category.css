@@ -9,6 +9,11 @@
     
 }
 
+.category h3 {
+    font-family: 'Playfair Display', serif;
+    color:orange;
+}
+
 .category .btn-success {
     background-color: orange!important;
     color: white!important;

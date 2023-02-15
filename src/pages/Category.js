@@ -57,7 +57,11 @@ export default function Category() {
         <h1 >Categories</h1></span>
   </div>
 </nav>
-        <ul>
+        
+        <div className="row">
+          <div className="col">
+            <h3>Find by category</h3>
+             <ul>
           {categories.map((category, index) => (
             <li key={index}>
               <button type="button" class="btn btn-success rounded-5"
@@ -74,6 +78,18 @@ export default function Category() {
             </li>
           ))}
         </ul>
+          </div>
+          <div className="col-4">
+            <h3>Find by....</h3>
+          </div>
+          <div className="col-4">
+            <h3>Find by....</h3>
+          </div>
+        </div>
+        
+        
+        
+       
       </div>
     </div>
   );
