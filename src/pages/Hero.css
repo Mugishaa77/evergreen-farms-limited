@@ -4,7 +4,7 @@
     background-size: cover;
     background-color: black;
     height: 500px;
-    font-family: 'Noto Serif', serif;
+    font-family: 'Playfair Display', serif;
 }
 
 .text-below-image {
@@ -16,17 +16,17 @@
 
 .hero h2,
 h3 {
-    color: #389238;
+    color: #FF8904;
 }
 
 
 .hero .btn-outline {
-    background-color: #389238 !important;
+    background-color: #FF8904 !important;
         
 }
 
 .hero .btn-primary {
-    background-color: #389238 !important;
+    background-color: #FF8904 !important;
 }
 
 .hero button {
@@ -42,7 +42,7 @@ h3 {
 .hero button:hover {
     cursor: pointer;
     opacity: 0.7;
-    background-color: #389238 !important;
+    background-color: #FF8904 !important;
 
 
 }

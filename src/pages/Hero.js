@@ -1,13 +1,13 @@
 import React from 'react';
 import './Hero.css';
-import hanging from "../logo/hanging.jpg";
+import open from "../logo/open.png";
 
 export default function Hero() {
   return (
     <div className="hero">
       <div className="position-relative">
         <div className="position-absolute top-0 end-0">
-          <img src={hanging} width="320" height="160" alt="open 24hrs" />
+          <img src={open} width="160" height="160" alt="open 24hrs" />
         </div>
         <div className="text-below-image">
             <h2>Your one stop shop for all your<br/>
