@@ -1,0 +1,15 @@
+.about {
+    height: 250px;
+    color:orange;
+    
+}
+
+.about h1 {
+    font-family: 'Playfair Display',
+        serif;
+}
+
+.about h6 {
+    font-family: 'Poppins', serif;
+    color: #357402;
+}
