@@ -16,17 +16,17 @@
 
 .hero h2,
 h3 {
-    color: #FF8904;
+    color: #295531;
 }
 
 
 .hero .btn-outline {
-    background-color: #FF8904 !important;
+    background-color: #295531 !important;
         
 }
 
 .hero .btn-primary {
-    background-color: #FF8904 !important;
+    background-color: #295531 !important;
 }
 
 .hero button {
@@ -42,7 +42,7 @@ h3 {
 .hero button:hover {
     cursor: pointer;
     opacity: 0.7;
-    background-color: #FF8904 !important;
+    background-color: #295531 !important;
 
 
 }

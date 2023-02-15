@@ -1,9 +1,9 @@
-.footer {
-    color: orange;
+ .footer {
+    color: #295531;
 }
 
 .footer  .svg-inline--fa {
-    color: orange;
+    color: #295531;
 }
 .footer .navbar-text {
     margin-right: 0!important;
@@ -23,7 +23,7 @@
 
 .footer .socials {
     cursor: pointer;
-        color: #FF8904!important;
+        color: #295531!important;
         font-size: 18px;
         transition: all 150ms ease-in-out;
 }
@@ -34,13 +34,13 @@
 }
 
 .footer h1 {
-    color: #FF8904;
+    color: #295531;
     font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
 .footer a {
-    color: #FF8904;
+    color: #295531;
 }
 
 .footer:hover {
