@@ -1,12 +1,12 @@
 .products {
     font-family: 'Poppins', serif;
-    color: #295531 !important;
+    color: #357402 !important;
     text-align:center;
     margin-top: 40px;
 }
 
 .products .text-warning, .border-warning  {
-    color: #295531 !important;
+    color: #357402 !important;
 }
 
 .products .btn, .btn-outline-success {
@@ -30,7 +30,7 @@
 .products .btn {
     cursor: pointer;
         opacity: 1;
-        background-color: #295531 !important;
+        background-color: #357402 !important;
 }
 
 .products .btn:hover {
