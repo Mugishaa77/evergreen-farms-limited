@@ -52,8 +52,8 @@ export default function Products () {
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Find in market" aria-label="Search"/>
-        <button class="btn btn-outline-success rounded-end-circle text-light" type="submit">Find</button>
+        <input class="form-control me-2 rounded-start-pill" type="search" placeholder="Find in market" aria-label="Search"/>
+        <button class="btn btn-outline-success rounded-5 text-light" type="submit">Find</button>
       </form>
     </div>
   </div>
