@@ -11,7 +11,7 @@ export default function Navbar () {
   <div className="container-fluid">
     <div class="container-fluid">
     <a class="navbar-brand" href="/">
-<img src= {evergreen} width="150" height="130" alt=""></img>
+<img src= {evergreen} width="220" height="130" alt=""></img>
     </a>
   </div>
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
