@@ -13,3 +13,17 @@
     font-family: 'Poppins', serif;
     color: #357402;
 }
+
+@media (max-width: 900px) {
+    .row>.col-6>p {
+        display: none;
+    }
+
+    .row>.col-6>h6 {
+        cursor: pointer;
+    }
+
+    .row>.col-6>h6.active+p {
+        display: block;
+    }
+}
