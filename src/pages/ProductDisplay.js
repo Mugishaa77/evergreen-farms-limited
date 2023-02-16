@@ -68,7 +68,7 @@ export default function ProductDisplay() {
   ));
 
   return (
-    <Slider {...settings}>
+    <Slider {...settings} className="my-carousel"> 
       {productCards}
     </Slider>
   );
