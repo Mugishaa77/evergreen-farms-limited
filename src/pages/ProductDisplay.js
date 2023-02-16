@@ -74,12 +74,14 @@ const ProductDisplay = () => {
 
   return (
     <div className="product-carousel">
+      <div className="container">
       <Slider {...settings}>
         {products.map((product, index) => (
           <div key={index}>
             <div className="display">
               <h1>Site Testing....</h1>
-              <img src={product.image} alt={product.name} />
+              <img className="img-thumbnail rounded"
+              src={product.image} alt={product.name} />
               <h2>{product.name}</h2>
               <p>{product.price}</p>
               <button>Buy Now</button>
@@ -87,6 +89,7 @@ const ProductDisplay = () => {
           </div>
         ))}
       </Slider>
+    </div>
     </div>
   );
 };
