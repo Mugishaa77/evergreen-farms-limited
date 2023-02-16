@@ -26,4 +26,16 @@
     .row>.col-6>h6.active+p {
         display: block;
     }
+
+    p{
+        display: none;
+    }
+
+    h6{
+        cursor: pointer;
+    }
+
+        h6.active+p {
+            display: block;
+}
 }
