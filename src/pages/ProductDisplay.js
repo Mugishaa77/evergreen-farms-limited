@@ -57,7 +57,7 @@ export default function ProductDisplay() {
 
   const productCards = products.map((product, index) => (
     <div className="display" key={index}>
-        <i><h1>Testing....Testing..</h1></i>
+        <h1>Site Testing....</h1>
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
       <p>{product.price}</p>

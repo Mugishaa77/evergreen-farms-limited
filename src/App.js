@@ -19,7 +19,6 @@ function App() {
        <ProductDisplay />
        <Products />
        <About />
-       <ProductDisplay />
        </div>
        <Footer />
     </div>
