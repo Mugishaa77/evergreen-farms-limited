@@ -1,7 +1,13 @@
  .category {
-     height: 350px;
+     height: 450px;
      background-color: #EEEEEE;
+     
 
+ }
+
+ .category img {
+    height: 170px;
+    width: 150px;
  }
 
  .category h1 {
