@@ -10,16 +10,15 @@
 }
  
 .hero .open-sign {
-    position: absolute;
     top: 150px;
     right: 0px;
     text-align: right;
 }
  
 .text-below-image {
-    position: absolute;
     top: 300px;
-    right: 160px;
+    right: 200px;
+    padding: 20px;
     text-align: right;
 }
 
@@ -71,8 +70,10 @@ h3 {
       }
 
       .text-below-image {
-          top: 200px;
-          right: 30px;
+          top: 100px;
+          text-align: justify;
+    
+          
       }
 
       .hero .call-to-action {
