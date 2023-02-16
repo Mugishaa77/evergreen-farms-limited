@@ -6,6 +6,8 @@ import Footer from './pages/Footer';
 import Category from './pages/Category';
 import Products from './pages/Products';
 import About from './pages/About';
+import ProductDisplay from './pages/ProductDisplay'
+
 
 function App() {
   return (
@@ -14,12 +16,12 @@ function App() {
       <Hero />
       <div className="row">
        <Category />
+       <ProductDisplay />
        <Products />
        <About />
+       <ProductDisplay />
        </div>
        <Footer />
-     
-      
     </div>
   );
 }
