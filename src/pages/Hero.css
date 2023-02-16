@@ -1,12 +1,21 @@
 .hero {
     background-image: url("../images/hero.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
+    background-color: #EEEEEE;
+    background-size: 97%;
+    background-position: center;
     height: 500px;
     font-family: 'Playfair Display', serif;
+    
 }
-
+ 
+.hero .open-sign {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    text-align: right;
+}
+ 
 .text-below-image {
     position: absolute;
     top: 180px;
@@ -16,17 +25,17 @@
 
 .hero h2,
 h3 {
-    color: #357402;
+    color: #2B6302;
 }
 
 
 .hero .btn-outline {
-    background-color: #357402 !important;
+    background-color: #2B6302 !important;
         
 }
 
 .hero .btn-primary {
-    background-color: #357402!important;
+    background-color: #2B6302!important;
 }
 
 .hero button {
@@ -42,7 +51,7 @@ h3 {
 .hero button:hover {
     cursor: pointer;
     opacity: 0.7;
-    background-color: #357402 !important;
+    background-color: #2B6302 !important;
 
 
 }
@@ -50,4 +59,23 @@ h3 {
 .hero .call-to-action {
     font-family: 'Poppins', serif;
     margin: 70px;
+}
+
+@media (max-width:900px) {
+    .hero {
+        background-size: cover;
+    }
+
+    .text-below-image {
+            position: absolute;
+            top: 150px;
+            right: 0;
+            text-align: right;
+        }
+       .open-sign {
+        display: none; 
+        
+    }
+        
+    
 }

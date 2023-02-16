@@ -6,9 +6,11 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="position-relative">
-        <div className="position-absolute top-0 end-0">
+         <div className="open-sign">
           <img src={hanging} width="320" height="160" alt="open 24hrs" />
-        </div>
+        
+         </div>
+          
         <div className="text-below-image">
             <h2>Your one stop shop for all your<br/>
             grocery and vegetable needs</h2>
