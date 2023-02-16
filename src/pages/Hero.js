@@ -5,10 +5,8 @@ import hanging from "../logo/hanging.jpg";
 export default function Hero() {
   return (
     <div className="hero">
-      <div className="position-relative">
          <div className="open-sign">
           <img src={hanging} width="320" height="160" alt="open 24hrs" />
-        
          </div>
           
         <div className="text-below-image">
@@ -20,6 +18,6 @@ export default function Hero() {
             <button type="button" class="btn btn-primary btn-lg rounded-5">Shop now</button>
                 </div>
       </div>
-    </div>
+    
   );
 }

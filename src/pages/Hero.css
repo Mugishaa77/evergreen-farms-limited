@@ -2,7 +2,7 @@
     background-image: url("../images/hero.jpg");
     background-repeat: no-repeat;
     background-color: #EEEEEE;
-    background-size: 97%;
+    background-size: cover;
     background-position: center;
     height: 500px;
     font-family: 'Playfair Display', serif;
@@ -11,14 +11,14 @@
  
 .hero .open-sign {
     position: absolute;
-    top: 0px;
+    top: 150px;
     right: 0px;
     text-align: right;
 }
  
 .text-below-image {
     position: absolute;
-    top: 180px;
+    top: 300px;
     right: 160px;
     text-align: right;
 }
@@ -61,21 +61,21 @@ h3 {
     margin: 70px;
 }
 
-@media (max-width:900px) {
-    .hero {
-        background-size: cover;
-    }
+  @media only screen and (max-width: 900px) {
+      .hero {
+          height: 300px;
+      }
 
-    .text-below-image {
-            position: absolute;
-            top: 150px;
-            right: 0;
-            text-align: right;
-        }
-       .open-sign {
-        display: none; 
-        
-    }
-        
-    
-}
+      .hero .open-sign {
+          display: none;
+      }
+
+      .text-below-image {
+          top: 200px;
+          right: 30px;
+      }
+
+      .hero .call-to-action {
+          margin: 30px;
+      }
+  }
