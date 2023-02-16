@@ -63,6 +63,7 @@ h3 {
   @media only screen and (max-width: 900px) {
       .hero {
           height: 300px;
+        background-image: url("../images/inverted-hero.jpg");
       }
 
       .hero .open-sign {
