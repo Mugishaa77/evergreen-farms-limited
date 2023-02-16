@@ -77,6 +77,12 @@ h3 {
           
       }
 
+      .text-below-image button {
+        text-align: right;
+      }
+       
+
+
       .hero .call-to-action {
           margin: 30px;
       }
