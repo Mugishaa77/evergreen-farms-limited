@@ -10,6 +10,14 @@ import redOnions from '../produce/red-onions.jpg';
 import sagaa from '../produce/sagaa.jpg';
 import springOnions from '../produce/spring-onions.jpg';
 
+const ArrowLeft = props => (
+  <button className="slick-arrow slick-prev">Previous</button>
+);
+
+const ArrowRight = props => (
+  <button className="slick-arrow slick-next">Next</button>
+);
+
 const products = [
   {name: 'Tomatoes', image: tomatoes, price: 'Ksh 10.00'},
   {name: 'Garlic', image: garlic, price: 'Ksh 10.00'},
@@ -30,19 +38,28 @@ const products = [
   }
 ];
 
-export default function ProductDisplay() {
+const ProductDisplay = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    prevArrow: <ArrowLeft />,
+    nextArrow: <ArrowRight />,
+    appendDots: dots => (
+      <div style={{ textAlign: "center" }}>
+        <span>
+          Slide {dots.props.currentSlide + 1} of {dots.props.slideCount}
+        </span>
+      </div>
+    ),
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 900,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 3,
+          slidesToScroll: 1
         }
       },
       {
@@ -55,21 +72,23 @@ export default function ProductDisplay() {
     ]
   };
 
-  const productCards = products.map((product, index) => (
-    <div className="display" key={index}>
-        <h1>Site Testing....</h1>
-      <img src={product.image} alt={product.name} />
-      <h2>{product.name}</h2>
-      <p>{product.price}</p>
-      <button onClick={() => console.log(`Buy ${product.name} clicked!`)}>
-        Buy Now
-      </button>
-    </div>
-  ));
-
   return (
-    <Slider {...settings} className="my-carousel"> 
-      {productCards}
-    </Slider>
+    <div className="product-carousel">
+      <Slider {...settings}>
+        {products.map((product, index) => (
+          <div key={index}>
+            <div className="display">
+              <h1>Site Testing....</h1>
+              <img src={product.image} alt={product.name} />
+              <h2>{product.name}</h2>
+              <p>{product.price}</p>
+              <button>Buy Now</button>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
-}
+};
+
+export default ProductDisplay;

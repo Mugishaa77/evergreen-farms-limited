@@ -72,3 +72,11 @@
     /* Adjust the size of the active dot */
 }
 
+@media (max-width: 900px) {
+    .display img {
+        height: 150px;
+        width: 150px;
+        font-size: 75%;
+    }
+
+}
