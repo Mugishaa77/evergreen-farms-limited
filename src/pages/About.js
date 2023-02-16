@@ -6,7 +6,8 @@ export default function About () {
         <div className="about">
             <div className="container">
                 <h1>About Us</h1>
-
+             <div className="row">
+                <div className="col-6">
 <h6>Our Story</h6>
 <p>
     Evergreen Farms was started as a small scale vegetable home orchard in Nyalenda slums in
@@ -23,8 +24,9 @@ to take it up as a full-time business.
     hands to become, <strong>the Green Team (Founding Four)</strong> with whom
 they started what has come to be known as Evergreen Farms.
 </p>
-
-<h6>We Believe</h6>
+</div>
+                <div className="col-6">
+                    <h6>We Believe</h6>
 <p>“...We make
 a living out
 of what we
@@ -32,12 +34,16 @@ get, but we
 make life,
 out of what
 we give...”</p>
-
 <h6>How we operate</h6>
 <p>Evergreen's Mobile Garden innovation creates a direct nexus between farmers,
 grocers and the end-consumers hence increasing the farmer's and grocer's profits while
 reducing the cost of food by almost half.</p>
 
+<h6>Our history</h6>
+<p>to be continued later...</p>
+                </div>
+                
+             </div>
 <h6>Our Vision</h6>
 <p>Farmers will sell their produce to grocers at their desired prices,
      The grocers also will in turn sell to the ultimate consumers at fairer prices, making
