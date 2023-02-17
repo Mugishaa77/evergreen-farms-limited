@@ -7,6 +7,11 @@ import tomatoes from '../produce/tomatoes.jpg';
 import './Products.css';
 import { BasketFill } from "react-bootstrap-icons";
 
+function Product({ product, onAddToBasket }) {
+  function handleAddToBasket() {
+    onAddToBasket(product);
+  }
+
 export default function Products () {
     const products = [
   {name: 'Tomatoes',
@@ -34,6 +39,7 @@ export default function Products () {
   }
   
 ];
+
         return (
   <div className="products">
     <div className="container-fluid">
@@ -67,7 +73,7 @@ export default function Products () {
         <div className="card-body">
           <h5 className="card-title text-info-emphasis">{product.name}</h5>
           <p className="card-text text-info-emphasis">{product.price}</p>
-          <a href="#" className="btn btn-primary rounded-5">Add to Basket</a>
+          <a href="#" className="btn btn-primary rounded-5" onClick={handleAddToBasket}>Add to Basket</a>
         </div>
       </div>
     </div>
