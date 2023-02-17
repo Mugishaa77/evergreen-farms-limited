@@ -43,7 +43,7 @@ export default function ProductDisplay() {
     slidesToScroll: 2,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 900,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 2
