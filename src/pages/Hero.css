@@ -16,10 +16,9 @@
 }
  
 .text-below-image {
-    top: 300px;
-    right: 200px;
-    padding: 20px;
     text-align: right;
+    margin-right: 250px;
+    
 }
 
 .hero h2,

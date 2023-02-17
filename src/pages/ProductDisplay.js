@@ -8,6 +8,7 @@ import tomatoes from '../produce/tomatoes.jpg';
 import redOnions from '../produce/red-onions.jpg';
 import garlic from '../produce/garlic.jpg';
 import './Products.css';
+import AddToBasket from './AddToBasket';
 
 const products = [
   {name: 'Tomatoes',
@@ -65,9 +66,7 @@ export default function ProductDisplay() {
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
       <p>{product.price}</p>
-      <button onClick={() => console.log(`Buy ${product.name} clicked!`)}>
-        Buy Now
-      </button>
+      <AddToBasket />
     </div>
   ));
 

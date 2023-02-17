@@ -59,6 +59,10 @@ export default function Category() {
 </nav>
         
         <div className="row">
+          <div className="col-4">
+            <h3>Find what you are looking for</h3>
+            
+          </div>
           <div className="col">
             <h3>Find by category</h3>
              <ul>
@@ -79,9 +83,7 @@ export default function Category() {
           ))}
         </ul>
           </div>
-          <div className="col-4">
-            <h3>Find by....</h3>
-          </div>
+          
           <div className="col-4">
             <h3>Find by....</h3>
           </div>
