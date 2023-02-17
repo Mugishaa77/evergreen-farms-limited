@@ -7,6 +7,7 @@ import springOnions from '../produce/spring-onions.jpg';
 import tomatoes from '../produce/tomatoes.jpg';
 import redOnions from '../produce/red-onions.jpg';
 import garlic from '../produce/garlic.jpg';
+import './Products.css';
 
 const products = [
   {name: 'Tomatoes',
