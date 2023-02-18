@@ -1,99 +1,120 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEnvelope, faPhone, faWhatsapp } from "@fortawesome/free-solid-svg-icons";
+import { faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import React from "react";
 import './Footer.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { faFacebook } from '@fortawesome/free-brands-svg-icons';
-import { faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-
-
 
 export default function Footer() {
   return (
     <div className="footer">
       <div className="container">
         <div className="last-nav">
-           <h1>Let's Talk Green</h1>
+          <h1>Let's Talk Green</h1>
         </div>
-       
+
         <div className="row">
-          <div className="col-4">
+          <div className="col-md-4">
             <h3>Email</h3>
-            <a href="mailto:lesliejobita@outlook.com"
+            <a
+              href="mailto:lesliejobita@outlook.com"
               title="Email"
               rel="noopener noreferrer"
-              target="-blank"
-              class="email-link">Lesliejobita@outlook.com</a>
+              target="_blank"
+              className="email-link"
+            >
+              lesliejobita@outlook.com
+            </a>
 
             <h3>Twitter</h3>
-            <a href=""
+            <a
+              href="https://twitter.com/"
               target="_blank"
               title="Twitter"
-              rel="noopener noreferrer">Evergreen</a>
+              rel="noopener noreferrer"
+            >
+              Evergreen
+            </a>
 
             <h3>Facebook</h3>
-            <a href=""
+            <a
+              href="https://www.facebook.com/"
               target="_blank"
-              title="Twitter"
-              rel="noopener noreferrer">Evergreen</a>
+              title="Facebook"
+              rel="noopener noreferrer"
+            >
+              Evergreen
+            </a>
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             <h4>Work Inquiry</h4>
-            <p class="text-muted">Let's work together</p>
-            <a href="" class="btn btn-branding mt-3">Contact Us</a>
+            <p className="text-muted">Let's work together</p>
+            <a href="" className="btn btn-branding mt-3">
+              Contact Us
+            </a>
           </div>
-          <div className="col-4">
+          <div className="col-md-4">
             <p className="socials">
-              <a href=""
+              <a
+                href="https://www.instagram.com/"
                 target="_blank"
                 title="Instagram"
-                rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faInstagram} className="instagram-icon" />
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faInstagram}
+                  className="instagram-icon"
+                />
               </a>
-            </p>
 
-
-            <p className="socials">
-              <a href=""
+              <a
+                href="https://twitter.com/"
                 target="_blank"
                 title="Twitter"
-                rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faTwitter} className="twitter-icon" /></a></p>
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
+              </a>
 
-
-            <p className="socials">
-              <a href="mailto:lesliejobita@outlook.com"
+              <a
+                href="mailto:lesliejobita@outlook.com"
                 title="Email"
                 rel="noopener noreferrer"
-                class="email-link">
-                <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" /></a></p>
+                className="email-link"
+              >
+                <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
+              </a>
 
-
-
-            <p className="socials">
-              <a href=""
+              <a
+                href="https://www.facebook.com/"
                 target="_blank"
                 title="Facebook"
-                rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faFacebook} className="facebook-icon" /></a></p>
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faFacebook}
+                  className="facebook-icon"
+                />
+              </a>
 
-            <p className="socials">
-              <a href=""
+              <a
+                href="tel:1234567890"
                 target="_blank"
                 title="Phone"
-                rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faPhone} className="phone-icon" /></a>
-            </p>
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={faPhone} className="phone-icon" />
+              </a>
 
-            <p className="socials">
-              <a href=""
+              <a
+                href="https://api.whatsapp.com/send?phone=1234567890"
                 target="_blank"
-                title="Whatsapp"
-                rel="noopener noreferrer">
-                <FontAwesomeIcon icon={faWhatsapp} className="whatsapp-icon" />
+                title="WhatsApp"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon
+                  icon={faWhatsapp}
+                  className="whatsapp-icon"
+                />
               </a>
             </p>
           </div>
@@ -104,3 +125,4 @@ export default function Footer() {
 }
 
 ReactDOM.render(<Footer />, document.getElementById('root'));
+
