@@ -70,16 +70,15 @@ h3 {
       }
 
       .text-below-image {
-          top: 100px;
+          top: 180px;
           text-align: center;
+          margin-right: 72px;
+          
     
           
       }
 
-      .text-below-image button {
-        text-align: right;
-      }
-       
+         
 
 
       .hero .call-to-action {
