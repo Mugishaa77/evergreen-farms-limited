@@ -2,38 +2,10 @@ import React, { useState }from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import sagaa from '../produce/sagaa.jpg';
-import springOnions from '../produce/spring-onions.jpg';
-import tomatoes from '../produce/tomatoes.jpg';
-import redOnions from '../produce/red-onions.jpg';
-import garlic from '../produce/garlic.jpg';
 import './Products.css';
+import products from '../ProductData';
 
-const products = [
-  {name: 'Tomatoes',
-   image: tomatoes,
-   price: 'Ksh 10.00'},
-  {
-    name: 'Garlic',
-    image: garlic,
-    price: 'Ksh 10.00'
-  },
-  {
-    name: 'Red Onions',
-    image: redOnions,
-    price: 'Ksh 10.00'
-  },
-  {
-    name: 'Sagaa',
-    image: sagaa,
-    price: 'Ksh 10.00'
-  },
-  {
-    name: 'Spring Onions',
-    image: springOnions,
-    price: 'Ksh 10.00'
-  }
-];
+
 
 export default function ProductDisplay({ handleAddToBasket, handleRemoveFromBasket }) {
   const [basketItems, setBasketItems] = useState([]);
