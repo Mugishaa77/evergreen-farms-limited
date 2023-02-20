@@ -10,6 +10,7 @@ import springOnions from './produce/spring-onions.jpg';
 import tomatoes from './produce/tomatoes.jpg';
 import redOnions from './produce/red-onions.jpg';
 import garlic from './produce/garlic.jpg';
+import HandleBasket from './pages/HandleBasket';
 
 
 const products = [
@@ -63,6 +64,7 @@ function App() {
           handleAddToBasket={handleAddToBasket}
           handleRemoveFromBasket={handleRemoveFromBasket}
         />
+        <HandleBasket />
         <About />
       </div>
       <Footer />
