@@ -9,7 +9,6 @@ import redOnions from '../produce/red-onions.jpg';
 import garlic from '../produce/garlic.jpg';
 import './Products.css';
 
-
 const products = [
   {name: 'Tomatoes',
    image: tomatoes,
@@ -34,28 +33,26 @@ const products = [
     image: springOnions,
     price: 'Ksh 10.00'
   }
-  
 ];
+
 export default function ProductDisplay({ handleAddToBasket, handleRemoveFromBasket }) {
   const [basketItems, setBasketItems] = useState([]);
-
-  const addToBasket = (product) => {
-    setBasketItems([...basketItems, product]);
-  };
-
-  const removeFromBasket = (product) => {
-    const newBasketItems = basketItems.filter((item) => item !== product);
-    setBasketItems(newBasketItems);
-  };
-
-  const toggleBasket = (product) => {
-    if (basketItems.includes(product)) {
-      removeFromBasket(product);
-    } else {
-      addToBasket(product);
-    }
-  };
   
+  const handleAddClick = (product) => {
+    setBasketItems([...basketItems, product]);
+    handleAddToBasket(product);
+  };
+
+  const handleRemoveClick = (product) => {
+    const updatedBasketItems = basketItems.filter(item => item.name !== product.name);
+    setBasketItems(updatedBasketItems);
+    handleRemoveFromBasket(product);
+  };
+
+  const isInBasket = (product) => {
+    return basketItems.some(item => item.name === product.name);
+  };
+
   const settings = {
     dots: true,
     infinite: true,
@@ -82,19 +79,21 @@ export default function ProductDisplay({ handleAddToBasket, handleRemoveFromBask
 
   const productCards = products.map((product, index) => (
     
-     <div className="display" key={index}>
+    <div className="display" key={index}>
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
       <p>{product.price}</p>
-      <button onClick={() => toggleBasket(product)}>
-        {basketItems.includes(product) ? 'Remove from Basket' : 'Add to Basket'}
+      <button onClick={() => handleAddClick(product)} disabled={isInBasket(product)}>
+        Add to Basket
+      </button>
+      <button onClick={() => handleRemoveClick(product)} disabled={!isInBasket(product)}>
+        Remove from Basket
       </button>
     </div>
 
   ));
 
   return (
-    
     <Slider {...settings}>
       {productCards}
     </Slider>
