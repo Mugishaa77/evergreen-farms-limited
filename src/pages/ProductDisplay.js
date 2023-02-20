@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState }from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -13,7 +13,7 @@ import './Products.css';
 const products = [
   {name: 'Tomatoes',
    image: tomatoes,
-  price: 'Ksh 10.00'},
+   price: 'Ksh 10.00'},
   {
     name: 'Garlic',
     image: garlic,
@@ -36,7 +36,26 @@ const products = [
   }
   
 ];
-export default function ProductDisplay() {
+export default function ProductDisplay({ handleAddToBasket, handleRemoveFromBasket }) {
+  const [basketItems, setBasketItems] = useState([]);
+
+  const addToBasket = (product) => {
+    setBasketItems([...basketItems, product]);
+  };
+
+  const removeFromBasket = (product) => {
+    const newBasketItems = basketItems.filter((item) => item !== product);
+    setBasketItems(newBasketItems);
+  };
+
+  const toggleBasket = (product) => {
+    if (basketItems.includes(product)) {
+      removeFromBasket(product);
+    } else {
+      addToBasket(product);
+    }
+  };
+  
   const settings = {
     dots: true,
     infinite: true,
@@ -62,15 +81,20 @@ export default function ProductDisplay() {
   };
 
   const productCards = products.map((product, index) => (
-    <div className="display" key={index}>
+    
+     <div className="display" key={index}>
       <img src={product.image} alt={product.name} />
       <h2>{product.name}</h2>
       <p>{product.price}</p>
-      <button>Add to Basket</button>
+      <button onClick={() => toggleBasket(product)}>
+        {basketItems.includes(product) ? 'Remove from Basket' : 'Add to Basket'}
+      </button>
     </div>
+
   ));
 
   return (
+    
     <Slider {...settings}>
       {productCards}
     </Slider>
