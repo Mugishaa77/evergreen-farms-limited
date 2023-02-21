@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Products.css';
-import products from '../ProductData';
+import products from './ProductData';
 
 
 
@@ -56,10 +56,10 @@ export default function ProductDisplay({ handleAddToBasket, handleRemoveFromBask
       <h2>{product.name}</h2>
       <p>{product.price}</p>
       <button onClick={() => handleAddClick(product)} disabled={isInBasket(product)}>
-        Add to Basket
+        Add
       </button>
       <button onClick={() => handleRemoveClick(product)} disabled={!isInBasket(product)}>
-        Remove from Basket
+        Remove
       </button>
     </div>
 
