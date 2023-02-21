@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom';
 import Navbar from './pages/Navbar';
 import Hero from './pages/Hero';
+import Basket from './pages/Basket';
 import Category from './pages/Category';
 import ProductDisplay from './pages/ProductDisplay';
 import About from './pages/About';
@@ -13,10 +14,10 @@ function App () {
     <div className="App">
       <BrowserRouter>
       <Navbar />
-      <Switch>
+      <Routes>
         <Route path="/basket" component={Basket} />
         <Route path="/hero" component={Hero} />
-      </Switch>
+      </Routes>
       </BrowserRouter>
     </div>
   );
