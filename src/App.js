@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Navbar from './pages/Navbar';
 import Hero from './pages/Hero';
 import Category from './pages/Category';
@@ -10,14 +11,13 @@ function App () {
 
   return (
     <div className="App">
-      <Navbar basketItems={basketItems} />
-      <Hero />
-      <div className="row">
-        <Category />
-        <ProductDisplay />
-        <About />
-      </div>
-      <Footer />
+      <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route path="/basket" component={Basket} />
+        <Route path="/hero" component={Hero} />
+      </Switch>
+      </BrowserRouter>
     </div>
   );
 }
