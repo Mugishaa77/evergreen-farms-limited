@@ -8,9 +8,15 @@ import reportWebVitals from './reportWebVitals';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
+import productReducer from './features/productSlices';
+
 const store = configureStore({
-  reducer: {},
-})
+  reducer: {
+    products: productReducer,
+  },
+});
+
+store.dispatch(productFetch());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
