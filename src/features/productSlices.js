@@ -25,7 +25,7 @@ const productSlices = createSlice ({
         },
         [productFetch.fulfilled] : (state, action) => {
             state.status = "success";
-            state.items = item.payload;
+            state.items = action.payload;
         },
         [productFetch.rejected] : (state, action) => {
             state.status = "rejected";
