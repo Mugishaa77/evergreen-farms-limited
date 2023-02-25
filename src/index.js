@@ -4,12 +4,10 @@ import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min';
 import reportWebVitals from './reportWebVitals';
-
+import productReducer from './features/productsSlice';
 
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-
-import productReducer from './features/productSlices';
 
 const store = configureStore({
   reducer: {
@@ -17,7 +15,10 @@ const store = configureStore({
   },
 });
 
-store.dispatch(productFetch());
+
+
+store.dispatch(productsFetch());
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
