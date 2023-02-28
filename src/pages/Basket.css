@@ -13,6 +13,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 2rem;
+    background-color: #EEEEEE;
 }
 
 .basket .product {
@@ -75,5 +76,5 @@
 
 .basket button:hover {
     background-color: #BCE29E;
-    color: orange;
+    color: #1F5229;
 }
