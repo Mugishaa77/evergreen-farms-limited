@@ -6,6 +6,7 @@ import 'bootstrap/dist/js/bootstrap.min';
 import reportWebVitals from './reportWebVitals';
 import productReducer from './features/productsSlice';
 import { productsFetch } from './features/productsSlice';
+import { productsApi } from './features/productsApi';
 
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
@@ -13,7 +14,12 @@ import { Provider } from 'react-redux';
 const store = configureStore({
   reducer: {
     products: productReducer,
+    [productsApi.reducerPath] : productsApi.reducer,
   },
+
+  middleware: ( getDefaultMiddleware) => 
+    getDefaultMiddleware().concat(productsApi.middleware),
+  
 });
 
 
