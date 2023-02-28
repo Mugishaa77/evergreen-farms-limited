@@ -1,11 +1,15 @@
 .basket {
+
+    background-color: #F2F7F0;
     padding: 2rem 4rem;
 }
 
 .basket h2 {
     font-size: 40px;
     font-weight: 400;
-    text-align: center
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1F5229;
 }
 
 .basket .products {
@@ -13,7 +17,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 2rem;
-    background-color: #EEEEEE;
+   
 }
 
 .basket .product {
@@ -26,6 +30,7 @@
     margin: 1rem auto;
     padding: 1rem;
     border-radius: 15px;
+    background-color: #D8F7CA;
     box-shadow: -5px -5px 10px 
     rgba(255, 255, 255, 0.5), 
     2px 2px 5px 
