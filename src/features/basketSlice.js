@@ -11,7 +11,8 @@ const basketSlice = createSlice({
     initialState,
     reducers: {
         addToBasket(state, action){
-            const itemIndex = state.basketItems.findIndex((item) => item.id === action.payload.id);
+            const itemIndex = state.basketItems.findIndex(
+                (item) => item.id === action.payload.id);
             if(itemIndex >= 0){
                 state.basketItems[itemIndex].basketQuantity += 1
             } else {
