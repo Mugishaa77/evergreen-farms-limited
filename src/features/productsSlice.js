@@ -4,13 +4,18 @@ import axios from 'axios';
 const initialState = {
   items: [],
   status: null,
+  error: null,
 };
 
   export const productsFetch = createAsyncThunk(
   'products/productsFetch',
-  async () => {
+  async (id = null , { rejectWithValue }) => {
+    try {
     const response = await axios.fetchById('http://localhost:5000/products');
     return response.data;
+    } catch (error) {
+      return rejectWithValue("an error occurred")
+    }
   }
 );
 
@@ -31,6 +36,8 @@ const productsSlice = createSlice({
     },
     [productsFetch.rejected]: (state, action) => {
       state.status = 'rejected';
+      state.error = action.payload;
+
     },
   },
 });
