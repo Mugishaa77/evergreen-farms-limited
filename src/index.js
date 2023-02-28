@@ -11,9 +11,12 @@ import { productsApi } from './features/productsApi';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
+import basketReducer from './features/basketSlice';
+
 const store = configureStore({
   reducer: {
     products: productReducer,
+    basket: basketReducer,
     [productsApi.reducerPath] : productsApi.reducer,
   },
 

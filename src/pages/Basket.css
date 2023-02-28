@@ -68,5 +68,12 @@
     border: none;
     outline: none;
     cursor: pointer;
+    background-color:#1F5229;
+    color: #BCE29E;
+    letter-spacing: 1.15px;
+}
+
+.basket button:hover {
     background-color: #BCE29E;
+    color: orange;
 }
