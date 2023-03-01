@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './Basket.css';
 import { useGetAllProductsQuery } from '../features/productsApi';
-import { addToBasket } from '../features/basketSlice';
+import basketReducer, { addToBasket, basketItems } from '../features/basketSlice';
+
+
+
 
 export default function Basket () {
     
@@ -11,12 +14,19 @@ export default function Basket () {
 
     const dispatch = useDispatch();
 
+    const [products, setProducts] = useState([]);
+
     const navigate = useNavigate();
 
-    const handleAddToBasket = (product) => {
-          dispatch(addToBasket(product))
-          navigate.push("/basket-one");
+    useEffect(() => {
+        if (data) {
+            setProducts(basketItems);
+        }
+    }, [basketItems]);
 
+    const handleAddToBasket = (product) => {
+        // handle adding product to basket
+        navigate('/basket-one');
     };
 
     

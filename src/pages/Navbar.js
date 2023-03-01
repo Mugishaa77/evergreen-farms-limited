@@ -2,7 +2,8 @@ import React from 'react';
 import evergreen from '../logo/sharpened-evergreen.png';
 import { BasketFill } from "react-bootstrap-icons";
 import './Navbar.css';
-import { Link } from 'react-router-dom';
+
+
 
 export default function Navbar () {
     return (
@@ -19,17 +20,20 @@ export default function Navbar () {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="/">Home</a>
+          <a class="nav-link active text-light" aria-current="page" href="/">
+            Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active text-light" aria-current="page" href="/">Market</a>
         </li> 
         <li class="nav-item dropdown">
-          <Link to="/basket-one">
-          <a class="nav-link dropdown-toggle text-light" href="/" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          
+          <a class="nav-link dropdown-toggle text-light" href="/basket-one" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            
             <BasketFill color="white" size={24} />
+
           </a>
-          </Link>
+          
           <ul class="dropdown-menu">
             <li><a class="dropdown-item text-primary" href="/">Add to basket</a></li>
             <li><a class="dropdown-item text-primary" href="/">Empty basket</a></li>
