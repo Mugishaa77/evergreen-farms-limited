@@ -19,14 +19,21 @@ const basketSlice = createSlice({
                 state.basketItems[itemIndex].basketQuantity += 1
                 toast.success("increased product quantity", {
                     position: "bottom-left",
-                })
+                    theme: "dark",
+                });
             } else {
                 const tempProduct = {...action.payload, basketQuantity: 1 };
                 state.basketItems.push(tempProduct);
-                 toast.success.dark("added to basket", {
+                 toast.info("added to basket", {
                     position: "bottom-left",
-                })
+                    theme: "dark",
+                    
+                });
             }
+
+            localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
+
+            
         },
     },
 });
