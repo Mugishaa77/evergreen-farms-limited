@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+import './basketSlice.css';
 
 const initialState = {
     basketItems: [],
@@ -16,13 +17,13 @@ const basketSlice = createSlice({
                 (item) => item.id === action.payload.id);
             if(itemIndex >= 0){
                 state.basketItems[itemIndex].basketQuantity += 1
-                toast.warning("increased product quantity", {
+                toast.success("increased product quantity", {
                     position: "bottom-left",
                 })
             } else {
                 const tempProduct = {...action.payload, basketQuantity: 1 };
                 state.basketItems.push(tempProduct);
-                 toast.success("added to basket", {
+                 toast.success.dark("added to basket", {
                     position: "bottom-left",
                 })
             }
