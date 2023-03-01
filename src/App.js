@@ -5,6 +5,7 @@ import Basket from './pages/Basket';
 import NotFound from './pages/NotFound';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import BasketOne from './pages/BasketOne';
 
 function App () {
   return (
@@ -15,6 +16,7 @@ function App () {
 
       <Routes>
           <Route path="/" exact element={<Basket/>} />
+          <Route path="/basket-one" exact element={<BasketOne />} />
       </Routes>
       
       </BrowserRouter>

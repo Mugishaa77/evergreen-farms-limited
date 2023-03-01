@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import './Basket.css';
 import { useGetAllProductsQuery } from '../features/productsApi';
 import { addToBasket } from '../features/basketSlice';
@@ -10,10 +11,15 @@ export default function Basket () {
 
     const dispatch = useDispatch();
 
+    const navigate = useNavigate();
+
     const handleAddToBasket = (product) => {
           dispatch(addToBasket(product))
+          navigate.push("/basket-one");
 
     };
+
+    
 
     return (
         <div className="basket">
