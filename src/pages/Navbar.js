@@ -2,7 +2,7 @@ import React from 'react';
 import evergreen from '../logo/sharpened-evergreen.png';
 import { BasketFill } from "react-bootstrap-icons";
 import './Navbar.css';
-
+import { Link } from 'react-router-dom';
 
 export default function Navbar () {
     return (

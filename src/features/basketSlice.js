@@ -3,7 +3,8 @@ import { toast } from "react-toastify";
 import './basketSlice.css';
 
 const initialState = {
-    basketItems: [],
+    basketItems: localStorage.getItem("basketItems") ?
+     JSON.parse(localStorage.getItem("basketItems")) : [],
     basketTotalQuantity: 0,
     basketTotalAmount: 0,
 };
@@ -33,7 +34,7 @@ const basketSlice = createSlice({
 
             localStorage.setItem("basketItems", JSON.stringify(state.basketItems));
 
-            
+
         },
     },
 });
