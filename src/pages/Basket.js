@@ -3,20 +3,12 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './Basket.css';
 import { useGetAllProductsQuery } from '../features/productsApi';
-
 import  { addToBasket } from '../features/basketSlice';
 
-
-
-
 export default function Basket () {
-    
     const { data, error, isLoading } = useGetAllProductsQuery();
-
     const dispatch = useDispatch();
-
     const [products, setProducts] = useState([]);
-
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -30,7 +22,6 @@ export default function Basket () {
         navigate('/basket-one');
     };
 
-    
 
     return (
         <div className="basket">
