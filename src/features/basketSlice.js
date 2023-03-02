@@ -26,7 +26,7 @@ const basketSlice = createSlice({
             } else {
                 const tempProduct = {...action.payload, basketQuantity: 1 };
                 state.basketItems.push(tempProduct);
-                 toast.info("added to basket", {
+                 toast.info(`${action.payload.name} added to basket`, {
                     position: "bottom-left",
                     theme: "dark",
                     
@@ -44,6 +44,11 @@ const basketSlice = createSlice({
             )
 
             state.basketItems = nextBasketItems;
+            localStorage.setItem("basketItems", JSON.stringify(state.basketItems))
+            toast.error(`${action.payload.name} removed from basket`, {
+                position: "top-center",
+                    theme: "dark",
+            })
         },
     },
 });
