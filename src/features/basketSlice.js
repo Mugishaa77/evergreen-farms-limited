@@ -37,10 +37,18 @@ const basketSlice = createSlice({
 
 
         },
+
+        removeFromBasket(state, action){
+            const nextBasketItems =state.basketItems.filter(
+                basketItem => basketItem.id !== action.payload.id
+            )
+
+            state.basketItems = nextBasketItems;
+        },
     },
 });
 
-export const { addToBasket } = basketSlice.actions;
+export const { addToBasket, removeFromBasket } = basketSlice.actions;
 
 export default basketSlice.reducer;
 

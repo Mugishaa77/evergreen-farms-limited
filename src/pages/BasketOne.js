@@ -1,11 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Basket.css';
+import { removeFromBasket } from '../features/basketSlice';
 
 export default function BasketOne () {
 
     const basket = useSelector((state) => state.basket);
+
+    const dispatch = useDispatch();
+
+    const handleRemoveFromBasket = (basketItem) => {
+        dispatch(removeFromBasket(basketItem));
+
+    };
 
 
     return (
@@ -42,7 +50,7 @@ export default function BasketOne () {
                                 <div>
                                     <h3>{basketItem.name}</h3>
                                     <p>{basketItem.desc}</p>
-                                    <button>Remove</button>
+                                    <button onClick = { () => handleRemoveFromBasket(basketItem)}>Remove</button>
                                 </div>
                             </div>
 
