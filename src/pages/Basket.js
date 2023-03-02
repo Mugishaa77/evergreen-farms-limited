@@ -3,7 +3,8 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './Basket.css';
 import { useGetAllProductsQuery } from '../features/productsApi';
-import basketReducer, { addToBasket, basketItems } from '../features/basketSlice';
+
+import  { addToBasket } from '../features/basketSlice';
 
 
 
@@ -20,9 +21,9 @@ export default function Basket () {
 
     useEffect(() => {
         if (data) {
-            setProducts(basketItems);
+            setProducts(data);
         }
-    }, [basketItems]);
+    }, data);
 
     const handleAddToBasket = (product) => {
         // handle adding product to basket
