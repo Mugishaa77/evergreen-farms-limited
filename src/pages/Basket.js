@@ -26,7 +26,7 @@ export default function Basket () {
     }, data);
 
     const handleAddToBasket = (product) => {
-        // handle adding product to basket
+        dispatch(addToBasket(product));
         navigate('/basket-one');
     };
 

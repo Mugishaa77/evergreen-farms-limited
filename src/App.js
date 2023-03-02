@@ -19,7 +19,7 @@ function App () {
           <Route path="/" exact element={<Hero />} />
           <Route path="/basket" exact element={<Basket/>} />
           <Route path="/basket-one" exact element={<BasketOne />} />
-          <Navigate to="/not-found" exact element={<NotFound />} />
+          
 
       </Routes>
       
