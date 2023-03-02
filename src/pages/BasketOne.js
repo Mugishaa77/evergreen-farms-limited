@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import './Basket.css';
 
 export default function BasketOne () {
 
@@ -11,7 +12,7 @@ export default function BasketOne () {
         <div className="basket-container">
             <h2>Shopping Basket</h2>
             {basket.basketItems.length === 0 ? 
-            (<div className="basketEmpty">
+            (<div className="basket-empty">
                 <p>Your Basket is currently empty</p>
                 <div className="start-shopping">
                     <Link to ="/basket">
@@ -49,9 +50,9 @@ export default function BasketOne () {
                                 Kshs{basketItem.price}
                             </div>
                             <div className="basket-product-quantity">
-                                <button>-</button>
+                                <button className="less">-</button>
                                 <div className="count">{basketItem.basketQuantity}</div>
-                                <button>+</button>
+                                <button className="more">+</button>
                         </div>
 
                         <div className="basket-product-total-price">
