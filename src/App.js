@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import BasketOne from './pages/BasketOne';
-
+import Login from './login/Login';
 
 function App () {
   return (
@@ -20,6 +20,7 @@ function App () {
           <Route path="/" exact element={<Hero />} />
           <Route path="/basket" exact element={<Basket/>} />
           <Route path="/basket-one" exact element={<BasketOne />} />
+          <Route path="/login" exact element={<Login/>} />
 
            
           {/* Redirect to /not-found for all other routes */}
