@@ -63,7 +63,7 @@ const basketSlice = createSlice({
                 position: "bottom-left",
                     theme: "dark",
             });
-            } else if(state.basketItemsms[itemIndex].basketQuantity === 1){
+            } else if(state.basketItems[itemIndex].basketQuantity === 1){
                 const nextBasketItems =state.basketItems.filter(
                 basketItem => basketItem.id !== action.payload.id
             );

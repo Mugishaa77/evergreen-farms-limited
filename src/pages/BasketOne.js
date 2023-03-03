@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Basket.css';
-import { decreaseBasket, removeFromBasket } from '../features/basketSlice';
+import { addToBasket, decreaseBasket, removeFromBasket } from '../features/basketSlice';
 
 export default function BasketOne () {
 
@@ -17,6 +17,10 @@ export default function BasketOne () {
 
     const handleDecreaseBasket = (basketItem) => {
         dispatch(decreaseBasket(basketItem));
+    };
+
+    const handleIncreaseBasket = (basketItem) => {
+        dispatch(addToBasket(basketItem));
     };
 
 
@@ -64,7 +68,7 @@ export default function BasketOne () {
                             <div className="basket-product-quantity">
                                 <button onClick = {() => handleDecreaseBasket(basketItem)}className="less">-</button>
                                 <div className="count">{basketItem.basketQuantity}</div>
-                                <button className="more">+</button>
+                                <button className="more" onClick = {() => handleIncreaseBasket(basketItem)}>+</button>
                         </div>
 
                         <div className="basket-product-total-price">
