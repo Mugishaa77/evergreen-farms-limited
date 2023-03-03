@@ -50,10 +50,41 @@ const basketSlice = createSlice({
                     theme: "dark",
             })
         },
+
+        decreaseBasket(state, action) {
+            const itemIndex = state.basketItems.findIndex(
+                basketItem => basketItem.id === action.payload.id
+            )
+
+            if(state.basketItems[itemIndex].basketQuantity > 1){
+                state.basketItems[itemIndex].basketQuantity -= 1
+
+                toast.info(`Decreased ${action.payload.name} basket quantity`, {
+                position: "bottom-left",
+                    theme: "dark",
+            });
+            } else if(state.basketItemsms[itemIndex].basketQuantity === 1){
+                const nextBasketItems =state.basketItems.filter(
+                basketItem => basketItem.id !== action.payload.id
+            );
+
+            state.basketItems = nextBasketItems;
+
+            
+            toast.error(`${action.payload.name} removed from basket`, {
+                position: "top-center",
+                    theme: "dark",
+            });
+            }
+                 
+            localStorage.setItem("basketItems", JSON.stringify(state.basketItems))           
+            
+            
+        },
     },
 });
 
-export const { addToBasket, removeFromBasket } = basketSlice.actions;
+export const { addToBasket, removeFromBasket, decreaseBasket } = basketSlice.actions;
 
 export default basketSlice.reducer;
 
