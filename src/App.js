@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import BasketOne from './pages/BasketOne';
 
+
 function App () {
   return (
     <div className="App">
@@ -19,9 +20,15 @@ function App () {
           <Route path="/" exact element={<Hero />} />
           <Route path="/basket" exact element={<Basket/>} />
           <Route path="/basket-one" exact element={<BasketOne />} />
+
+           
+          {/* Redirect to /not-found for all other routes */}
+          <Route path="*" element={<Navigate to="/not-found" />} />
+          <Route path="/not-found" element={<NotFound />} />
           
 
       </Routes>
+      
       
       </BrowserRouter>
     </div>

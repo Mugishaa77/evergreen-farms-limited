@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import evergreen from '../logo/sharpened-evergreen.png';
 import { BasketFill } from "react-bootstrap-icons";
 import './Navbar.css';
@@ -22,25 +22,31 @@ export default function Navbar () {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="/">
-            Home</a>
+           <Link to="/" className="nav-link active text-light">
+             Home
+           </Link>
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-light" aria-current="page" href="/">Market</a>
+          <Link to="/basket" className="nav-link active text-light">
+            Market
+                </Link>
         </li> 
         <li class="nav-item dropdown">
-          
-          <a class="nav-link dropdown-toggle text-light" href="/basket-one" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            
-            <BasketFill color="white" size={24} />
-
-          </a>
+          <Link
+           to="/basket-one"
+               className="nav-link dropdown-toggle text-light"
+              role="button"
+               data-bs-toggle="dropdown"
+              aria-expanded="false"
+                >
+               <BasketFill color="white" size={24} />
+              </Link>
           
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item text-primary" href="/">Add to basket</a></li>
-            <li><a class="dropdown-item text-primary" href="/">Empty basket</a></li>
+            <li className="drop"><Link to="/basket" class="dropdown-item text-primary" >Shop</Link></li>
+            <li className="drop"><Link to="/basket-one" class="dropdown-item text-primary" >Checkout</Link></li>
             <li><hr class="dropdown-divider text-primary"/></li>
-            <li><a class="dropdown-item text-primary" href="/">...</a></li>
+            <li><a class="dropdown-item text-primary" href="/">Top-up</a></li>
           </ul>
         </li>
         <li class="nav-item">
