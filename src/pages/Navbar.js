@@ -1,4 +1,5 @@
 import React from 'react';
+
 import evergreen from '../logo/sharpened-evergreen.png';
 import { BasketFill } from "react-bootstrap-icons";
 import './Navbar.css';
@@ -6,6 +7,7 @@ import './Navbar.css';
 
 
 export default function Navbar () {
+  
     return (
     <div>
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-style">
@@ -38,11 +40,11 @@ export default function Navbar () {
             <li><a class="dropdown-item text-primary" href="/">Add to basket</a></li>
             <li><a class="dropdown-item text-primary" href="/">Empty basket</a></li>
             <li><hr class="dropdown-divider text-primary"/></li>
-            <li><a class="dropdown-item text-primary" href="/">Something else here</a></li>
+            <li><a class="dropdown-item text-primary" href="/"></a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link active text-light" href="/">Contact Us</a>
+          <a class="nav-link active text-light" href="/">contact Us</a>
         </li>
       </ul>
     </div>
