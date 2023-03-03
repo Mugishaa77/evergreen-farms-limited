@@ -79,12 +79,20 @@ const basketSlice = createSlice({
                  
             localStorage.setItem("basketItems", JSON.stringify(state.basketItems))           
             
-            
         },
+
+        clearBasket(state, action) {
+            state.basketItems = [];
+             toast.error(`Basket Cleared`, {
+                position: "top-center",
+                    theme: "dark",
+            });
+            localStorage.setItem("basketItems", JSON.stringify(state.basketItems))
+        }
     },
 });
 
-export const { addToBasket, removeFromBasket, decreaseBasket } = basketSlice.actions;
+export const { addToBasket, removeFromBasket, decreaseBasket, clearBasket } = basketSlice.actions;
 
 export default basketSlice.reducer;
 
