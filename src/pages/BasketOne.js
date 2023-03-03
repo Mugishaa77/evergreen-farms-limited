@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import './Basket.css';
-import { addToBasket, clearBasket, decreaseBasket, removeFromBasket } from '../features/basketSlice';
+import { addToBasket, clearBasket, decreaseBasket, removeFromBasket, getTotals } from '../features/basketSlice';
 
 export default function BasketOne () {
 
     const basket = useSelector((state) => state.basket);
 
     const dispatch = useDispatch();
+
+    useEffect (() => {
+        dispatch(getTotals());
+    }, [basket, dispatch]);
+
+    
 
     const handleRemoveFromBasket = (basketItem) => {
         dispatch(removeFromBasket(basketItem));
@@ -25,7 +31,7 @@ export default function BasketOne () {
 
     const handleClearBasket = () => {
         dispatch(clearBasket());
-    }
+    };
 
 
     return (
@@ -88,7 +94,7 @@ export default function BasketOne () {
                         <div className="sub-total">
                             <span>Subtotal</span>
                             <span><strong>
-                                Kshs{basket.basketTotalAmount}</strong></span>
+                                Kshs {JSON.stringify(basket.basketTotalAmount)}</strong></span>
                         </div>
                         <p>Taxes and Delivery calculated at checkout</p>
                         <button>Check-out</button>

@@ -11,7 +11,7 @@ import { productsApi } from './features/productsApi';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
-import basketReducer from './features/basketSlice';
+import basketReducer, { getTotals } from './features/basketSlice';
 
 const store = configureStore({
   reducer: {
@@ -28,6 +28,7 @@ const store = configureStore({
 
 
 store.dispatch(productsFetch());
+store.dispatch(getTotals());
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

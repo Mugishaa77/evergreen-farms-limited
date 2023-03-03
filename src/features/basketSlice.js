@@ -19,16 +19,16 @@ const basketSlice = createSlice({
                 (item) => item.id === action.payload.id);
             if(itemIndex >= 0){
                 state.basketItems[itemIndex].basketQuantity += 1
-                toast.success("increased product quantity", {
+                toast.success(`${action.payload.name} increased in basket`, {
                     position: "bottom-left",
                     theme: "dark",
                 });
             } else {
                 const tempProduct = {...action.payload, basketQuantity: 1 };
                 state.basketItems.push(tempProduct);
-                 toast.info(`${action.payload.name} added to basket`, {
+                 toast.success(`${action.payload.name} added to basket`, {
                     position: "bottom-left",
-                    theme: "dark",
+                    theme: "colored",
                     
                 });
             }
@@ -47,7 +47,7 @@ const basketSlice = createSlice({
             localStorage.setItem("basketItems", JSON.stringify(state.basketItems))
             toast.error(`${action.payload.name} removed from basket`, {
                 position: "top-center",
-                    theme: "dark",
+                    theme: "colored",
             })
         },
 
@@ -59,9 +59,9 @@ const basketSlice = createSlice({
             if(state.basketItems[itemIndex].basketQuantity > 1){
                 state.basketItems[itemIndex].basketQuantity -= 1
 
-                toast.info(`Decreased ${action.payload.name} basket quantity`, {
+                toast.warning(`${action.payload.name} reduced from basket`, {
                 position: "bottom-left",
-                    theme: "dark",
+                    theme: "colored",
             });
             } else if(state.basketItems[itemIndex].basketQuantity === 1){
                 const nextBasketItems =state.basketItems.filter(
@@ -72,7 +72,7 @@ const basketSlice = createSlice({
 
             
             toast.error(`${action.payload.name} removed from basket`, {
-                position: "top-center",
+                position: "bottom-left",
                     theme: "dark",
             });
             }
@@ -88,11 +88,37 @@ const basketSlice = createSlice({
                     theme: "dark",
             });
             localStorage.setItem("basketItems", JSON.stringify(state.basketItems))
-        }
+        },
+
+        getTotals(state, action) {
+        let { total, quantity } = state.basketItems.reduce(
+    (basketTotal, basketItem) => {
+      const { price, basketQuantity } = basketItem;
+      const itemTotal = price * basketQuantity;
+
+      basketTotal.total += itemTotal;
+      basketTotal.quantity += basketQuantity;
+
+      return basketTotal;
+    },
+    {
+      total: 0,
+      quantity: 0,
+    }
+  );
+
+  state.basketTotalQuantity = quantity;
+  state.basketTotalAmount = total;
+
+  return state; 
+}
+
+
+        
     },
 });
 
-export const { addToBasket, removeFromBasket, decreaseBasket, clearBasket } = basketSlice.actions;
+export const { addToBasket, removeFromBasket, decreaseBasket, clearBasket, getTotals } = basketSlice.actions;
 
 export default basketSlice.reducer;
 
