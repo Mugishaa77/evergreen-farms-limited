@@ -40,7 +40,7 @@ export default function Navbar () {
             <li><a class="dropdown-item text-primary" href="/">Add to basket</a></li>
             <li><a class="dropdown-item text-primary" href="/">Empty basket</a></li>
             <li><hr class="dropdown-divider text-primary"/></li>
-            <li><a class="dropdown-item text-primary" href="/"></a></li>
+            <li><a class="dropdown-item text-primary" href="/">...</a></li>
           </ul>
         </li>
         <li class="nav-item">
