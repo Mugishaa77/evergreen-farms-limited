@@ -12,6 +12,19 @@
     color:#1F5229 ;
 }
 
+.basket .next-link {
+    color: #F76400;
+    cursor: pointer;
+    position: absolute;
+        top: 200px;
+        right: 20px;
+
+}
+
+.basket .next-link:hover {
+    color: #1F5229;
+}
+
 .basket .products {
     display: flex;
     justify-content: space-between;
@@ -90,6 +103,8 @@
     padding: 2rem 4rem;
     background-color: #F2F7F0;
 }
+
+
 
 .basket-container h2 {
     font-weight: 400;
@@ -307,3 +322,13 @@
 .continue-shopping a span {
     margin-left: 0.5rem;
 }
+
+.basket-container .back-link {
+    color: #F76400;
+    cursor: pointer;
+}
+
+.basket-container .back-link:hover {
+    color: #1F5229;
+}
+
