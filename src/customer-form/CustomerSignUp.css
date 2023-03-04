@@ -1,0 +1,159 @@
+/* Customer Details */
+
+.customer-details label {
+    font-family: 'Poppins', serif;
+        color: #1F5229;
+        padding: 1rem;
+        
+}
+
+.customer-details h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1.15px;
+
+
+}
+
+.customer-details {
+    background-color: #E5FFDA
+}
+
+.customer-details button {
+    width:100px;
+    height: 40px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #1F5229;
+        color: #8fe051;
+        letter-spacing: 1.15px;
+}
+
+.customer-details button:hover {
+    background-color: #BCE29E;
+        color: #1F5229;
+}
+
+/* Personal Details */
+.personal-details label {
+    font-family: 'Poppins', serif;
+    color: #1F5229;
+    padding: 1rem;
+
+}
+
+.personal-details h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1.15px;
+
+
+}
+
+.personal-details {
+    background-color: #E5FFDA
+}
+
+.personal-details button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+    outline: #8fe051;
+    border: none;
+    margin: 1rem;
+    
+}
+
+.personal-details button:hover {
+    background-color: #BCE29E;
+    color: #1F5229;
+}
+
+/* Confirmation */
+
+.confirmation {
+    background-color: #E5FFDA;
+    
+    }
+
+    .confirmation h2 {
+        font-family:'Times New Roman', Times, serif;
+        font-weight: 400;
+        text-align: center;
+        letter-spacing: 1.15px;
+
+    }
+
+    .confirmation p {
+        color: #1F5229;
+            font-family: 'Poppins', serif;
+    }
+
+        .confirmation button {
+            width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 2rem;
+            cursor: pointer;
+            background-color: #1F5229;
+            color: #8fe051;
+            letter-spacing: 1.15px;
+            outline: #8fe051;
+            border: none;
+            margin:1rem;
+    
+        }
+    
+        .confirmation button:hover {
+            background-color: #BCE29E;
+            color: #1F5229;
+        }
+
+/* Success */
+.success {
+    background-color: #E5FFDA;
+    color: #1F5229;
+    font-family: 'Poppins', serif;
+    text-align: center;
+    min-height: 88vh;
+}
+
+.success h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1.15px;
+
+}
+
+.success button {
+    width: 160px;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        cursor: pointer;
+        background-color: #1F5229;
+        color: #8fe051;
+        letter-spacing: 1.15px;
+        outline: #8fe051;
+        border: none;
+    
+    
+    }
+    
+    .success button:hover {
+        background-color: #BCE29E;
+        color: #1F5229;
+    }

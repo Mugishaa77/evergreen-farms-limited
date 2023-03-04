@@ -1,4 +1,5 @@
 import React from 'react';
+import './CustomerSignUp.css';
 
 export default function Confirmation ({ nextStep, prevStep, customerData }) {
     return (

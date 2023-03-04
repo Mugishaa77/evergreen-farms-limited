@@ -33,14 +33,40 @@ export default function SignUp () {
     }));
   }
 
+   switch (step) {
+    case 1:
+      return (
+        <CustomerDetails
+          nextStep={nextStep}
+          handleChange={handleChange}
+          customerData={customerData}
+        />
+      );
+      case 2:
+      return (
+        <PersonalDetails
+          nextStep={nextStep}
+          prevStep={prevStep}
+          handleChange={handleChange}
+          customerData={customerData}
+        />
+      );
+    case 3:
+      return (
+        <Confirmation
+          nextStep={nextStep}
+          prevStep={prevStep}
+          customerData={customerData}
+        />
+      );
+      case 4:
+      return <Success />;
+    default:
+      return null;
 
 
 
 
-    return(<div className="signup">
-        <div className="container">
 
-
-        </div>
-    </div>)
+      }
 }
