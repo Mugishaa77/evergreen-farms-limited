@@ -6,14 +6,24 @@ export default function PersonalDetails ({ nextStep, prevStep, handleChange, cus
         <div className="personal-details">
             <div className="container">
                 <h2> Personal Details</h2>
-                     <label>Address:</label>
+                     <label>Telephone:</label>
       <input
         type="text"
-        name="address"
+        name="telephone"
         onChange={handleChange}
-        value={customerData.address}
+        value={customerData.telephone}
         className="form-control"
       />
+
+      <label>ID Number:</label>
+      <input
+        type="text"
+        name="idNnumber"
+        onChange={handleChange}
+        value={customerData.idNumber}
+        className="form-control"
+      />
+      
       <label>City:</label>
       <input
         type="text"
@@ -22,20 +32,13 @@ export default function PersonalDetails ({ nextStep, prevStep, handleChange, cus
         value={customerData.city}
         className="form-control"
       />
-      <label>State:</label>
+      
+      <label>County:</label>
       <input
         type="text"
-        name="state"
+        name="county"
         onChange={handleChange}
-        value={customerData.state}
-        className="form-control"
-      />
-      <label>Zip:</label>
-      <input
-        type="text"
-        name="zip"
-        onChange={handleChange}
-        value={customerData.zip}
+        value={customerData.county}
         className="form-control"
       />
       <button onClick={prevStep}>Back</button>

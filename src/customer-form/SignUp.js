@@ -13,6 +13,8 @@ export default function SignUp () {
     lastName: '',
     idNumber: '',
     city: '',
+    telephone: '',
+    county: '',
     email: '',
     password: ''
     

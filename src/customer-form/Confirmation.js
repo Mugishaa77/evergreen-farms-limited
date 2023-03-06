@@ -9,10 +9,13 @@ export default function Confirmation ({ nextStep, prevStep, customerData }) {
       <p>First Name: {customerData.firstName}</p>
       <p>Last Name: {customerData.lastName}</p>
       <p>Email: {customerData.email}</p>
-      <p>Address: {customerData.address}</p>
+      <p>Telephone: {customerData.telephone}</p>
+      <p>ID number: {customerData.idNumber}</p>
       <p>City: {customerData.city}</p>
-      <p>State: {customerData.state}</p>
-      <p>Zip: {customerData.zip}</p>
+      <p>County: {customerData.county}</p>
+      
+      
+      
       <button onClick={prevStep}>Back</button>
       <button onClick={nextStep}>Confirm</button>
 
