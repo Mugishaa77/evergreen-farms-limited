@@ -3,12 +3,11 @@ import CustomerDetails from './CustomerDetails';
 import PersonalDetails from './PersonalDetails';
 import Confirmation from './Confirmation';
 import Success from './Success';
+import axios from 'axios';
 
-
-export default function SignUp () {
-
-    const [step, setStep] = React.useState(1);
-    const [customerData, setCustomerData] = React.useState({
+export default function SignUp() {
+  const [step, setStep] = React.useState(1);
+  const [customerData, setCustomerData] = React.useState({
     firstName: '',
     lastName: '',
     idNumber: '',
@@ -17,25 +16,36 @@ export default function SignUp () {
     county: '',
     email: '',
     password: ''
-    
   });
 
-   const nextStep = () => {
+  const nextStep = () => {
     setStep(prevStep => prevStep + 1);
-  }
+  };
 
   const prevStep = () => {
     setStep(prevStep => prevStep - 1);
-  }
+  };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setCustomerData(prevCustomerData => ({
       ...prevCustomerData,
       [e.target.name]: e.target.value
     }));
-  }
+  };
 
-   switch (step) {
+  const handleSubmit = async e => {
+    e.preventDefault();
+
+    try {
+      const response = await axios.post('/sign-up', customerData);
+      console.log(response.data.message);
+      setStep(4); // Move to the Success step
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  switch (step) {
     case 1:
       return (
         <CustomerDetails
@@ -44,7 +54,7 @@ export default function SignUp () {
           customerData={customerData}
         />
       );
-      case 2:
+    case 2:
       return (
         <PersonalDetails
           nextStep={nextStep}
@@ -58,17 +68,13 @@ export default function SignUp () {
         <Confirmation
           nextStep={nextStep}
           prevStep={prevStep}
+          handleSubmit={handleSubmit}
           customerData={customerData}
         />
       );
-      case 4:
+    case 4:
       return <Success />;
     default:
       return null;
-
-
-
-
-
-      }
+  }
 }

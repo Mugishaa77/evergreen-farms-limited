@@ -18,7 +18,7 @@ export default function PersonalDetails ({ nextStep, prevStep, handleChange, cus
       <label>ID Number:</label>
       <input
         type="text"
-        name="idNnumber"
+        name="idNumber"
         onChange={handleChange}
         value={customerData.idNumber}
         className="form-control"

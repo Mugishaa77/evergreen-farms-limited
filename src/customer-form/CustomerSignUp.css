@@ -16,6 +16,12 @@
 
 }
 
+.customer-details .required {
+    font-family: 'Times New Roman', Times, serif;
+    color: orangered;
+    
+}
+
 .customer-details {
     background-color: #E5FFDA
 }
