@@ -38,3 +38,17 @@ font-size: 40px;
     
 
 }
+
+.sign-up-guide {
+    margin: 2rem;
+}
+
+.sign-up-guide .sign-up-here {
+    text-decoration: none;
+    color: orangered;
+    cursor: pointer;
+}
+
+.sign-up-guide .sign-up-here:hover {
+    color: orange;
+}

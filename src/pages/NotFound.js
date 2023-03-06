@@ -11,10 +11,10 @@ export default function NotFound () {
             <hr/>
             </div>
             
-            <Link to ="/">
-                <p className="statement">
+            <Link to ="/" className="statement">
+                
                     Go back to home-page
-                </p>
+                
             </Link>
 
         </div>
