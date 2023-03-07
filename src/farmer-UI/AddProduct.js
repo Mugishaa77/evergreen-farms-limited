@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+/*This component is responsible for rendering a 
+form that allows the farmer to add a new product
+ to their profile. */
+
 const AddProduct = () => {
   const navigate = useNavigate();
   const [product, setProduct] = useState({

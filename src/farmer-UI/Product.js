@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+/*used to display detailed information 
+about a single product and provide options 
+to edit or delete the product.*/
+
 const Product = () => {
   const { id } = useParams();
   const navigate = useNavigate();

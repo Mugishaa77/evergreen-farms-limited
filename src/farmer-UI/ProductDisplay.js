@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+/* is used to display a list of products and 
+provide a link to view more details about a
+ specific product*/
+
 const ProductDisplay = () => {
   return (
     <div>
