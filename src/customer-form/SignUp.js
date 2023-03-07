@@ -45,6 +45,8 @@ export default function SignUp() {
     }
   };
 
+  
+
   switch (step) {
     case 1:
       return (
