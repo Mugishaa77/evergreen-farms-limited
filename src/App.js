@@ -10,6 +10,10 @@ import BasketOne from './pages/BasketOne';
 import Login from './login/Login';
 import SignUp from './customer-form/SignUp';
 import FarmerProfile from './farmer-UI/FarmerProfile';
+import ProductDisplay from './farmer-UI/ProductDisplay';
+import Product from './farmer-UI/Product';
+import AddProduct from './farmer-UI/AddProduct';
+import Dashboard from './farmer-UI/Dashboard';
 
 function App () {
   return (
@@ -25,6 +29,12 @@ function App () {
           <Route path="/login" exact element={<Login/>} />
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/farmer-ui" exact element={<FarmerProfile/>} />
+          <Route path="/product-display" exact element={<ProductDisplay/>} />
+          <Route path="/product" exact element={<Product/>} />
+          
+          <Route path="/add-product" exact element={<AddProduct/>}/>
+          <Route path="/dashboard" exact element={<Dashboard/>}/>
+          
 
            
           {/* Redirect to /not-found for all other routes */}

@@ -1,0 +1,85 @@
+/* Dashboard */
+
+.farmer-dashboard {
+    background-color: #F2F7F0;
+        padding: 2rem 4rem;;
+}
+
+.farmer-dashboard h2 {
+font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1F5229;
+}
+
+.farmer-dashboard .add-product-btn{
+   font-weight: 'Poppins', serif;
+   color: orangered;
+   text-decoration: none;
+   cursor: pointer;
+   font-weight: 400;
+    
+}
+
+.farmer-dashboard .add-product-btn:hover {
+    color: #1F5229
+}
+
+.farmer-dashboard .delete-btn {
+    height: 40px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #1F5229;
+        color: #8fe051;
+        letter-spacing: 1.15px;
+}
+
+.farmer-dashboard .delete-btn:hover {
+    background-color: #BCE29E;
+        color: #1F5229;
+}
+
+/*Add-Product */
+
+.add-product {
+    background-color: #F2F7F0;
+        padding: 2rem 4rem;
+}
+
+.add-product h2 {
+    font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: #1F5229;
+}
+
+.add-product label {
+    font-family: 'Poppins', serif;
+        color: #1F5229;
+        padding: 1rem;
+}
+
+.add-product .submit-btn {
+    height: 40px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #1F5229;
+        color: #8fe051;
+        letter-spacing: 1.15px;
+
+}
+
+.add-product .submit-btn:hover {
+    background-color: #BCE29E;
+        color: #1F5229;
+}
