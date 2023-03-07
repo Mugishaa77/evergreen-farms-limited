@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Farmer.css';
 
 /*This component is responsible for rendering a 
 form that allows the farmer to add a new product

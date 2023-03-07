@@ -83,3 +83,46 @@ font-size: 40px;
     background-color: #BCE29E;
         color: #1F5229;
 }
+
+/*Product */
+
+.products {
+    background-color: #F2F7F0;
+    padding: 2rem 4rem;
+}
+
+.products h2 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1F5229;
+}
+
+.products label {
+    font-family: 'Poppins', serif;
+    color: #1F5229;
+    padding: 1rem;
+}
+
+.products .save-btn,
+.products .delete-btn {
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+
+}
+
+.products .save-btn:hover,
+.products .delete-btn:hover {
+    background-color: #BCE29E;
+    color: #1F5229;
+}
+

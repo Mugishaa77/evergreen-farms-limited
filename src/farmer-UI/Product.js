@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './Farmer.css';
 
 /*used to display detailed information 
 about a single product and provide options 
@@ -56,27 +57,45 @@ const Product = () => {
   };
 
   return (
-    <div>
+    <div className="products">
       <img src={product.image} alt={product.name} />
       <form onSubmit={handleSubmit}>
         <label>
           Name:
-          <input type="text" name="name" value={product.name} onChange={handleChange} />
+          <input type="text"
+           name="name" 
+           value={product.name}
+            onChange={handleChange} 
+            className="form-control"/>
         </label>
         <label>
           Price:
-          <input type="number" name="price" value={product.price} onChange={handleChange} />
+          <input type="number" 
+          name="price" 
+          value={product.price} 
+          onChange={handleChange} 
+           className="form-control"/>
         </label>
         <label>
           Description:
-          <textarea name="description" value={product.description} onChange={handleChange} />
+          <textarea name="description"
+           value={product.description}
+            onChange={handleChange} 
+             className="form-control"/>
         </label>
         <label>
           Image URL:
-          <input type="text" name="image" value={product.image} onChange={handleChange} />
+          <input type="text" 
+          name="image" 
+          value={product.image} 
+          onChange={handleChange} 
+           className="form-control"/>
         </label>
-        <button type="submit">Save</button>
-        <button onClick={handleDelete}>Delete</button>
+        <button type="submit"
+        className="save-btn">Save</button>
+        <button 
+        onClick={handleDelete}
+        className="delete-btn">Delete</button>
       </form>
     </div>
   );
