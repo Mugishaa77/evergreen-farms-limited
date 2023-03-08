@@ -4,10 +4,17 @@ import PersonalDetails from './PersonalDetails';
 import Confirmation from './Confirmation';
 import Success from './Success';
 import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { registerUser } from '../features/authSlice';
+
 
 export default function SignUp() {
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
+  console.log(auth);
+
   const [step, setStep] = React.useState(1);
-  const [customerData, setCustomerData] = React.useState({
+  const [user, setuser] = React.useState({
     firstName: '',
     lastName: '',
     idNumber: '',
@@ -18,6 +25,8 @@ export default function SignUp() {
     password: ''
   });
 
+  console.log("user:", user);
+
   const nextStep = () => {
     setStep(prevStep => prevStep + 1);
   };
@@ -27,8 +36,8 @@ export default function SignUp() {
   };
 
   const handleChange = e => {
-    setCustomerData(prevCustomerData => ({
-      ...prevCustomerData,
+    setuser(prevuser => ({
+      ...prevuser,
       [e.target.name]: e.target.value
     }));
   };
@@ -36,13 +45,15 @@ export default function SignUp() {
   const handleSubmit = async e => {
     e.preventDefault();
 
-    try {
-      const response = await axios.post('/sign-up', customerData);
+    dispatch(registerUser(user))
+
+    /*try {
+      const response = await axios.post('/sign-up', user);
       console.log(response.data.message);
       setStep(4); // Move to the Success step
     } catch (error) {
       console.error(error);
-    }
+    }*/
   };
 
   
@@ -53,7 +64,7 @@ export default function SignUp() {
         <CustomerDetails
           nextStep={nextStep}
           handleChange={handleChange}
-          customerData={customerData}
+          user={user}
         />
       );
     case 2:
@@ -62,7 +73,7 @@ export default function SignUp() {
           nextStep={nextStep}
           prevStep={prevStep}
           handleChange={handleChange}
-          customerData={customerData}
+          user={user}
         />
       );
     case 3:
@@ -71,7 +82,7 @@ export default function SignUp() {
           nextStep={nextStep}
           prevStep={prevStep}
           handleSubmit={handleSubmit}
-          customerData={customerData}
+          user={user}
         />
       );
     case 4:

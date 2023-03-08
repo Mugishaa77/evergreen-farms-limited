@@ -5,8 +5,13 @@ import jwtDecode from 'jwt-decode';
 
 const initialState = {
     token: localStorage.getItem("token"),
-    name: "",
     email: "",
+    firstName: "",
+    lastName: "",
+    idNumber: "",
+    city: "",
+    telephone: "",
+    county: "",
     _id: "",
     registerStatus: "",
     registerError: "",
@@ -21,9 +26,15 @@ export const registerUser = createAsyncThunk(
         try{
 
            const token =  await axios.post(`${url}/register`, {
-                name: values.name,
                 email: values.email,
                 password: values.password,
+                firstName: values.firstName,
+                lastName: values.lastName,
+                idNumber: values.idNumber,
+                city: values.city,
+                telephone: values.telephone,
+                county: values.county,
+   
             });
 
             localStorage.setItem("token", token.data);
@@ -56,9 +67,14 @@ const authSlice = createSlice({
 
                 return{ ...state,
                 token: action.payload,
-                name: user.name,
                 email: user.email,
                 _id: user._id,
+                firstName: user.firstName,
+                lastName: user.lastName,
+                idNumber: user.idNumber,
+                city: user.city,
+                telephone: user.telephone,
+                county: user.county,
                 registerStatus: "success",
 
             }

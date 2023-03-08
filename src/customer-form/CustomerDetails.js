@@ -1,7 +1,7 @@
 import React from 'react';
 import './CustomerSignUp.css';
 
-export default function CustomerDetails ({ nextStep, handleChange, customerData }) {
+export default function CustomerDetails ({ nextStep, handleChange, user }) {
 
 
     return (
@@ -13,7 +13,7 @@ export default function CustomerDetails ({ nextStep, handleChange, customerData 
         type="text"
         name="firstName"
         onChange={handleChange}
-        value={customerData.firstName}
+        value={user.firstName}
         className="form-control"
       />
       <label>Last Name:</label>
@@ -21,7 +21,7 @@ export default function CustomerDetails ({ nextStep, handleChange, customerData 
         type="text"
         name="lastName"
         onChange={handleChange}
-        value={customerData.lastName}
+        value={user.lastName}
          className="form-control"
       />
       <label>Email:</label>
@@ -29,7 +29,7 @@ export default function CustomerDetails ({ nextStep, handleChange, customerData 
         type="email"
         name="email"
         onChange={handleChange}
-        value={customerData.email}
+        value={user.email}
          className="form-control"
       />
       <label>Password:</label>
@@ -37,7 +37,7 @@ export default function CustomerDetails ({ nextStep, handleChange, customerData 
         type="password"
         name="password"
         onChange={handleChange}
-        value={customerData.password}
+        value={user.password}
          className="form-control"
       />
       <button onClick={nextStep}>Next</button>

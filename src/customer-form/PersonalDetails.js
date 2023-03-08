@@ -1,7 +1,7 @@
 import React from 'react';
 import './CustomerSignUp.css';
 
-export default function PersonalDetails ({ nextStep, prevStep, handleChange, customerData }) {
+export default function PersonalDetails ({ nextStep, prevStep, handleChange, user }) {
     return (
         <div className="personal-details">
             <div className="container">
@@ -11,7 +11,7 @@ export default function PersonalDetails ({ nextStep, prevStep, handleChange, cus
         type="text"
         name="telephone"
         onChange={handleChange}
-        value={customerData.telephone}
+        value={user.telephone}
         className="form-control"
       />
 
@@ -20,7 +20,7 @@ export default function PersonalDetails ({ nextStep, prevStep, handleChange, cus
         type="text"
         name="idNumber"
         onChange={handleChange}
-        value={customerData.idNumber}
+        value={user.idNumber}
         className="form-control"
       />
       
@@ -29,7 +29,7 @@ export default function PersonalDetails ({ nextStep, prevStep, handleChange, cus
         type="text"
         name="city"
         onChange={handleChange}
-        value={customerData.city}
+        value={user.city}
         className="form-control"
       />
       
@@ -38,7 +38,7 @@ export default function PersonalDetails ({ nextStep, prevStep, handleChange, cus
         type="text"
         name="county"
         onChange={handleChange}
-        value={customerData.county}
+        value={user.county}
         className="form-control"
       />
       <button onClick={prevStep}>Back</button>
