@@ -3,7 +3,6 @@ import CustomerDetails from './CustomerDetails';
 import PersonalDetails from './PersonalDetails';
 import Confirmation from './Confirmation';
 import Success from './Success';
-import axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerUser } from '../features/authSlice';
 
@@ -47,13 +46,6 @@ export default function SignUp() {
 
     dispatch(registerUser(user))
 
-    /*try {
-      const response = await axios.post('/sign-up', user);
-      console.log(response.data.message);
-      setStep(4); // Move to the Success step
-    } catch (error) {
-      console.error(error);
-    }*/
   };
 
   
@@ -79,7 +71,6 @@ export default function SignUp() {
     case 3:
       return (
         <Confirmation
-          nextStep={nextStep}
           prevStep={prevStep}
           handleSubmit={handleSubmit}
           user={user}
