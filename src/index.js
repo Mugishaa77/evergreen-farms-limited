@@ -12,11 +12,13 @@ import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 
 import basketReducer, { getTotals } from './features/basketSlice';
+import authReducer from './features/authSlice';
 
 const store = configureStore({
   reducer: {
     products: productReducer,
     basket: basketReducer,
+    auth: authReducer,
     [productsApi.reducerPath] : productsApi.reducer,
   },
 
