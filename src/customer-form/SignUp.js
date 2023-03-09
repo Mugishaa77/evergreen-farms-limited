@@ -46,7 +46,7 @@ export default function SignUp() {
 
   };
 
-  
+  /*will revisit authentication later.. min 48*/
 
   switch (step) {
     case 1:
