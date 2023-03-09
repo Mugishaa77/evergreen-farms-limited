@@ -13,7 +13,7 @@ export default function SignUp() {
   console.log(auth);
 
   const [step, setStep] = React.useState(1);
-  const [user, setuser] = React.useState({
+  const [user, setUser] = React.useState({
     firstName: '',
     lastName: '',
     idNumber: '',
