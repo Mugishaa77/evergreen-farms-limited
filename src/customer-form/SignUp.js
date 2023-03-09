@@ -26,6 +26,10 @@ export default function SignUp() {
 
   console.log("user:", user);
 
+  const handleUserChange = (field, value) => {
+    setUser(prevUser => ({...prevUser, [field]: value}));
+  };
+
   const nextStep = () => {
     setStep(prevStep => prevStep + 1);
   };
@@ -34,12 +38,6 @@ export default function SignUp() {
     setStep(prevStep => prevStep - 1);
   };
 
-  const handleChange = e => {
-    setuser(prevuser => ({
-      ...prevuser,
-      [e.target.name]: e.target.value
-    }));
-  };
 
   const handleSubmit = async e => {
     e.preventDefault();
@@ -55,8 +53,8 @@ export default function SignUp() {
       return (
         <CustomerDetails
           nextStep={nextStep}
-          handleChange={handleChange}
           user={user}
+          onChange={handleUserChange}
         />
       );
     case 2:
@@ -64,7 +62,7 @@ export default function SignUp() {
         <PersonalDetails
           nextStep={nextStep}
           prevStep={prevStep}
-          handleChange={handleChange}
+          onChange={handleUserChange}
           user={user}
         />
       );

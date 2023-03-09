@@ -41,10 +41,13 @@ export const registerUser = createAsyncThunk(
 
             return token.data;
 
-        }catch(err){
-            console.log(err.response.data)
-            return rejectWithValue(err.response.data);
-
+        } catch(err) {
+            if (err.response.status === 409) { // User already exists
+                return rejectWithValue("User already exists");
+            } else {
+                console.log(err.response.data);
+                return rejectWithValue(err.response.data);
+            }
         }
         
     }
