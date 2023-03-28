@@ -30,10 +30,13 @@ function App () {
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/farmer-ui" exact element={<FarmerProfile/>} />
           <Route path="/product-display" exact element={<ProductDisplay/>} />
-          <Route path="/product" exact element={<Product/>} />
+          
           
           <Route path="/add-product" exact element={<AddProduct/>}/>
-          <Route path="/dashboard" exact element={<Dashboard/>}/>
+          <Route path="/dashboard" exact element={<Dashboard/>}>
+             <Route path="product" exact element={<Product/>} />
+          </Route>
+
           
 
            

@@ -44,7 +44,7 @@ const Dashboard = () => {
             onClick={() => handleDelete(product.id)}>Delete</button>
           </li>
         ))}
-      </ul>
+      </ul> 
     </div>
   );
 };

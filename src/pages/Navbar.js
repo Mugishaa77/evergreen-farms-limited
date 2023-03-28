@@ -31,6 +31,11 @@ export default function Navbar () {
             Market
                 </Link>
         </li> 
+        <li className="nav-item">
+           
+              <Link to="/dashboard" className="nav-link active text-light">
+              Farmer</Link>
+        </li>
         <li class="nav-item dropdown">
           <Link
            to="/basket-one"
@@ -41,6 +46,7 @@ export default function Navbar () {
                 >
                <BasketFill color="white" size={24} />
               </Link>
+             
           
           <ul class="dropdown-menu">
             <li className="drop"><Link to="/basket" class="dropdown-item text-primary" >Shop</Link></li>

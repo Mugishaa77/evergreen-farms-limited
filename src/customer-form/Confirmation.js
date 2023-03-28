@@ -1,6 +1,7 @@
 import React from 'react';
 import './CustomerSignUp.css';
 
+
 export default function Confirmation ({ handleSubmit, prevStep, user }) {
     return (
         <div className="confirmation">
@@ -18,8 +19,11 @@ export default function Confirmation ({ handleSubmit, prevStep, user }) {
       
       
       <button onClick={prevStep}>Back</button>
-      <button onClick={handleSubmit}>Confirm</button>
-      
+      <button onClick={handleSubmit}>Confirm
+        
+      </button>
+        
+        
 
 
             </div>
