@@ -3,10 +3,23 @@ import { Link } from 'react-router-dom';
 import evergreen from '../logo/sharpened-evergreen.png';
 import { BasketFill } from "react-bootstrap-icons";
 import './Navbar.css';
-
-
+import { useSelector, useDispatch } from 'react-redux';
+import { logoutUser } from '../features/authSlice';
+import { toast } from 'react-toastify';
 
 export default function Navbar () {
+
+  const dispatch = useDispatch ();
+  const auth = useSelector((state) => state.auth);
+  const { basketTotalQuantity } = useSelector((state) => state.basket);
+  const AuthLinks = () => {
+  return (
+    <div>
+      <Link to='/login'>Login</Link>
+      <Link to='/sign-up'>Sign Up</Link>
+    </div>
+  );
+};
   
     return (
     <div>
@@ -36,6 +49,7 @@ export default function Navbar () {
               <Link to="/dashboard" className="nav-link active text-light">
               Farmer</Link>
         </li>
+        <li>{ basketTotalQuantity }</li>
         <li class="nav-item dropdown">
           <Link
            to="/basket-one"
@@ -61,6 +75,20 @@ export default function Navbar () {
       </ul>
     </div>
   </div>
+
+  {
+  auth._id ? <div onClick={() => {
+    toast.warning("You have logged out", {
+      position: "bottom-left"
+    })
+    dispatch(logoutUser(null))
+  }}>
+    Logout
+  </div> : <AuthLinks>
+    <Link to= "/login">Login</Link>
+    <Link to ="/sign-up">Sign Up</Link></AuthLinks>
+    
+ }
 </nav>
 
     </div>

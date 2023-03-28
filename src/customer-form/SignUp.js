@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useNavigate } from 'react';
 import CustomerDetails from './CustomerDetails';
 import PersonalDetails from './PersonalDetails';
 import Confirmation from './Confirmation';
@@ -9,8 +9,16 @@ import { registerUser } from '../features/authSlice';
 
 export default function SignUp() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const auth = useSelector((state) => state.auth);
   console.log(auth);
+
+  useEffect (() => {
+    if (auth._id ){
+      navigate("/basket")
+    }
+  },
+  [auth._id, navigate])
 
   const [step, setStep] = React.useState(1);
   const [user, setUser] = React.useState({

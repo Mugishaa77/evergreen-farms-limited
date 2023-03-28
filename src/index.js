@@ -14,6 +14,9 @@ import { Provider } from 'react-redux';
 import basketReducer, { getTotals } from './features/basketSlice';
 import authReducer from './features/authSlice';
 
+import { loadUser, logoutUser } from './features/authSlice';
+
+
 const store = configureStore({
   reducer: {
     products: productReducer,
@@ -31,6 +34,8 @@ const store = configureStore({
 
 store.dispatch(productsFetch());
 store.dispatch(getTotals());
+store.dispatch(loadUser(null));
+store.dispatch(logoutUser());
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
