@@ -49,7 +49,11 @@ export default function Navbar () {
               <Link to="/dashboard" className="nav-link active text-light">
               Farmer</Link>
         </li>
-        <li>{ basketTotalQuantity }</li>
+        <li className="nav-item">
+           <Link to="/farmer-dashboard" className="nav-link active text-light">Admin</Link>
+        </li>
+       
+        
         <li class="nav-item dropdown">
           <Link
            to="/basket-one"
@@ -59,8 +63,11 @@ export default function Navbar () {
               aria-expanded="false"
                 >
                <BasketFill color="white" size={24} />
-              </Link>
+              </Link></li>
              
+             <li className="nav-item">
+              <span  className="nav-link active text-light">Basket:{ basketTotalQuantity }</span>
+             </li>
           
           <ul class="dropdown-menu">
             <li className="drop"><Link to="/basket" class="dropdown-item text-primary" >Shop</Link></li>
@@ -68,7 +75,7 @@ export default function Navbar () {
             <li><hr class="dropdown-divider text-primary"/></li>
             <li><a class="dropdown-item text-primary" href="/">Top-up</a></li>
           </ul>
-        </li>
+        
         <li class="nav-item">
           <a class="nav-link active text-light" href="/">contact Us</a>
         </li>
@@ -77,18 +84,30 @@ export default function Navbar () {
   </div>
 
   {
-  auth._id ? <div onClick={() => {
+  auth._id ? (
+    <div className="links">
+    
+      
+    
+  <div onClick={() => {
     toast.warning("You have logged out", {
       position: "bottom-left"
     })
     dispatch(logoutUser(null))
   }}>
     Logout
-  </div> : <AuthLinks>
-    <Link to= "/login">Login</Link>
-    <Link to ="/sign-up">Sign Up</Link></AuthLinks>
+  </div>
+  </div>) : (<AuthLinks>
+     <li className="nav-item">
+    <Link to= "/login" className="nav-link active text-light">Login</Link>
+
+     </li>
+     <li className="nav-item">
+      <Link to ="/sign-up" className="nav-link active text-light">Sign Up</Link>
+     </li>
+    </AuthLinks>
     
- }
+ )}
 </nav>
 
     </div>

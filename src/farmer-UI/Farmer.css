@@ -126,3 +126,14 @@ font-size: 40px;
     color: #1F5229;
 }
 
+/*Side-nav*/
+.farmer-dashboard .side-nav {
+    border-right: #8fe051;
+    height: calc(100vh - 70px);
+    position: fixed;
+    overflow-y: auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}

@@ -14,6 +14,9 @@ import ProductDisplay from './farmer-UI/ProductDisplay';
 import Product from './farmer-UI/Product';
 import AddProduct from './farmer-UI/AddProduct';
 import Dashboard from './farmer-UI/Dashboard';
+import FarmerDashboard from './farmer-UI/FarmerDashboard'
+import FarmerProducts from './farmer-UI/FarmerProducts';
+
 
 function App () {
   return (
@@ -36,7 +39,9 @@ function App () {
           <Route path="/dashboard" exact element={<Dashboard/>}>
              <Route path="product" exact element={<Product/>} />
           </Route>
-
+          <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
+            <Route path="farmer-products" exact element={<FarmerProducts/>}/>
+          </Route>
           
 
            
