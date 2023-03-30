@@ -127,6 +127,11 @@ font-size: 40px;
 }
 
 /*Side-nav*/
+
+.farmer-dashboard {
+    display: flex;
+    height: 100vh;
+}
 .farmer-dashboard .side-nav {
     border-right: #8fe051;
     height: calc(100vh - 70px);
@@ -136,4 +141,31 @@ font-size: 40px;
     display: flex;
     flex-direction: column;
     padding: 2rem;
+}
+
+.farmer-dashboard h3 {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.farmer-dashboard a {
+    text-decoration: none;
+    margin-bottom: 1 rem;
+    font-size: 14px;
+}
+
+.farmer-dashboard .content {
+    margin-left: 200px;
+    padding: 2rem 3rem;
+    width: 100px;
+}
+
+.farmer-dashboard .link-active{
+    color: orangered;
+}
+
+.farmer-dashboard .link-inactive {
+    color: #8fe051;
 }
