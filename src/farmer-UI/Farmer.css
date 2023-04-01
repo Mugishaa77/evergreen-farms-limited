@@ -203,7 +203,7 @@ font-size: 40px;
     min-height: 30px;
     outline: none;
     border-radius: 5px;
-    border: #1F5229;
+    border: 1px solid #1F5229;
     margin: 0.3rem, 0;
 }
 
@@ -214,16 +214,36 @@ font-size: 40px;
 .image-preview {
     margin: 2rem 0 2rem 2rem;
     padding: 2rem;
-    border: #1F5229;
+    border:1px solid  #1F5229;
     max-width: 300px;
     width: 100%;
     display: flex;
     align-items: center;
     padding: 2rem;
-    color: #BCE29E;
+    color: #1F5229;
 
 }
 
 .farmer-products img {
     max-width: 100%;
 }
+
+.create-submit {
+    width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        font-weight: 400;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #1F5229;
+        color: #8fe051;
+        letter-spacing: 1.15px;
+    }
+    
+    .create-submit:hover {
+        background-color: #BCE29E;
+        color: #1F5229;
+    }
+

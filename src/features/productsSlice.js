@@ -1,9 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import { url } from './api';
 
 const initialState = {
   items: [],
   status: null,
+  createStatus: null, 
   
 };
 
@@ -13,6 +16,23 @@ const initialState = {
     
     const response = await axios.fetchById('http://localhost:5000/products');
     return response.data;
+    
+  }
+);
+
+   export const productsCreate = createAsyncThunk(
+  'products/productsCreate',
+  async (values) => {
+    try {
+      const response = await axios.post(`${url}/products`, values);
+    return response.data;
+
+    }catch(error) {
+      console.log(error);
+      toast.error(error.response?.data)
+    }
+    
+    
     
   }
 );
@@ -34,6 +54,18 @@ const productsSlice = createSlice({
     },
     [productsFetch.rejected]: (state, action) => {
       state.status = 'rejected';
+      
+
+    },
+    [productsCreate.pending]: (state, action) => {
+      state.createStatus = 'pending';
+    },
+    [productsCreate.fulfilled]: (state, action) => {
+      state.createStatus = 'success';
+      state.items.push(action.payload);
+    },
+    [productsCreate.rejected]: (state, action) => {
+      state.createStatus = 'rejected';
       
 
     },
