@@ -1,5 +1,5 @@
 export default function Summary (){
     return(<div className="summary">
-        Summary
+        <h3>Summary</h3>
     </div>)
 }

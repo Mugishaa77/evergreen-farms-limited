@@ -169,3 +169,61 @@ font-size: 40px;
 .farmer-dashboard .link-inactive {
     color: #8fe051;
 }
+
+/*FarmerProducts.js */
+
+.farmer-products, .create-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.farmer-products button {
+    padding: 9px 12px;
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 1.15px;
+    background-color: #1F5229;
+    color: #BCE29E;
+    border: none;
+    outline:none;
+    cursor: pointer;
+    margin: 0.5rem 0;
+
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-top: 2rem;
+}
+
+.styled-form select, input {
+    padding: 7px;
+    min-height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: #1F5229;
+    margin: 0.3rem, 0;
+}
+
+.styled-form select {
+    color: #1F5229;
+}
+
+.image-preview {
+    margin: 2rem 0 2rem 2rem;
+    padding: 2rem;
+    border: #1F5229;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    color: #BCE29E;
+
+}
+
+.farmer-products img {
+    max-width: 100%;
+}
