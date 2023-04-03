@@ -2,12 +2,12 @@
 M-Garden project (the Mobile Garden) project
 
 M-Garden project is a multi-vendor e-commerce agribusiness website.
-It allows a farmer to open an online stall to open an online market stall to sell wholesale farm produce directly to grocers(mama mboga)
+It allows a farmer to open an online market stall to sell wholesale farm produce directly to grocers(mama mboga)
 It operates on three profiles: 
 ~Farmers:
     Vendors with wholesale or retail stalls.
 ~Grocers:
-    Vendors with wholesale or retial stalls.
+    Vendors with wholesale or retail stalls.
 ~Users:
     Buyers who can buy farm produce from farmers and grocers depending on their preference.
 
