@@ -44,13 +44,9 @@ export default function Navbar () {
             Market
                 </Link>
         </li> 
+        
         <li className="nav-item">
-           
-              <Link to="/dashboard" className="nav-link active text-light">
-              Farmer</Link>
-        </li>
-        <li className="nav-item">
-           <Link to="/farmer-dashboard" className="nav-link active text-light">Admin</Link>
+           <Link to="/farmer-dashboard" className="nav-link active text-light">Farmer</Link>
         </li>
        
         

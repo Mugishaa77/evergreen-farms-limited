@@ -10,14 +10,12 @@ import BasketOne from './pages/BasketOne';
 import Login from './login/Login';
 import SignUp from './customer-form/SignUp';
 import FarmerProfile from './farmer-UI/FarmerProfile';
-import ProductDisplay from './farmer-UI/ProductDisplay';
-import Product from './farmer-UI/Product';
-import AddProduct from './farmer-UI/AddProduct';
-import Dashboard from './farmer-UI/Dashboard';
 import FarmerDashboard from './farmer-UI/FarmerDashboard';
 import FarmerProducts from './farmer-UI/FarmerProducts';
 import Summary from './farmer-UI/Summary';
 import CreateProduct from './farmer-UI/CreateProduct';
+import ProductDisplay from './pages/ProductDisplay';
+
 
 
 function App () {
@@ -35,17 +33,13 @@ function App () {
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/farmer-ui" exact element={<FarmerProfile/>} />
           <Route path="/product-display" exact element={<ProductDisplay/>} />
-          
-          
-          <Route path="/add-product" exact element={<AddProduct/>}/>
-          <Route path="/dashboard" exact element={<Dashboard/>}>
-             <Route path="product" exact element={<Product/>} />
-          </Route>
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
+            <Route path="farmer-profile" exact element = {<FarmerProfile/>}/>
+            <Route path="summary" exact element={<Summary/>}/>
             <Route path="farmer-products" exact element={<FarmerProducts/>}>
               <Route path="create-product" exact element={<CreateProduct/>}/>
             </Route>
-            <Route path="summary" exact element={<Summary/>}/>
+            
           </Route>
           
 
