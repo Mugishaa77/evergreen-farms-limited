@@ -134,14 +134,16 @@ font-size: 40px;
 }
 
 .farmer-dashboard .side-nav {
-    border-right: #8fe051;
     height: calc(100vh - 70px);
-    position: fixed;
     overflow-y: auto;
     width: 200px;
     display: flex;
     flex-direction: column;
     padding: 2rem;
+    top: 300;
+    border-right: 1px solid #1F5229;
+    
+
 }
 
 .farmer-dashboard h3 {
@@ -158,7 +160,7 @@ font-size: 40px;
 }
 
 .farmer-dashboard .content {
-    margin-left: 200px;
+    margin-left: 201px;
     padding: 2rem 3rem;
     width: calc(100% - 200px);
 }
@@ -256,4 +258,51 @@ input {
     .create-submit:hover {
         background-color: #BCE29E;
         color: #1F5229;
+    }
+
+    /*Farmer's Profile */
+
+    .farmer-profile {
+        margin-right: 150px;
+        margin-left: 0;
+        background-color: #E5FFDA
+        
+        
+    }
+
+        .farmer-profile h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 400;
+            text-align: center;
+            letter-spacing: 1.15px;
+    
+    
+        }
+
+                .farmer-profile label {
+                    font-family: 'Poppins', serif;
+                    color: #1F5229;
+                    padding: 1rem;
+        
+                }
+
+    .farmer-profile button {
+        width: 100px;
+            height: 40px;
+            border-radius: 5px;
+            margin-top: 2rem;
+            font-weight: 400;
+            cursor: pointer;
+            background-color: #1F5229;
+            color: #8fe051;
+            letter-spacing: 1.15px;
+            outline: #8fe051;
+            border: none;
+            margin: 1rem;
+    }
+
+    .farmer-profile .container {
+        max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
     }

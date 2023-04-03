@@ -1,10 +1,11 @@
 import React from 'react';
+import './Farmer.css';
 
 export default function FarmerProfile () {
     return(
         <div className="farmer-profile">
             <div className="container">
-                <h1>Stalls</h1>
+                <h2>Farmer's Profile</h2>
                 <label>Full Name:</label>
       <input
         type="text"
