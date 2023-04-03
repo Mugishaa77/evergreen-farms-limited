@@ -218,15 +218,25 @@ input {
     padding: 2rem;
     border: 1px solid #1F5229;
     max-width: 300px;
+    max-height: 300px;
     width: 100%;
+    height: auto;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 2rem;
-    color: #1F5229;
 }
 
+.image-preview p {
+    color: #1F5229;
+    font-family: 'Times New Roman', Times, serif;
+}
 .farmer-products img {
-    max-width: 100%;
+    width: 200px;
+        height: 200px;
+        margin-top: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+        border-radius: 15px;
 }
 
 .create-submit {
