@@ -132,6 +132,7 @@ font-size: 40px;
     display: flex;
     height: 100vh;
 }
+
 .farmer-dashboard .side-nav {
     border-right: #8fe051;
     height: calc(100vh - 70px);
@@ -159,10 +160,10 @@ font-size: 40px;
 .farmer-dashboard .content {
     margin-left: 200px;
     padding: 2rem 3rem;
-    width: 100px;
+    width: calc(100% - 200px);
 }
 
-.farmer-dashboard .link-active{
+.farmer-dashboard .link-active {
     color: orangered;
 }
 
@@ -172,7 +173,8 @@ font-size: 40px;
 
 /*FarmerProducts.js */
 
-.farmer-products, .create-product {
+.farmer-products,
+.create-product {
     display: flex;
     justify-content: space-between;
 }
@@ -185,10 +187,9 @@ font-size: 40px;
     background-color: #1F5229;
     color: #BCE29E;
     border: none;
-    outline:none;
+    outline: none;
     cursor: pointer;
     margin: 0.5rem 0;
-
 }
 
 .styled-form {
@@ -198,7 +199,8 @@ font-size: 40px;
     margin-top: 2rem;
 }
 
-.styled-form select, input {
+.styled-form select,
+input {
     padding: 7px;
     min-height: 30px;
     outline: none;
@@ -214,14 +216,13 @@ font-size: 40px;
 .image-preview {
     margin: 2rem 0 2rem 2rem;
     padding: 2rem;
-    border:1px solid  #1F5229;
+    border: 1px solid #1F5229;
     max-width: 300px;
     width: 100%;
     display: flex;
     align-items: center;
     padding: 2rem;
     color: #1F5229;
-
 }
 
 .farmer-products img {
@@ -230,14 +231,14 @@ font-size: 40px;
 
 .create-submit {
     width: 100%;
-        height: 40px;
-        border-radius: 5px;
-        margin-top: 2rem;
-        font-weight: 400;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background-color: #1F5229;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #1F5229;
         color: #8fe051;
         letter-spacing: 1.15px;
     }
@@ -246,4 +247,3 @@ font-size: 40px;
         background-color: #BCE29E;
         color: #1F5229;
     }
-
