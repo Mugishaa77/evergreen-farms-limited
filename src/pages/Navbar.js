@@ -72,8 +72,12 @@ export default function Navbar () {
             <li><a class="dropdown-item text-primary" href="/">Top-up</a></li>
           </ul>
         
-        <li class="nav-item">
-          <a class="nav-link active text-light" href="/">contact Us</a>
+        
+        <li className="nav-item">
+           <Link to="/about" className="nav-link active text-light">About Us</Link>
+        </li>
+        <li className="nav-item">
+           <Link to="/contact-us" className="nav-link active text-light">Talk to Us</Link>
         </li>
       </ul>
     </div>

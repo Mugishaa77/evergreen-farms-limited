@@ -15,7 +15,8 @@ import FarmerProducts from './farmer-UI/FarmerProducts';
 import Summary from './farmer-UI/Summary';
 import CreateProduct from './farmer-UI/CreateProduct';
 import ProductDisplay from './pages/ProductDisplay';
-
+import About from './pages/About';
+import Footer from './pages/Footer';
 
 
 function App () {
@@ -33,7 +34,10 @@ function App () {
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/farmer-ui" exact element={<FarmerProfile/>} />
           <Route path="/product-display" exact element={<ProductDisplay/>} />
+          <Route path="/about" exact element={<About/>} />
+          <Route path="/contact-us" exact element={<Footer/>}/>
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
+            
             <Route path="farmer-profile" exact element = {<FarmerProfile/>}/>
             <Route path="summary" exact element={<Summary/>}/>
             <Route path="farmer-products" exact element={<FarmerProducts/>}>

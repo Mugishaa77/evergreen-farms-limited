@@ -18,7 +18,7 @@ const [activeIndex, setActiveIndex] = useState(null);
 
 
                     <h6  className={activeIndex === 0 ? "active" : ""}
-              onClick={() => handleClick(0)}>Our Story</h6>
+              onClick={() => handleClick(0)}> Our Story </h6>
                     <p className={activeIndex === 0 ? "active" : ""}>
                      Evergreen Farms was started as a small scale vegetable home orchard in Nyalenda slums in
                    Kisumu, Kenya by Leisley Odhiambo (Odhis). 
