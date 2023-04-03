@@ -9,13 +9,13 @@ export default function Footer() {
   return (
     <div className="footer">
       <div className="container">
-        <div className="last-nav">
-          <h1>Let's Talk Green</h1>
-        </div>
+        
+          <h2>Let's Talk Green</h2>
+        
 
         <div className="row">
           <div className="col-md-4">
-            <h3>Email</h3>
+            <h6>Email</h6>
             <a
               href="mailto:lesliejobita@outlook.com"
               title="Email"
@@ -26,7 +26,7 @@ export default function Footer() {
               lesliejobita@outlook.com
             </a>
 
-            <h3>Twitter</h3>
+            <h6>Twitter</h6>
             <a
               href="https://twitter.com/"
               target="_blank"
@@ -36,7 +36,7 @@ export default function Footer() {
               Evergreen
             </a>
 
-            <h3>Facebook</h3>
+            <h6>Facebook</h6>
             <a
               href="https://www.facebook.com/"
               target="_blank"

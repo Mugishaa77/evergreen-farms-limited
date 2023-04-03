@@ -1,10 +1,20 @@
  .footer {
     color: #357402;
-    background-color: #EEEEEE;
+    background-color: #D8F7CA;
 }
 
+.footer h2 {
+    font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: #1F5229;
+}
+
+
+
 .footer  .svg-inline--fa {
-    color: #357402;
+    color: #1F5229;
 }
 .footer .navbar-text {
     margin-right: 0!important;

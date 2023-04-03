@@ -12,7 +12,7 @@ const [activeIndex, setActiveIndex] = useState(null);
      return (
         <div className="about">
             <div className="container">
-                <h1>About Us</h1>
+                <h2>About Us</h2>
                   <div className="row">
                     <div className="col-6">
 
