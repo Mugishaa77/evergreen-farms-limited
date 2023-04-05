@@ -49,30 +49,12 @@ export default function Navbar () {
            <Link to="/farmer-dashboard" className="nav-link active text-light">Farmer</Link>
         </li>
        
-        
-        <li class="nav-item dropdown">
-          <Link
-           to="/basket-one"
-               className="nav-link dropdown-toggle text-light"
-              role="button"
-               data-bs-toggle="dropdown"
-              aria-expanded="false"
-                >
-               <BasketFill color="white" size={24} />
-              </Link></li>
              
              <li className="nav-item">
-              <span  className="nav-link active text-light">Basket:{ basketTotalQuantity }</span>
+              <Link to="/basket-one" className="nav-link active text-light">
+                 <BasketFill color="white" size={24} />:{ basketTotalQuantity }
+              </Link>
              </li>
-          
-          <ul class="dropdown-menu">
-            <li className="drop"><Link to="/basket" class="dropdown-item text-primary" >Shop</Link></li>
-            <li className="drop"><Link to="/basket-one" class="dropdown-item text-primary" >Checkout</Link></li>
-            <li><hr class="dropdown-divider text-primary"/></li>
-            <li><a class="dropdown-item text-primary" href="/">Top-up</a></li>
-          </ul>
-        
-        
         <li className="nav-item">
            <Link to="/about" className="nav-link active text-light">About Us</Link>
         </li>
