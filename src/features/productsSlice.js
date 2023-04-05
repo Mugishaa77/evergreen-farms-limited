@@ -3,6 +3,8 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { url } from './api';
 
+
+
 const initialState = {
   items: [],
   status: null,
@@ -14,7 +16,7 @@ const initialState = {
   'products/productsFetch',
   async () => {
     
-    const response = await axios.fetchById('http://localhost:5000/products');
+    const response = await axios.fetchById(`${url}/products`);
     return response.data;
     
   }
@@ -24,7 +26,7 @@ const initialState = {
   'products/productsCreate',
   async (values) => {
     try {
-      const response = await axios.post(`${url}/products`, values);
+    const response = await axios.post(`${url}/products`, values);
     return response.data;
 
     }catch(error) {
