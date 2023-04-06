@@ -67,7 +67,7 @@ export default function BasketOne () {
 
                 <div className="basket-items">
                     {basket.basketItems?.map(basketItem => (
-                        <div className="basket-item" key={basketItem.id}>
+                        <div className="basket-item" key={basketItem._id}>
                             <div className="basket-product">
                                 <img src={basketItem.image} alt={basketItem.name}/>
                                 <div>

@@ -16,7 +16,7 @@ const basketSlice = createSlice({
     reducers: {
         addToBasket(state, action){
             const itemIndex = state.basketItems.findIndex(
-                (item) => item.id === action.payload.id);
+                (item) => item._id === action.payload._id);
             if(itemIndex >= 0){
                 state.basketItems[itemIndex].basketQuantity += 1
                 toast.success(`${action.payload.name} increased in basket`, {
@@ -40,7 +40,7 @@ const basketSlice = createSlice({
 
         removeFromBasket(state, action){
             const nextBasketItems =state.basketItems.filter(
-                basketItem => basketItem.id !== action.payload.id
+                basketItem => basketItem._id !== action.payload._id
             )
 
             state.basketItems = nextBasketItems;
@@ -53,7 +53,7 @@ const basketSlice = createSlice({
 
         decreaseBasket(state, action) {
             const itemIndex = state.basketItems.findIndex(
-                basketItem => basketItem.id === action.payload.id
+                basketItem => basketItem._id === action.payload._id
             )
 
             if(state.basketItems[itemIndex].basketQuantity > 1){
@@ -65,7 +65,7 @@ const basketSlice = createSlice({
             });
             } else if(state.basketItems[itemIndex].basketQuantity === 1){
                 const nextBasketItems =state.basketItems.filter(
-                basketItem => basketItem.id !== action.payload.id
+                basketItem => basketItem._id !== action.payload._id
             );
 
             state.basketItems = nextBasketItems;
