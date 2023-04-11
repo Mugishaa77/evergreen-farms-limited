@@ -23,6 +23,7 @@ import GrocerProducts from './grocer-ui/GrocerProducts';
 import GrocerSummary from './grocer-ui/GrocerSummary';
 import GrocerDashboard from './grocer-ui/GrocerDashboard';
 import Display from './pages/Display';
+import Category from './pages/Category';
 
 function App () {
   return (
@@ -41,7 +42,9 @@ function App () {
           <Route path="/product-display" exact element={<ProductDisplay/>} />
           <Route path="/about" exact element={<About/>} />
           <Route path="/contact-us" exact element={<Footer/>}/>
-          <Route path="/main-display" exact element={<Display/>}/>
+          <Route path="/main-display" exact element={<Display/>}>
+          <Route path="category" exact element = {<Category/>}/>
+          </Route>
 
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
 

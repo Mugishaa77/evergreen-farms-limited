@@ -1,3 +1,64 @@
 .main-display {
-    background-color: #BCE29E;
+    background-color: #F2F7F0;
+    padding: 2rem 4rem;
+    
 }
+
+.main-display h3 {
+    font-size: 35px;
+        font-weight: 400;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: #1F5229;
+}
+
+.main-display .back-link {
+    color: #F76400;
+    cursor: pointer;
+    position: absolute;
+    top: 175px;
+    left: 20px;
+
+}
+
+.main-display .back-link:hover {
+    color: #1F5229;
+}
+
+.main-display .next-link {
+    color: #F76400;
+    cursor: pointer;
+    position: absolute;
+    top: 175px;
+    right: 20px;
+
+}
+
+.main-display .next-link:hover {
+    color: #1F5229;
+}
+
+.main-display p {
+    color: #1F5229;
+    font-family: 'Poppins',
+        serif;
+
+}
+
+.main-display button {
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+}
+
+.main-display button:hover {
+    background-color: #BCE29E;
+    color: #1F5229;
+}
+

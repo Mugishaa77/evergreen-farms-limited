@@ -41,3 +41,16 @@
         height: 225px;
     }
  }
+
+ .category .back-link {
+     color: #F76400;
+     cursor: pointer;
+     position: absolute;
+     top: 180px;
+     left: 20px;
+
+ }
+
+ .category .back-link:hover {
+     color: #1F5229;
+ }
