@@ -71,31 +71,28 @@ export default function Navbar () {
     </div>
   </div>
 
-  {
-  auth._id ? (
-    <div className="links">
-    
-      
-    
-  <div onClick={() => {
-    toast.warning("You have logged out", {
-      position: "bottom-left"
-    })
-    dispatch(logoutUser(null))
-  }}>
-    Logout
+  {auth._id ? (
+  <div className="links">
+    <div onClick={() => {
+      toast.warning("You have logged out", {
+        position: "bottom-left"
+      })
+      dispatch(logoutUser(null))
+    }}>
+      Logout
+    </div>
   </div>
-  </div>) : (<AuthLinks>
-     <li className="nav-item">
-    <Link to= "/login" className="nav-link active text-light">Login</Link>
+) : (
+  <>
+    <li className="nav-item">
+      <Link to="/login" className="nav-link active text-light">Login</Link>
+    </li>
+    <li className="nav-item">
+      <Link to="/sign-up" className="nav-link active text-light">Sign Up</Link>
+    </li>
+  </>
+)}
 
-     </li>
-     <li className="nav-item">
-      <Link to ="/sign-up" className="nav-link active text-light">Sign Up</Link>
-     </li>
-    </AuthLinks>
-    
- )}
 </nav>
 
     </div>

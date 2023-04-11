@@ -1,25 +1,16 @@
- .category {
-     height: 450px;
-     background-color: #EEEEEE;
-     
+.category {
+    background-color: #F2F7F0;
+    padding: 2rem 4rem;
 
- }
+}
 
- .category img {
-    height: 170px;
-    width: 150px;
- }
-
- .category h1 {
-     font-family: 'Playfair Display', serif;
-     color: #357402 !important;
-
- }
-
- .category h3 {
-     font-family: 'Playfair Display', serif;
-     color: orange;
- }
+.category h3 {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1F5229;
+}
 
  .category .btn-success {
      background-color: orange !important;
@@ -54,3 +45,18 @@
  .category .back-link:hover {
      color: #1F5229;
  }
+
+ .category .next-link {
+     color: #F76400;
+     cursor: pointer;
+     position: absolute;
+     top: 175px;
+     right: 20px;
+
+ }
+
+ .category .next-link:hover {
+     color: #1F5229;
+ }
+
+ 
