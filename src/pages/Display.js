@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import './Display.css';
 
 
@@ -24,6 +24,20 @@ export default function Display (){
 </svg></p>
 <input type="text" placeholder="Search Here"></input><button>Search</button>
 
+<div className="right-nav">
+    <NavLink className={({ isActive }) =>
+                isActive ? "link-active" : "link-inactive"
+            }
+            to ="/basket"><p>View Products in Fresh Market</p></NavLink>
+
+            <NavLink className={({ isActive }) =>
+                isActive ? "link-active" : "link-inactive"
+            }
+            to ="/main-display/category"><p>Sort by Category</p></NavLink>
+ 
+</div>
+<div className="content">
+    <Outlet/></div>
     
             </div>
             </div>

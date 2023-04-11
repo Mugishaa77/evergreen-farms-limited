@@ -62,3 +62,31 @@
     color: #1F5229;
 }
 
+.main-display a {
+    text-decoration: none;
+}
+
+.main-display p {
+    color: #1F5229;
+}
+
+.main-display p:hover {
+    color: #F76400;
+}
+
+.main-display .right-nav {
+    height: calc(100vh - 70px);
+        overflow-y: auto;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        top: 300;
+        border-right: 1px solid #1F5229;
+}
+
+.main-display .content {
+    margin-left: 201px;
+        padding: 2rem 2rem;
+        width: calc(100% - 200px);
+}
