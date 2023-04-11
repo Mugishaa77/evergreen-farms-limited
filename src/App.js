@@ -22,6 +22,7 @@ import GrocerCreateProduct from './grocer-ui/GrocerCreateProduct';
 import GrocerProducts from './grocer-ui/GrocerProducts';
 import GrocerSummary from './grocer-ui/GrocerSummary';
 import GrocerDashboard from './grocer-ui/GrocerDashboard';
+import Display from './pages/Display';
 
 function App () {
   return (
@@ -40,6 +41,7 @@ function App () {
           <Route path="/product-display" exact element={<ProductDisplay/>} />
           <Route path="/about" exact element={<About/>} />
           <Route path="/contact-us" exact element={<Footer/>}/>
+          <Route path="/main-display" exact element={<Display/>}/>
 
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
 
