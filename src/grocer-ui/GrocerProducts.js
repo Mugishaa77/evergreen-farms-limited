@@ -11,7 +11,7 @@ export default function GrocerProducts (){
 
            <h3>Products</h3>
 
-        <button onClick ={() => navigate("/grocer-dashboard/grocer-products/create-product")} >
+        <button onClick ={() => navigate("/grocer-dashboard/grocer-products/grocer-create-product")} >
 
             Create</button>
             

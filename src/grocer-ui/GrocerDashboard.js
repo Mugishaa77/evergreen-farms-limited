@@ -13,7 +13,7 @@ export default function GrocerDashboard (){
                 <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }
-            to ="/grocer-dashboard/summary">Summary</NavLink>
+            to ="/grocer-dashboard/grocer-summary">Summary</NavLink>
                 <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }

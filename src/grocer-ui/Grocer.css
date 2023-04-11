@@ -1,0 +1,226 @@
+/* Grocer's Profile */
+
+.grocer-profile {
+    margin-right: 150px;
+    margin-left: 0;
+    background-color: #E5FFDA
+}
+
+.grocer-profile h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1.15px;
+
+
+}
+
+.grocer-profile label {
+    font-family: 'Poppins', serif;
+    color: #1F5229;
+    padding: 1rem;
+
+}
+
+.grocer-profile button {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+    outline: #8fe051;
+    border: none;
+    margin: 1rem;
+}
+
+.grocer-profile .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/*Grocer Dashboard*/
+
+.grocer-dashboard {
+    background-color: #F2F7F0;
+    padding: 2rem 4rem;
+    
+}
+
+.grocer-dashboard h2 {
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1F5229;
+}
+
+.grocer-dashboard .add-product-btn {
+    font-weight: 'Poppins', serif;
+    color: orangered;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 400;
+
+}
+
+.grocer-dashboard .add-product-btn:hover {
+    color: #1F5229
+}
+
+.grocer-dashboard .delete-btn {
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+}
+
+.grocer-dashboard .delete-btn:hover {
+    background-color: #BCE29E;
+    color: #1F5229;
+}
+
+/*Side Nav*/
+
+.grocer-dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.grocer-dashboard .side-nav {
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    top: 300;
+    border-right: 1px solid #1F5229;
+
+
+}
+
+.grocer-dashboard h3 {
+    margin: 0 0 1rem 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 17px;
+}
+
+.grocer-dashboard a {
+    text-decoration: none;
+    margin-bottom: 1 rem;
+    font-size: 14px;
+}
+
+.grocer-dashboard .content {
+    margin-left: 201px;
+    padding: 2rem 2rem;
+    width: calc(100% - 200px);
+}
+
+.grocer-dashboard .link-active {
+    color: orangered;
+}
+
+.grocer-dashboard .link-inactive {
+    color: #8fe051;
+}
+
+/*Grocer Products*/
+
+.grocer-products,
+.create-product {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grocer-products button {
+    padding: 9px 12px;
+    border-radius: 5px;
+    font-weight: 400;
+    letter-spacing: 1.15px;
+    background-color: #1F5229;
+    color: #BCE29E;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0.5rem 0;
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin-top: 2rem;
+}
+
+.styled-form select,
+input {
+    padding: 7px;
+    min-height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #1F5229;
+    margin: 0.3rem, 0;
+}
+
+.styled-form select {
+    color: #1F5229;
+}
+
+.image-preview {
+    margin: 2rem 0 2rem 2rem;
+    padding: 2rem;
+    border: 1px solid #1F5229;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-preview p {
+    color: #1F5229;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.grocer-products img {
+    width: 200px;
+    height: 200px;
+    margin-top: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 15px;
+}
+
+.create-submit {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 2rem;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+}
+
+.create-submit:hover {
+    background-color: #BCE29E;
+    color: #1F5229;
+}

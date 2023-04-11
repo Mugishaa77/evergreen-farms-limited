@@ -21,7 +21,7 @@ import GrocerProfile from './grocer-ui/GrocerProfile';
 import GrocerCreateProduct from './grocer-ui/GrocerCreateProduct';
 import GrocerProducts from './grocer-ui/GrocerProducts';
 import GrocerSummary from './grocer-ui/GrocerSummary';
-import GrocerDashboard from '/grocer-ui/GrocerDashboard';
+import GrocerDashboard from './grocer-ui/GrocerDashboard';
 
 function App () {
   return (
@@ -40,24 +40,27 @@ function App () {
           <Route path="/product-display" exact element={<ProductDisplay/>} />
           <Route path="/about" exact element={<About/>} />
           <Route path="/contact-us" exact element={<Footer/>}/>
+
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
 
-            
             <Route path="farmer-profile" exact element = {<FarmerProfile/>}/>
             <Route path="summary" exact element={<Summary/>}/>
             <Route path="farmer-products" exact element={<FarmerProducts/>}>
               <Route path="create-product" exact element={<CreateProduct/>}/>
             </Route>
+            </Route>
 
-            <Route path = "/grocer-dashboard" exact element={<GrocerDashboard/>}></Route>
+            <Route path = "/grocer-dashboard" exact element={<GrocerDashboard/>}>
+
             <Route path="grocer-profile" exact element = {<GrocerProfile/>}/>
             <Route path="grocer-summary" exact element={<GrocerSummary/>}/>
             <Route path="grocer-products" exact element={<GrocerProducts/>}>
               <Route path="grocer-create-product" exact element={<GrocerCreateProduct/>}/>
             </Route>
+            </Route>
 
             
-          </Route>
+          
           
 
            

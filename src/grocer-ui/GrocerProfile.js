@@ -5,7 +5,7 @@ export default function GrocerProfile () {
     return(
         <div className="grocer-profile">
             <div className="container">
-                <h2>grocer's Profile</h2>
+                <h2>Grocer's Profile</h2>
                 <label>Full Name:</label>
       <input
         type="text"
