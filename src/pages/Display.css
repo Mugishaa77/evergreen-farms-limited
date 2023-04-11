@@ -85,8 +85,133 @@
         border-right: 1px solid #1F5229;
 }
 
-.main-display .content {
-    margin-left: 201px;
-        padding: 2rem 2rem;
-        width: calc(100% - 200px);
+/*Wholesale */
+.wholesale-goods {
+    background-color: #F2F7F0;
+    padding: 2rem 4rem;
+
+}
+
+.wholesale-goods h3 {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1F5229;
+}
+
+.wholesale-goods .back-link {
+    color: #F76400;
+    cursor: pointer;
+    position: absolute;
+    top: 175px;
+    left: 20px;
+
+}
+
+.wholesale-goods .back-link:hover {
+    color: #1F5229;
+}
+
+.wholesale-goods .next-link {
+    color: #F76400;
+    cursor: pointer;
+    position: absolute;
+    top: 175px;
+    right: 20px;
+
+}
+
+.wholesale-goods .next-link:hover {
+    color: #1F5229;
+}
+
+.wholesale-goods button {
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+}
+
+.wholesale-goods button:hover {
+    background-color: #BCE29E;
+    color: #1F5229;
+}
+
+.wholesale-goods p {
+    color: #1F5229;
+    font-family: 'Poppins', serif;
+}
+
+.product-search {
+    text-align: right;
+}
+
+/*Retail*/
+
+.retail {
+    background-color: #F2F7F0;
+    padding: 2rem 4rem;
+
+}
+
+.retail h3 {
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    color: #1F5229;
+}
+
+.retail .back-link {
+    color: #F76400;
+    cursor: pointer;
+    position: absolute;
+    top: 175px;
+    left: 20px;
+
+}
+
+.retail .back-link:hover {
+    color: #1F5229;
+}
+
+.retail .next-link {
+    color: #F76400;
+    cursor: pointer;
+    position: absolute;
+    top: 175px;
+    right: 20px;
+
+}
+
+.retail .next-link:hover {
+    color: #1F5229;
+}
+
+.retail button {
+    height: 40px;
+    border-radius: 5px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #1F5229;
+    color: #8fe051;
+    letter-spacing: 1.15px;
+}
+
+.retail button:hover {
+    background-color: #BCE29E;
+    color: #1F5229;
+}
+
+.retail p {
+    color: #1F5229;
+    font-family: 'Poppins', serif;
 }

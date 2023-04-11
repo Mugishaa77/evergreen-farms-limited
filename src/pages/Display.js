@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Display.css';
 
 
@@ -25,19 +25,28 @@ export default function Display (){
 <input type="text" placeholder="Search Here"></input><button>Search</button>
 
 <div className="right-nav">
-    <NavLink className={({ isActive }) =>
+    <Link  to ="/basket" className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }
-            to ="/basket"><p>View Products in Fresh Market</p></NavLink>
+           ><p>View Products in Fresh Market</p></Link>
 
-            <NavLink className={({ isActive }) =>
+            <Link  to ="/category" className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }
-            to ="/main-display/category"><p>Sort by Category</p></NavLink>
+           ><p>Sort by Category</p></Link>
+
+            <Link to ="/wholesale" className={({ isActive }) =>
+                isActive ? "link-active" : "link-inactive"
+            }
+            ><p>Wholesale Products</p></Link>
+
+            <Link to ="/retail" className={({ isActive }) =>
+                isActive ? "link-active" : "link-inactive"
+            }
+            ><p>Retail Products</p></Link>
  
 </div>
-<div className="content">
-    <Outlet/></div>
+
     
             </div>
             </div>
