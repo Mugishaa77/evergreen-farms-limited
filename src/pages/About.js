@@ -15,17 +15,15 @@ const [activeIndex, setActiveIndex] = useState(null);
                 <h2>About Us</h2>
                   <div className="row">
                     <div className="col-6">
-
+                       {/* Will definitely revisit the about section with help from the team */}
 
                     <h6  className={activeIndex === 0 ? "active" : ""}
               onClick={() => handleClick(0)}> Our Story </h6>
                     <p className={activeIndex === 0 ? "active" : ""}>
                      Evergreen Farms was started as a small scale vegetable home orchard in Nyalenda slums in
                    Kisumu, Kenya by Leisley Odhiambo (Odhis). 
-                   The name Evergreen derives from the fact that amid the difficulties and challenges, the
-                    residents of Nyalenda had an oasis of fresh farm produce, within a desert of strife and
-                    pandemonium  the ever green farm. farm. Later, it became Evergreen Farms when Odhis decided
-                     to take it up as a full-time business. 
+                    It became Evergreen Farms when Odhis decided
+                     to take it up as a full-time business. (to be updated with a vision/goal) 
                      </p>
 
                      <h6 className={activeIndex === 1 ? "active" : ""}

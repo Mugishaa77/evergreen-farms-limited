@@ -77,7 +77,25 @@
     color: #F76400;
 }
 
+@media (max-width: 900px) {
+    .main-display {
+        flex-direction: column;
+        padding: 2rem;
+    }
 
+    .main-display h3 {
+        font-size: 28px;
+    }
+
+    .main-display .back-link,
+    .main-display .next-link {
+        top: 20px;
+        position: static;
+        margin-bottom: 1rem;
+    }
+}
+/*Position the nav divs appropriately to enable mobile view */
+/* Start on media queries and mobile responsiveness from this section next time */
 
 /*Wholesale */
 .wholesale-goods {
