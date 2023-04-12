@@ -10,6 +10,9 @@ export default function CreateProduct() {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [category, setCategory] = useState('');
+  const [measurement, setMeasurement] = useState('');
+  const [info, setInfo] = useState('');
+
 
   console.log(productImg);
 
@@ -37,6 +40,8 @@ export default function CreateProduct() {
       name,
       price,
       category,
+      measurement,
+      info,
       image: productImg,
     }));
   };
@@ -48,11 +53,21 @@ export default function CreateProduct() {
         <input type="file" accept="image/*" onChange={handleProductImageUpload} required />
         <select onChange={(e) => setCategory(e.target.value)} required>
           <option value="">Select Category</option>
-          <option value="fruit">Fruit</option>
-          <option value="vegetable">Vegetable</option>
+          <option value="Wholesale">Wholesale</option>
+          <option value="Retail">Retail</option>
+        </select>
+        <select onChange={(e) => setMeasurement(e.target.value)} required>
+          <option value="">Select Measurement</option>
+          <option value="Single">Single</option>
+          <option value="Bale">Bale</option>
+          <option value="Bunch">Bunch</option>
+          <option value="Kilogram">Kilogram</option>
+          <option value="other">Other</option>
+
         </select>
         <input type="text" required placeholder="Name" onChange={(e) => setName(e.target.value)} />
         <input type="text" required placeholder="Price in kshs" onChange={(e) => setPrice(e.target.value)} />
+        <input type="text"  placeholder="Additional information on product" onChange={(e) => setInfo(e.target.value)} />
         <button className="create-submit" type="submit">Submit</button>
       </form>
       <div className="image-preview">

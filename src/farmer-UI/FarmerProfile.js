@@ -34,6 +34,13 @@ export default function FarmerProfile () {
         className="form-control"
       />
 
+       {/* Should be auto-generated based on first-come first-serve basis // */}
+      <label>Stall Number:</label>
+      <input
+        type="text"
+        name="farmerStallNumber"
+        className="form-control"
+      />
       
     <button>Submit</button>
 
