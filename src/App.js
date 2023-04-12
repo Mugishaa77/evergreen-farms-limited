@@ -1,32 +1,44 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+
+// pages
 import Navbar from './pages/Navbar';
 import Basket from './pages/Basket';
 import Hero from './pages/Hero';
 import NotFound from './pages/NotFound';
-import { ToastContainer } from 'react-toastify';
-import "react-toastify/dist/ReactToastify.css";
 import BasketOne from './pages/BasketOne';
-import Login from './login/Login';
-import SignUp from './customer-form/SignUp';
-import FarmerProfile from './farmer-UI/FarmerProfile';
-import FarmerDashboard from './farmer-UI/FarmerDashboard';
-import FarmerProducts from './farmer-UI/FarmerProducts';
-import Summary from './farmer-UI/Summary';
-import CreateProduct from './farmer-UI/CreateProduct';
-import ProductDisplay from './pages/ProductDisplay';
 import About from './pages/About';
 import Footer from './pages/Footer';
-import GrocerProfile from './grocer-ui/GrocerProfile';
-import GrocerCreateProduct from './grocer-ui/GrocerCreateProduct';
-import GrocerProducts from './grocer-ui/GrocerProducts';
-import GrocerSummary from './grocer-ui/GrocerSummary';
-import GrocerDashboard from './grocer-ui/GrocerDashboard';
 import Display from './pages/Display';
 import Category from './pages/Category';
 import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
 import StallDisplay from './pages/StallDisplay';
+
+// login
+import Login from './login/Login';
+
+// toastify
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+
+// grocer-UI
+import GrocerProfile from './grocer-ui/GrocerProfile';
+import GrocerCreateProduct from './grocer-ui/GrocerCreateProduct';
+import GrocerProducts from './grocer-ui/GrocerProducts';
+import GrocerSummary from './grocer-ui/GrocerSummary';
+import GrocerDashboard from './grocer-ui/GrocerDashboard';
+
+// farmer-UI
+import FarmerProfile from './farmer-UI/FarmerProfile';
+import FarmerDashboard from './farmer-UI/FarmerDashboard';
+import FarmerProducts from './farmer-UI/FarmerProducts';
+import Summary from './farmer-UI/Summary';
+import CreateProduct from './farmer-UI/CreateProduct';
+
+// customer-form
+import SignUp from './customer-form/SignUp';
+
 
 function App () {
   return (
@@ -42,7 +54,6 @@ function App () {
           <Route path="/login" exact element={<Login/>} />
           <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/farmer-ui" exact element={<FarmerProfile/>} />
-          <Route path="/product-display" exact element={<ProductDisplay/>} />
           <Route path="/about" exact element={<About/>} />
           <Route path="/contact-us" exact element={<Footer/>}/>
           <Route path="/main-display" exact element={<Display/>}/>
