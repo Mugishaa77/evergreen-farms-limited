@@ -43,6 +43,33 @@
     padding: 20px;
 }
 
+@media screen and (max-width: 900px) {
+    .grocer-profile {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .grocer-profile h2 {
+        font-size: 1.5rem;
+    }
+
+    .grocer-profile label {
+        font-size: 0.8rem;
+    }
+
+    .grocer-profile button {
+        width: 80px;
+        height: 30px;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
+
+    .grocer-profile .container {
+        max-width: 90%;
+        padding: 10px;
+    }
+}
+
 /*Grocer Dashboard*/
 
 .grocer-dashboard {
@@ -90,6 +117,27 @@
     color: #1F5229;
 }
 
+@media screen and (max-width: 900px) {
+    .grocer-dashboard {
+        padding: 2rem 2rem;
+    }
+
+    .grocer-dashboard h2 {
+        font-size: 2rem;
+    }
+
+    .grocer-dashboard .add-product-btn {
+        font-size: 0.8rem;
+    }
+
+    .grocer-dashboard .delete-btn {
+        width: 80px;
+        height: 30px;
+        font-size: 0.8rem;
+        margin-top: 1rem;
+    }
+}
+
 /*Side Nav*/
 
 .grocer-dashboard {
@@ -135,6 +183,40 @@
 
 .grocer-dashboard .link-inactive {
     color: #8fe051;
+}
+
+@media screen and (max-width: 900px) {
+    .grocer-dashboard {
+        flex-direction: column;
+    }
+
+    .grocer-dashboard .side-nav {
+        width: 100%;
+        height: auto;
+        border: none;
+        border-bottom: 1px solid #1F5229;
+        padding: 1rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        position: sticky;
+        top: 70px;
+    }
+
+    .grocer-dashboard .content {
+        margin-left: 0;
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+
+    .grocer-dashboard h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .grocer-dashboard a {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
 }
 
 /*Grocer Products*/
@@ -223,4 +305,23 @@ input {
 .create-submit:hover {
     background-color: #BCE29E;
     color: #1F5229;
+}
+
+@media screen and (max-width: 900px) {
+
+    .grocer-products,
+    .create-product {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .styled-form {
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+
+    .image-preview {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
 }
