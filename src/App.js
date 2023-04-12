@@ -26,6 +26,7 @@ import Display from './pages/Display';
 import Category from './pages/Category';
 import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
+import StallDisplay from './pages/StallDisplay';
 
 function App () {
   return (
@@ -48,6 +49,7 @@ function App () {
           <Route path="/category" exact element = {<Category/>}/>
           <Route path="/wholesale" exact element= {<Wholesale/>}/>
           <Route path="/retail" exact element={<Retail/>}/>
+          <Route path="/stall" exact element={<StallDisplay/>}/>
           
 
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>

@@ -65,7 +65,7 @@ export default function Display (){
             }
             ><p>Identify Stall by Name </p></Link>
 
-            <Link to ="/" className={({ isActive }) =>
+            <Link to ="/stall" className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }
             ><p>See all Stalls Here <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
