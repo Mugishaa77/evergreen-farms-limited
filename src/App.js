@@ -14,6 +14,8 @@ import Category from './pages/Category';
 import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
 import StallDisplay from './pages/StallDisplay';
+import ProductList from './pages/ProductList';
+
 
 // login
 import Login from './login/Login';
@@ -61,6 +63,7 @@ function App () {
           <Route path="/wholesale" exact element= {<Wholesale/>}/>
           <Route path="/retail" exact element={<Retail/>}/>
           <Route path="/stall" exact element={<StallDisplay/>}/>
+          <Route path="/all" exact element={<ProductList/>}/>
           
 
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
