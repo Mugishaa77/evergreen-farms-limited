@@ -3,44 +3,38 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import { url } from './api';
 
-
-
 const initialState = {
   items: [],
   status: null,
   createStatus: null, 
-  
 };
 
-  export const productsFetch = createAsyncThunk(
+export const productsFetch = createAsyncThunk(
   'products/productsFetch',
   async () => {
-    
-    const response = await axios.fetchById(`${url}/products`);
-    return response.data;
-    
+    try {
+      const response = await axios.get(`${url}/products`);
+      return response.data;
+    } catch (error) {
+      console.log(error);
+      throw error;
+    }
   }
 );
 
-   export const productsCreate = createAsyncThunk(
+export const productsCreate = createAsyncThunk(
   'products/productsCreate',
   async (values) => {
     try {
-    const response = await axios.post(`${url}/products`, values);
-    return response.data;
-
-    }catch(error) {
+      const response = await axios.post(`${url}/products`, values);
+      return response.data;
+    } catch (error) {
       console.log(error);
-      toast.error(error.response?.data)
+      toast.error(error.response?.data);
+      throw error;
     }
-    
-    
-    
   }
 );
-
-
-
 
 const productsSlice = createSlice({
   name: 'products',
@@ -56,8 +50,6 @@ const productsSlice = createSlice({
     },
     [productsFetch.rejected]: (state, action) => {
       state.status = 'rejected';
-      
-
     },
     [productsCreate.pending]: (state, action) => {
       state.createStatus = 'pending';
@@ -68,8 +60,6 @@ const productsSlice = createSlice({
     },
     [productsCreate.rejected]: (state, action) => {
       state.createStatus = 'rejected';
-      
-
     },
   },
 });
