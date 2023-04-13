@@ -56,19 +56,23 @@ export default function Basket() {
         <>
           <h2> Fresh Market</h2>
           <div className="products">
-            {products.map((product) => (
-  <div key={product._id} className="product">
-    <h3>{product.name}</h3>
-    <img src={product.image.url} alt={product.name} />
-    <div className="details">
-      <span>{product.desc}</span>
-      <span className="price">Kshs {product.price}</span>
+           {products.map((product) => {
+  console.log(product); // add this line to print the product object
+  return (
+    <div key={product._id} className="product">
+      <h3>{product.name}</h3>
+      <img src={product.image} alt={product.name} />
+      <div className="details">
+        <span>{product.desc}</span>
+        <span className="price">Kshs {product.price}</span>
+      </div>
+      <button onClick={() => handleAddToBasket(product)}>
+        Add to Basket
+      </button>
     </div>
-    <button onClick={() => handleAddToBasket(product)}>
-      Add to Basket
-    </button>
-  </div>
-))}
+  );
+})}
+
 
           </div>
         </>
