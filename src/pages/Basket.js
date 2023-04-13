@@ -19,6 +19,7 @@ export default function Basket() {
     try {
       setIsLoading(true);
       const response = await fetch(`${url}/products`);
+      console.log(`${url}/products`)
       const result = await response.json();
       setIsLoading(false);
       setFetchedData(result);
@@ -56,18 +57,19 @@ export default function Basket() {
           <h2> Fresh Market</h2>
           <div className="products">
             {products.map((product) => (
-              <div key={product._id} className="product">
-                <h3>{product.name}</h3>
-                <img src={product.image.url} alt={product.name} />
-                <div className="details">
-                  <span>{product.desc}</span>
-                  <span className="price">Kshs {product.price}</span>
-                </div>
-                <button onClick={() => handleAddToBasket(product)}>
-                  Add to Basket
-                </button>
-              </div>
-            ))}
+  <div key={product._id} className="product">
+    <h3>{product.name}</h3>
+    <img src={product.image.url} alt={product.name} />
+    <div className="details">
+      <span>{product.desc}</span>
+      <span className="price">Kshs {product.price}</span>
+    </div>
+    <button onClick={() => handleAddToBasket(product)}>
+      Add to Basket
+    </button>
+  </div>
+))}
+
           </div>
         </>
       )}
