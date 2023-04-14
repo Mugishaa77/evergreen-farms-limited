@@ -1,16 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Grocer.css';
 
 export default function GrocerProfile () {
+
+  const [fullName, setFullName] = useState('');
+  const [emailAddress, setEmailAddress] = useState('');
+  const [contactNumber, setContactNumber] = useState('');
+  const [stallName, setStallName] = useState('');
+  const [stallNumber, setStallNumber] = useState('');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const profile = new Profile({
+        fullName,
+        emailAddress,
+        contactNumber,
+        stallName,
+        stallNumber,
+        role: 'grocer'
+      });
+
+      await profile.save();
+      // Do something after the data is saved successfully
+      toast.success(`Grocer Profile saved successfully!`, {
+        position: 'bottom-left',
+        theme: 'dark',
+      });
+    } catch (error) {
+      // Handle errors here
+      toast.error(` Grocer Profile not saved!`, {
+        position: 'bottom-left',
+        theme: 'dark',
+      });
+    }
+  };
+
     return(
         <div className="grocer-profile">
             <div className="container">
                 <h2>Grocer's Profile</h2>
+                <form onSubmit={handleSubmit}>
                 <label>Full Name:</label>
       <input
         type="text"
         name="fullName"
         className="form-control"
+        value={fullName}
+            onChange={(event) => setFullName(event.target.value)}
       />
 
       <label>Email Address:</label>
@@ -18,6 +58,8 @@ export default function GrocerProfile () {
         type="text"
         name="grocerEmailAddress"
         className="form-control"
+        value={emailAddress}
+            onChange={(event) => setEmailAddress(event.target.value)}
       />
 
       <label>Contact Number:</label>
@@ -25,6 +67,8 @@ export default function GrocerProfile () {
         type="text"
         name="grocerContactNumber"
         className="form-control"
+         value={contactNumber}
+            onChange={(event) => setContactNumber(event.target.value)}
       />
 
       <label>Stall Name:</label>
@@ -32,6 +76,8 @@ export default function GrocerProfile () {
         type="text"
         name="grocerStallName"
         className="form-control"
+        value={stallName}
+            onChange={(event) => setStallName(event.target.value)}
       />
 
 
@@ -41,11 +87,14 @@ export default function GrocerProfile () {
         type="text"
         name="grocerStallNumber"
         className="form-control"
+        value={stallNumber}
+            onChange={(event) => setStallNumber(event.target.value)}
       />
 
 
       
     <button>Submit</button>
+    </form>
 
 
             </div>
