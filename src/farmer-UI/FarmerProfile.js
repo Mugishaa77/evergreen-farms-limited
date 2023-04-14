@@ -14,7 +14,7 @@ export default function FarmerProfile() {
     event.preventDefault();
 
     try {
-      const profile = new Profile({
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/farmerProfile`, {
         fullName,
         emailAddress,
         contactNumber,
