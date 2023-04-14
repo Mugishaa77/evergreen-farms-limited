@@ -1,6 +1,7 @@
 .main-display {
     background-color: #F2F7F0;
     padding: 2rem 4rem;
+    overflow-x: auto;
     display: flex;
         flex-direction: row;
     
@@ -87,13 +88,12 @@
         font-size: 28px;
     }
 
-    .main-display .back-link,
-    .main-display .next-link {
-        top: 20px;
-        position: static;
-        margin-bottom: 1rem;
-    }
+    
 }
+
+
+
+
 /*Position the nav divs appropriately to enable mobile view */
 /* Start on media queries and mobile responsiveness from this section next time */
 
