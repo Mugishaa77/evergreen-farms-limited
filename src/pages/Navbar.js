@@ -23,23 +23,23 @@ export default function Navbar () {
   
     return (
     <div>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-style">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-style">
+  <div className="container-fluid">
+    <a className="navbar-brand" href="/">
       <img src={evergreen} width="220" height="130" alt=""/>
     </a>
-    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
+    <button className="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span className="navbar-toggler-icon"></span>
 </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+    <div className="collapse navbar-collapse" id="navbarNav">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
            <Link to="/" className="nav-link active text-light">
              Home
            </Link>
         </li>
-        <li class="nav-item">
+        <li className="nav-item">
           <Link to="/basket" className="nav-link active text-light">
             Market
                 </Link>

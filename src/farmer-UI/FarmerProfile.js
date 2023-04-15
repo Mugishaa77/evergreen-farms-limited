@@ -12,6 +12,8 @@ export default function FarmerProfile() {
   const [stallName, setStallName] = useState('');
   const [stallNumber, setStallNumber] = useState('');
 
+  
+
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -23,7 +25,8 @@ export default function FarmerProfile() {
         stallName,
         stallNumber,
         role: 'farmer'
-      });
+      }
+       );console.log(`${url}/api/farmerProfile`)
 
       if (response.status === 200) {
         // Do something after the data is saved successfully
