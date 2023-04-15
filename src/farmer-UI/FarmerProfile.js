@@ -25,15 +25,22 @@ export default function FarmerProfile() {
         role: 'farmer'
       });
 
-      await response.save();
-      // Do something after the data is saved successfully
-      toast.success(`Farmer Profile saved successfully!`, {
-        position: 'bottom-left',
-        theme: 'dark',
-      });
+      if (response.status === 200) {
+        // Do something after the data is saved successfully
+        toast.success(`Farmer Profile saved successfully!`, {
+          position: 'bottom-left',
+          theme: 'dark',
+        });
+      } else {
+        // Handle errors here
+        toast.error(` Farmer Profile not saved!`, {
+          position: 'bottom-left',
+          theme: 'dark',
+        });
+      }
     } catch (error) {
       // Handle errors here
-      toast.error(`Farmer Profile not saved!`, {
+      toast.error(`Farmer Profile not saved`, {
         position: 'bottom-left',
         theme: 'dark',
       });

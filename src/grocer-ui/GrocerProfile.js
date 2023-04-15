@@ -16,31 +16,31 @@ export default function GrocerProfile () {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-      const response = await axios.post(`${url}/api/grocerProfile`, {
-        fullName,
-        emailAddress,
-        contactNumber,
-        stallName,
-        stallNumber,
-        role: 'grocer'
-      });
+    const response = await axios.post(`${url}/api/grocerProfile`, {
+  fullName,
+  emailAddress,
+  contactNumber,
+  stallName,
+  stallNumber,
+  role: 'grocer'
+});
 
-      await response.save();
-      // Do something after the data is saved successfully
-      toast.success(`Grocer Profile saved successfully!`, {
-        position: 'bottom-left',
-        theme: 'dark',
-      });
-    } catch (error) {
-      // Handle errors here
-      toast.error(` Grocer Profile not saved!`, {
-        position: 'bottom-left',
-        theme: 'dark',
-      });
-    }
-  };
+   if (response.status === 200) {
+  // Do something after the data is saved successfully
+  toast.success(`Grocer Profile saved successfully!`, {
+    position: 'bottom-left',
+    theme: 'dark',
+  });
+} else {
+  // Handle errors here
+  toast.error(` Grocer Profile not saved!`, {
+    position: 'bottom-left',
+    theme: 'dark',
+  });
+}
 
+    
+      
     return(
         <div className="grocer-profile">
             <div className="container">
@@ -102,4 +102,4 @@ export default function GrocerProfile () {
             </div>
         </div>
     );
-}
+}}
