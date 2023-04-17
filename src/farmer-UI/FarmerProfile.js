@@ -18,7 +18,7 @@ export default function FarmerProfile() {
     event.preventDefault();
 
     try {
-      const response = await axios.post(`${baseUrl}/api/farmerProfile`, {
+      const response = await axios.post(`${baseUrl}/api/farmer`, {
         fullName,
         emailAddress,
         contactNumber,
@@ -26,7 +26,7 @@ export default function FarmerProfile() {
         stallNumber,
         role: 'farmer'
       }
-       );console.log(`${baseUrl}/api/farmerProfile`)
+       );console.log(`${baseUrl}/api/farmer`)
 
       if (response.status === 200) {
         // Do something after the data is saved successfully

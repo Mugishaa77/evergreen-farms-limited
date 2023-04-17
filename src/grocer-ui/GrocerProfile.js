@@ -16,7 +16,7 @@ export default function GrocerProfile () {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await axios.post(`${baseUrl}/api/grocerProfile`, {
+    const response = await axios.post(`${baseUrl}/api/grocer`, {
   fullName,
   emailAddress,
   contactNumber,
