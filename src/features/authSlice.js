@@ -1,6 +1,6 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
 import  axios from 'axios';
-import { url } from './api';
+import { baseUrl } from './api';
 import jwtDecode from 'jwt-decode';
 
 const initialState = {
@@ -25,7 +25,7 @@ export const registerUser = createAsyncThunk(
     async(values, {rejectWithValue}) => {
         try{
 
-           const token =  await axios.post(`${url}/register`, {
+           const token =  await axios.post(`${baseUrl}/register`, {
                 email: values.email,
                 password: values.password,
                 firstName: values.firstName,

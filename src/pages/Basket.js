@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
-import { url } from '../features/api';
+import { baseUrl } from '../features/api';
 
 import './Basket.css';
 import { addToBasket } from '../features/basketSlice';
@@ -18,8 +18,9 @@ export default function Basket() {
   const fetchData = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch(`${url}/products`);
-      console.log(`${url}/products`)
+      const response = await fetch(`${baseUrl}/products`);
+      console.log(`${baseUrl}/products`)
+      console.log(process.env.REACT_APP_BASE_URL)
       const result = await response.json();
       setIsLoading(false);
       setFetchedData(result);

@@ -13,8 +13,6 @@ import Display from './pages/Display';
 import Category from './pages/Category';
 import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
-import StallDisplay from './pages/StallDisplay';
-
 
 
 // login
@@ -40,6 +38,12 @@ import CreateProduct from './farmer-UI/CreateProduct';
 
 // customer-form
 import SignUp from './customer-form/SignUp';
+
+// stalls
+import StallDisplay from './stalls/StallDisplay';
+import StallLayout from './stalls/StallLayout';
+
+
 
 
 function App () {
@@ -79,6 +83,7 @@ function App () {
 
             <Route path="grocer-profile" exact element = {<GrocerProfile/>}/>
             <Route path="grocer-summary" exact element={<GrocerSummary/>}/>
+            <Route path="stall-layout" exact element={<StallLayout/>}/>
             <Route path="grocer-products" exact element={<GrocerProducts/>}>
               <Route path="grocer-create-product" exact element={<GrocerCreateProduct/>}/>
             </Route>

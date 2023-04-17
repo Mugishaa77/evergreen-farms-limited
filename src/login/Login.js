@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { url } from '../features/api';
+import { baseUrl } from '../features/api';
 import axios from 'axios';
 import './Login.css';
 
@@ -21,7 +21,7 @@ const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${url}/login`, {
+      const response = await axios.post(`${baseUrl}/login`, {
         username,
         password,
       });

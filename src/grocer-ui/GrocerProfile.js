@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import { url } from '../features/api';
+import { baseUrl } from '../features/api';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import './Grocer.css';
@@ -16,7 +16,7 @@ export default function GrocerProfile () {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await axios.post(`${url}/api/grocerProfile`, {
+    const response = await axios.post(`${baseUrl}/api/grocerProfile`, {
   fullName,
   emailAddress,
   contactNumber,

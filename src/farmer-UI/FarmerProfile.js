@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Farmer.css';
-import { url } from '../features/api';
+import { baseUrl} from '../features/api';
 
 export default function FarmerProfile() {
   const [fullName, setFullName] = useState('');
@@ -18,7 +18,7 @@ export default function FarmerProfile() {
     event.preventDefault();
 
     try {
-      const response = await axios.post(`${url}/api/farmerProfile`, {
+      const response = await axios.post(`${baseUrl}/api/farmerProfile`, {
         fullName,
         emailAddress,
         contactNumber,
@@ -26,7 +26,7 @@ export default function FarmerProfile() {
         stallNumber,
         role: 'farmer'
       }
-       );console.log(`${url}/api/farmerProfile`)
+       );console.log(`${baseUrl}/api/farmerProfile`)
 
       if (response.status === 200) {
         // Do something after the data is saved successfully
