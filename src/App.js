@@ -13,6 +13,7 @@ import Display from './pages/Display';
 import Category from './pages/Category';
 import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
+import Checkout from './pages/Checkout';
 
 
 // login
@@ -67,6 +68,7 @@ function App () {
           <Route path="/wholesale" exact element= {<Wholesale/>}/>
           <Route path="/retail" exact element={<Retail/>}/>
           <Route path="/stall" exact element={<StallDisplay/>}/>
+          <Route path="/checkout" exact element={<Checkout/>}/>
           
           
 
