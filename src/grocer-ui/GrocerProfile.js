@@ -47,6 +47,7 @@ export default function GrocerProfile () {
                 <h2>Grocer's Profile</h2>
                 <form onSubmit={handleSubmit}>
                 <label>Full Name:</label>
+                {/*  */}
       <input
         type="text"
         name="fullName"
