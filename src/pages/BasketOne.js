@@ -102,7 +102,10 @@ export default function BasketOne () {
                                 Kshs {JSON.stringify(basket.basketTotalAmount)}</strong></span>
                         </div>
                         <p>Taxes and Delivery calculated at checkout</p>
-                        <button>Check-out</button>
+                        <Link to="/checkout">
+                            <button>Check-out</button>
+                        </Link>
+                        
                         <div className="continue-shopping">
                     <Link to ="/basket">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
