@@ -53,7 +53,7 @@ export default function Navbar () {
            <Link to="/grocer-dashboard" className="nav-link active text-light">Grocer</Link>
         </li>
        <li className="nav-item">
-           <Link to="/main-display" className="nav-link active text-light">Show All</Link>
+           <Link to="/main-display" className="nav-link active text-light">Main Menu</Link>
         </li>
              
              <li className="nav-item">

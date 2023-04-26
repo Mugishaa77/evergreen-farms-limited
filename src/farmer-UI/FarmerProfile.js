@@ -3,7 +3,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Farmer.css';
-import { baseUrl} from '../features/api';
+import { baseUrl } from '../features/api';
 
 export default function FarmerProfile() {
   const [fullName, setFullName] = useState('');
@@ -11,8 +11,6 @@ export default function FarmerProfile() {
   const [contactNumber, setContactNumber] = useState('');
   const [stallName, setStallName] = useState('');
   const [stallNumber, setStallNumber] = useState('');
-
-  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
