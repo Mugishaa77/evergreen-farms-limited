@@ -16,7 +16,7 @@ export default function Navbar () {
   return (
     <div>
       <Link to='/login'>Login</Link>
-      <Link to='/sign-up'>Sign Up</Link>
+      <Link to='/register'>Register</Link>
     </div>
   );
 };
@@ -88,7 +88,7 @@ export default function Navbar () {
       <Link to="/login" className="nav-link active text-light">Login</Link>
     </li>
     <li className="nav-item">
-      <Link to="/sign-up" className="nav-link active text-light">Sign Up</Link>
+      <Link to="/register" className="nav-link active text-light">Register</Link>
     </li>
   </>
 )}
