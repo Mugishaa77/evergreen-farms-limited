@@ -44,6 +44,9 @@ import SignUp from './customer-form/SignUp';
 import StallDisplay from './stalls/StallDisplay';
 import StallLayout from './stalls/StallLayout';
 
+// register
+import Register from './registration/Register';
+
 
 
 
@@ -69,7 +72,7 @@ function App () {
           <Route path="/retail" exact element={<Retail/>}/>
           <Route path="/stall" exact element={<StallDisplay/>}/>
           <Route path="/checkout" exact element={<Checkout/>}/>
-          
+          <Route path="/register" exact element={<Register/>}/>
           
 
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
