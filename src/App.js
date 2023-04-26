@@ -37,9 +37,6 @@ import FarmerProducts from './farmer-UI/FarmerProducts';
 import Summary from './farmer-UI/Summary';
 import CreateProduct from './farmer-UI/CreateProduct';
 
-// customer-form
-import SignUp from './customer-form/SignUp';
-
 // stalls
 import StallDisplay from './stalls/StallDisplay';
 import StallLayout from './stalls/StallLayout';
@@ -62,7 +59,6 @@ function App () {
           <Route path="/basket" exact element={<Basket/>} />
           <Route path="/basket-one" exact element={<BasketOne />} />
           <Route path="/login" exact element={<Login/>} />
-          <Route path="/sign-up" exact element={<SignUp/>} />
           <Route path="/farmer-ui" exact element={<FarmerProfile/>} />
           <Route path="/about" exact element={<About/>} />
           <Route path="/contact-us" exact element={<Footer/>}/>
