@@ -6,6 +6,7 @@ import UserRole from './UserRole';
 import Complete from './Complete';
 import Confirmation from './Confirmation';
 import { useDispatch, useSelector } from 'react-redux';
+import axios from 'axios';
 import { registerUser } from '../features/authSlice';
 
 export default function Register () {
@@ -13,6 +14,15 @@ export default function Register () {
     const navigate = useNavigate ();
 
     // const auth and useEffect
+    //  const auth = useSelector((state) => state.auth);
+  //console.log(auth);
+
+  //useEffect (() => {
+    // if (auth._id ){
+    //   navigate("/basket")
+    // }
+//   },
+//   [auth._id, navigate])///
 
     const [step, setStep] = React.useState(1);
     const [user, setUser] = React.useState({
@@ -41,6 +51,17 @@ export default function Register () {
 
 
     // const handleSubmit
+    const handleSubmit = (e) => {
+    e.preventDefault();
+    axios
+      .post("/api/register", user)
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
     
 
@@ -78,7 +99,7 @@ export default function Register () {
                         return (
                             <Confirmation
                             prevStep={prevStep}
-        //   handleSubmit={handleSubmit}
+                handleSubmit={handleSubmit}
           user={user}
         />);
 

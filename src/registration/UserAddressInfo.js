@@ -9,7 +9,7 @@ export default function UserAddressInfo ({ nextStep, prevStep, onChange, user}) 
         <div className="user-address">
             <div className="container">
                 <h2>User Address Information</h2>
-                <label>Phone Number</label>
+                <label>Phone Number </label>
                 <input
                 type="text"
                 name="phoneNumber"
