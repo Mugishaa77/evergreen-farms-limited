@@ -1,13 +1,20 @@
+import './Register.css';
+
 export default function UserIdentity ({ nextStep, onChange, user}) {
+    const handleChange = (e) => {
+    const { name, value } = e.target;
+    onChange(name, value);
+  };
+
     return (
         <div className="user-id">
-            <div className="container">
+             <div className="container"> 
                 <h2>User Identity</h2>
                 <label>First Name</label>
                 <input
                 type="text"
                 name="firstName"
-                onChange={(e) => onChange= ('firstName', e.target.value)}
+                onChange={handleChange}
                 value={user.firstName}
                 className="form-control"
                 />
@@ -16,8 +23,8 @@ export default function UserIdentity ({ nextStep, onChange, user}) {
                 <input
                 type="text"
                 name="lastName"
-                onChange={(e) => onChange= ('lastName', e.target.value)}
-                value={user.lastName}
+                 onChange={handleChange}
+                  value={user.lastName}
                 className="form-control"
                 />
 
@@ -25,7 +32,7 @@ export default function UserIdentity ({ nextStep, onChange, user}) {
                 <input
                 type="text"
                 name="idNumber"
-                onChange={(e) => onChange =('idNumber', e.target.value)}
+                 onChange={handleChange}
                 value={user.idNumber}
                 className="form-control"
                 />

@@ -1,4 +1,10 @@
+import './Register.css';
+
 export default function UserAddressInfo ({ nextStep, prevStep, onChange, user}) {
+     const handleChange = (e) => {
+    const { name, value } = e.target;
+    onChange(name, value);
+  };
     return (
         <div className="user-address">
             <div className="container">
@@ -7,7 +13,7 @@ export default function UserAddressInfo ({ nextStep, prevStep, onChange, user}) 
                 <input
                 type="text"
                 name="phoneNumber"
-                onChange={(e) => onChange=('phoneNumber', e.target.value)}
+                onChange={handleChange}
                 value={user.phoneNumber}
                 className="form-control"
                 />
@@ -16,7 +22,7 @@ export default function UserAddressInfo ({ nextStep, prevStep, onChange, user}) 
                 <input
                 type="text"
                 name="email"
-                onChange={(e) => onChange=('email', e.target.value)}
+                onChange={handleChange}
                 value={user.email}
                 className="form-control"
                 />
@@ -25,7 +31,7 @@ export default function UserAddressInfo ({ nextStep, prevStep, onChange, user}) 
                 <input
                 type="text"
                 name="password"
-                onChange={(e) => onChange=('password', e.target.value)}
+                onChange={handleChange}
                 value={user.password}
                 className="form-control"
                 />

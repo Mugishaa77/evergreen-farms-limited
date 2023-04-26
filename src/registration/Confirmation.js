@@ -1,3 +1,5 @@
+import './Register.css';
+
 export default function Confirmation ({ prevStep, user }) {
     return (
         <div className="confirmation">
@@ -12,7 +14,7 @@ export default function Confirmation ({ prevStep, user }) {
                 <p>Role: {user.role}</p>
 
                 <button onClick={prevStep}>Back</button>
-                <button >Submit & Finish</button>
+                <button  className="submit">Submit & Finish</button>
 
             </div>
         </div>
