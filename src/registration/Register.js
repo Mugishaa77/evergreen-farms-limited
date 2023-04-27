@@ -3,13 +3,10 @@ import { useNavigate } from 'react-router-dom';
 import UserIdentity from './UserIdentity';
 import UserAdressInfo from './UserAddressInfo';
 import UserRole from './UserRole';
-import Complete from './Complete';
 import Confirmation from './Confirmation';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from 'axios';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { baseUrl } from '../features/api';
 import { registerUser } from '../features/authSlice';
 
 export default function Register () {
@@ -17,15 +14,15 @@ export default function Register () {
     const navigate = useNavigate ();
 
     // const auth and useEffect
-    //  const auth = useSelector((state) => state.auth);
-  //console.log(auth);
+     const auth = useSelector((state) => state.auth);
+  console.log(auth);
 
-  //useEffect (() => {
-    // if (auth._id ){
-    //   navigate("/basket")
-    // }
-//   },
-//   [auth._id, navigate])///
+  useEffect (() => {
+     if (auth._id ){
+       navigate("/basket")
+     }
+   },
+  [auth._id, navigate])
 
     const [step, setStep] = React.useState(1);
     const [user, setUser] = React.useState({
@@ -53,31 +50,35 @@ export default function Register () {
         setStep(prevStep => prevStep - 1);
     };
 
-    //remember to change back the api url
-    
-
-const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
     e.preventDefault();
-    axios
-      .post(`${baseUrl}/users`, user)
-      .then((res) => {
-        console.log(res.data);
-         toast.success('Registration successful!');
+    dispatch(registerUser(user))
+      .then(() => {
+        console.log('Registration successful');
+        toast.success('Registration successful!', {
+          position: 'top-center',
+          theme: 'colored',
+        });
+        setTimeout(() => {
+        navigate("/login");
+      }, 2000); // wait for 2 seconds before redirecting to login page
       })
       .catch((err) => {
         console.log(err);
+        toast.error('Registration failed', {
+          position: 'top-center',
+          theme: 'colored',
+        });
+        setStep(1); // redirect to first step
       });
   };
 
-  
+
+       
 
 
-    
-      
 
-  
-
-    
+     
 
     switch(step) {
         case 1:
@@ -125,10 +126,10 @@ const handleSubmit = (e) => {
         />
         );
 
-        case 5: 
-        return (
-            <Complete />
-        )
+        default:
+            return null;
+
+       
 
 
         
