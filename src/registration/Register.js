@@ -9,7 +9,11 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { registerUser } from '../features/authSlice';
 
+
+
 export default function Register () {
+
+
     const dispatch = useDispatch();
     const navigate = useNavigate ();
 
@@ -78,7 +82,8 @@ export default function Register () {
 
 
 
-     
+
+
 
     switch(step) {
         case 1:
