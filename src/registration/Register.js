@@ -59,7 +59,7 @@ export default function Register () {
 const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/users", user)
+      .post(`${baseUrl}/users`, user)
       .then((res) => {
         console.log(res.data);
          toast.success('Registration successful!');
