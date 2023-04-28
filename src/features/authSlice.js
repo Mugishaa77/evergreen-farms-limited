@@ -95,36 +95,35 @@ const authSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(registerUser.pending, (state, action) => {
-      return { ...state, registerStatus: 'pending' };
-    });
-
-    builder.addCase(registerUser.fulfilled, (state, action) => {
-      if (action.payload) {
-        const user = jwtDecode(action.payload);
+    builder
+      .addCase(registerUser.pending, (state, action) => {
+        return { ...state, registerStatus: 'pending' };
+      })
+      .addCase(registerUser.fulfilled, (state, action) => {
+        if (action.payload) {
+          const user = jwtDecode(action.payload);
+          return {
+            ...state,
+            token: action.payload,
+            email: user.email,
+            _id: user._id,
+            firstName: user.firstName,
+            lastName: user.lastName,
+            idNumber: user.idNumber,
+            phoneNumber: user.phoneNumber,
+            role: user.role,
+            registerStatus: 'success',
+          };
+        }
+        return state;
+      })
+      .addCase(registerUser.rejected, (state, action) => {
         return {
           ...state,
-          token: action.payload,
-          email: user.email,
-          _id: user._id,
-          firstName: user.firstName,
-          lastName: user.lastName,
-          idNumber: user.idNumber,
-          phoneNumber: user.phoneNumber,
-          role: user.role,
-          registerStatus: 'success',
+          registerStatus: 'rejected',
+          registerError: action.payload,
         };
-      }
-      return state;
-    });
-
-    builder.addCase(registerUser.rejected, (state, action) => {
-      return {
-        ...state,
-        registerStatus: 'rejected',
-        registerError: action.payload,
-      };
-    });
+      });
   },
 });
 
