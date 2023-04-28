@@ -40,27 +40,28 @@ const productsSlice = createSlice({
   name: 'products',
   initialState,
   reducers: {},
-  extraReducers: {
-    [productsFetch.pending]: (state, action) => {
-      state.status = 'pending';
-    },
-    [productsFetch.fulfilled]: (state, action) => {
-      state.status = 'success';
-      state.items = action.payload;
-    },
-    [productsFetch.rejected]: (state, action) => {
-      state.status = 'rejected';
-    },
-    [productsCreate.pending]: (state, action) => {
-      state.createStatus = 'pending';
-    },
-    [productsCreate.fulfilled]: (state, action) => {
-      state.createStatus = 'success';
-      state.items.push(action.payload);
-    },
-    [productsCreate.rejected]: (state, action) => {
-      state.createStatus = 'rejected';
-    },
+  extraReducers: (builder) => {
+    builder
+      .addCase(productsFetch.pending, (state, action) => {
+        state.status = 'pending';
+      })
+      .addCase(productsFetch.fulfilled, (state, action) => {
+        state.status = 'success';
+        state.items = action.payload;
+      })
+      .addCase(productsFetch.rejected, (state, action) => {
+        state.status = 'rejected';
+      })
+      .addCase(productsCreate.pending, (state, action) => {
+        state.createStatus = 'pending';
+      })
+      .addCase(productsCreate.fulfilled, (state, action) => {
+        state.createStatus = 'success';
+        state.items.push(action.payload);
+      })
+      .addCase(productsCreate.rejected, (state, action) => {
+        state.createStatus = 'rejected';
+      });
   },
 });
 
