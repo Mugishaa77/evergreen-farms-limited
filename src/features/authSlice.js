@@ -127,6 +127,29 @@ const authSlice = createSlice({
   },
 });
 
+// trial,, do not mix with good code
+
+export const loginUser = createAsyncThunk(
+  "auth/loginUser",
+  async (values, { rejectWithValue }) => {
+    try {
+      const token = await axios.post(`${baseUrl}/login`, {
+        email: values.email,
+        password: values.password,
+      });
+
+      localStorage.setItem("token", token.data);
+      return token.data;
+    } catch (error) {
+      console.log(error.response);
+      return rejectWithValue(error.response.data);
+    }
+  }
+);
+
+// end of trial
+
 export const { loadUser, logoutUser } = authSlice.actions;
 
 export default authSlice.reducer;
+// 

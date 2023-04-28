@@ -1,87 +1,88 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { baseUrl } from '../features/api';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, Link } from 'react-router-dom';
+import { loginUser } from '../features/authSlice';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './Login.css';
 
+export default function Login() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const auth = useSelector((state) => state.auth);
+  console.log(auth);
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post(`${baseUrl}/login`, {
-        email,
-        password,
-      });
-
-      // Save the JWT token to local storage
-      localStorage.setItem('token', response.data.token);
-
-      // Redirect the user to the dashboard
-      window.location.href = '/';
-
-      // Show a success message
-    toast.success('Login successful!', {
-          position: 'top-center',
-          theme: 'colored',
-        });
-
-    } catch (error) {
-      setError(error.response.data.message);
-      // Show an error message
-    toast.error('Login failed. Please check your email and password.', {
-          position: 'top-center',
-          theme: 'colored',
-        });
+  useEffect(() => {
+    if (auth._id) {
+      navigate('/basket');
     }
+  }, [auth._id, navigate]);
+
+  const [user, setUser] = useState({ email: '', password: '' });
+  console.log('Login Credentials:', user);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(loginUser(user))
+      .then(() => {
+        console.log('Log In successful');
+        toast.success('LogIn successful', {
+          position: 'top-center',
+          theme: 'dark',
+        });
+        setTimeout(() => {
+          navigate('/');
+        }, 2000);
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error('Log In failed', {
+          position: 'top-center',
+          theme: 'dark',
+        });
+      });
   };
 
   return (
     <div className="log-in">
-    <div className="container">
-      <h1 className="log-in-title">Login</h1>
-      {error && <p>{error}</p>}
-      <form onSubmit={handleSubmit} >
-        <div>
-          <label className="label">Email Address:</label>
-          <input type="text" 
-          value={email}
-           onChange={handleEmailChange} 
-           className ="form-control"/>
-        </div>
-        <div>
-          <label className="label">Password:</label>
-          <input type="password"
-           value={password} 
-           onChange={handlePasswordChange} 
-           className ="form-control"/>
-        </div>
-        <button 
-        className="log-in-button"
-        type="submit">Login</button>
-        <div className="sign-up-guide">
-        <p>Don't have an account?</p>
-        <Link to ="/register" className="sign-up-here" >Sign up here</Link>
-        </div>
-      </form>
-    </div>
+      <div className="container">
+        <h1 className="log-in-title">Login</h1>
+
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label className="label">Email Address:</label>
+            <input
+              type="text"
+              value={user.email}
+              onChange={(e) =>
+                setUser({ ...user, email: e.target.value })
+              }
+              className="form-control"
+            />
+          </div>
+          <div>
+            <label className="label">Password:</label>
+            <input
+              type="password"
+              value={user.password}
+              onChange={(e) =>
+                setUser({ ...user, password: e.target.value })
+              }
+              className="form-control"
+            />
+          </div>
+          <button className="log-in-button" type="submit">
+            Login
+          </button>
+          <div className="sign-up-guide">
+            <p>Don't have an account?</p>
+            <Link to="/register" className="sign-up-here">
+              Register here
+            </Link>
+          </div>
+        </form>
+      </div>
     </div>
   );
-};
-
-export default Login;
+}
