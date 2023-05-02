@@ -12,42 +12,7 @@ export default function FarmerProfile() {
   const [stallName, setStallName] = useState('');
   const [stallNumber, setStallNumber] = useState('');
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    try {
-      const response = await axios.post(`${baseUrl}/api/farmer`, {
-        fullName,
-        emailAddress,
-        contactNumber,
-        stallName,
-        stallNumber,
-        role: 'farmer'
-      }
-       );console.log(`${baseUrl}/api/farmer`)
-
-      if (response.status === 200) {
-        // Do something after the data is saved successfully
-        toast.success(`Farmer Profile saved successfully!`, {
-          position: 'bottom-left',
-          theme: 'dark',
-        });
-      } else {
-        // Handle errors here
-        toast.error(` Farmer Profile not saved!`, {
-          position: 'bottom-left',
-          theme: 'dark',
-        });
-      }
-    } catch (error) {
-      // Handle errors here
-      toast.error(`Farmer Profile not saved`, {
-        position: 'bottom-left',
-        theme: 'dark',
-      });
-    }
-  };
-
+  
   return (
     <div className="farmer-profile">
       <div className="container">

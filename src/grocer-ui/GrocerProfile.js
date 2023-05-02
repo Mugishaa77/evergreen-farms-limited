@@ -12,33 +12,6 @@ export default function GrocerProfile () {
   const [contactNumber, setContactNumber] = useState('');
   const [stallName, setStallName] = useState('');
   const [stallNumber, setStallNumber] = useState('');
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const response = await axios.post(`${baseUrl}/api/grocer`, {
-  fullName,
-  emailAddress,
-  contactNumber,
-  stallName,
-  stallNumber,
-  role: 'grocer'
-});
-
-   if (response.status === 200) {
-  // Do something after the data is saved successfully
-  toast.success(`Grocer Profile saved successfully!`, {
-    position: 'bottom-left',
-    theme: 'dark',
-  });
-} else {
-  // Handle errors here
-  toast.error(` Grocer Profile not saved!`, {
-    position: 'bottom-left',
-    theme: 'dark',
-  });
-}
-
     
       
     return(
@@ -103,4 +76,4 @@ export default function GrocerProfile () {
             </div>
         </div>
     );
-}}
+}
