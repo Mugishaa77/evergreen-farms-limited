@@ -12,6 +12,35 @@ export default function FarmerProfile() {
   const [stallName, setStallName] = useState('');
   const [stallNumber, setStallNumber] = useState('');
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post(`${baseUrl}/api/farmers`, {
+        fullName,
+        emailAddress,
+        contactNumber,
+        stallName,
+        stallNumber,
+      });
+      // display success message to user
+      toast.success ('Successful!', {
+        position: 'top-center',
+          theme: 'dark',
+
+      });
+       
+    } catch (err) {
+      console.error(err);
+      // display error message to user
+
+      toast.warning (`Failed`, {
+        position: 'top-center',
+        theme: 'dark',
+      });
+    }
+  };
+
+  
   
   return (
     <div className="farmer-profile">
