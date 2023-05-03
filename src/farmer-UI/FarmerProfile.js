@@ -25,7 +25,7 @@ export default function FarmerProfile() {
       // display success message to user
       toast.success ('Successful!', {
         position: 'top-center',
-          theme: 'dark',
+          theme: 'colored',
 
       });
        
@@ -33,9 +33,9 @@ export default function FarmerProfile() {
       console.error(err);
       // display error message to user
 
-      toast.warning (`Failed`, {
+      toast.error (`Failed`, {
         position: 'top-center',
-        theme: 'dark',
+        theme: 'colored',
       });
     }
   };
@@ -48,7 +48,7 @@ export default function FarmerProfile() {
         {/* Will probably get more information that is relevant to the stall later */}
         <h2>Farmer's Profile</h2>
 
-        <form onSubmit={handleSubmit}>
+        <form >
           <label>Full Name:</label>
           <input
             type="text"
@@ -95,7 +95,7 @@ export default function FarmerProfile() {
             onChange={(event) => setStallNumber(event.target.value)}
           />
 
-          <button type="submit">Submit</button>
+          <button onClick={handleSubmit}>Submit</button>
         </form>
       </div>
     </div>

@@ -72,7 +72,6 @@ export default function Navbar () {
           ) : (
             <div className="links">
               <Link to="/login" className="nav-link active text-light">Login</Link>
-              <Link to="/register" className="nav-link active text-light">Register</Link>
             </div>
           )}
 

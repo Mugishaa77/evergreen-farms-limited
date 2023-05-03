@@ -29,6 +29,7 @@ import GrocerCreateProduct from './grocer-ui/GrocerCreateProduct';
 import GrocerProducts from './grocer-ui/GrocerProducts';
 import GrocerSummary from './grocer-ui/GrocerSummary';
 import GrocerDashboard from './grocer-ui/GrocerDashboard';
+import GrocerSetUp from './grocer-ui/GrocerSetUp';
 
 // farmer-UI
 import FarmerProfile from './farmer-UI/FarmerProfile';
@@ -83,6 +84,7 @@ function App () {
             <Route path = "/grocer-dashboard" exact element={<GrocerDashboard/>}>
 
             <Route path="grocer-profile" exact element = {<GrocerProfile/>}/>
+            <Route path="grocer-setup" exact element={<GrocerSetUp/>}/>
             <Route path="grocer-summary" exact element={<GrocerSummary/>}/>
             <Route path="stall-layout" exact element={<StallLayout/>}/>
             <Route path="grocer-products" exact element={<GrocerProducts/>}>

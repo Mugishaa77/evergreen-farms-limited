@@ -1,12 +1,12 @@
 /* Grocer's Profile */
 
-.grocer-profile {
+.grocer-setup {
     margin-right: 150px;
     margin-left: 0;
     background-color: #E5FFDA
 }
 
-.grocer-profile h2 {
+.grocer-setup h2 {
     font-family: 'Times New Roman', Times, serif;
     font-weight: 400;
     text-align: center;
@@ -15,14 +15,14 @@
 
 }
 
-.grocer-profile label {
+.grocer-setup label {
     font-family: 'Poppins', serif;
     color: #1F5229;
     padding: 1rem;
 
 }
 
-.grocer-profile button {
+.grocer-setup button {
     width: 100px;
     height: 40px;
     border-radius: 5px;
@@ -37,34 +37,34 @@
     margin: 1rem;
 }
 
-.grocer-profile .container {
+.grocer-setup .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
 }
 
 @media screen and (max-width: 900px) {
-    .grocer-profile {
+    .grocer-setup {
         margin-right: 0;
         margin-left: 0;
     }
 
-    .grocer-profile h2 {
+    .grocer-setup h2 {
         font-size: 1.5rem;
     }
 
-    .grocer-profile label {
+    .grocer-setup label {
         font-size: 0.8rem;
     }
 
-    .grocer-profile button {
+    .grocer-setup button {
         width: 80px;
         height: 30px;
         font-size: 0.8rem;
         margin-top: 1rem;
     }
 
-    .grocer-profile .container {
+    .grocer-setup .container {
         max-width: 90%;
         padding: 10px;
     }
@@ -325,4 +325,9 @@ input {
         margin: 1rem 0;
         max-width: 100%;
     }
+}
+
+.grocer-profile h1 {
+    color: #1F5229;
+        font-family: 'Times New Roman', Times, serif;
 }

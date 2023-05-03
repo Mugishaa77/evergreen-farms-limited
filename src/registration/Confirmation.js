@@ -1,5 +1,5 @@
 import './Register.css';
-
+// 
 export default function Confirmation ({ prevStep, user, handleSubmit }) {
     return (
         <div className="confirmation">
