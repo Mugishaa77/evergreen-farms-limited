@@ -6,120 +6,97 @@ import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
 import './Farmer.css';
 
-export default function FarmerSetUp () {
-
-  const [farmer, setFarmer] = React.useState({
+function FarmerSetUp() {
+  
+  const [farmer, setFarmer] = useState({
     fullName: '',
-        emailAddress: '',
-        contactNumber: '',
-        stallName: '',
-        stallNumber: ''
+    emailAddress: '',
+    contactNumber: '',
+    stallName: '',
+    stallNumber: ''
+  });
 
-  })
+  const handleFarmerChange = (event) => {
+    const { name, value } = event.target;
+    setFarmer(prevFarmer => ({ ...prevFarmer, [name]: value }));
+  };
 
-  console.log('New farmer:', farmer);
-
-   const handleFarmerChange = (field, value) => {
-        setFarmer(prevFarmer => ({...prevFarmer, [field]: value }));
-
-    };
-
-   const handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`${baseUrl}/api/farmers`, {
-        fullName: farmer.fullName,
-        emailAddress: farmer.emailAddress,
-        contactNumber: farmer.contactNumber,
-        stallName: farmer.stallName,
-        stallNumber: farmer.stallNumber
-
-        
-      });
+      await axios.post(`${baseUrl}/api/farmer-profiles`, farmer);
       // display success message to user
-      toast.success ('Successful!', {
+      toast.success('Profile created successfully!', {
         position: 'top-center',
-          theme: 'colored',
-
+        theme: 'colored',
       });
-       
     } catch (err) {
       console.error(err);
       // display error message to user
-
-      toast.error (`Failed`, {
+      toast.error('Failed to create profile', {
         position: 'top-center',
         theme: 'colored',
       });
     }
   };
-      
-    return(
-        <div className="farmer-setup">
-            <div className="container">
-                <h2>Profile details</h2>
-                <form>
-                <label>Full Name:</label>
-                
-      <input
-        type="text"
-        name="fullName"
-        className="form-control"
-        value={farmer.fullName}
+
+  return (
+    <div className="farmer-setup">
+      <div className="container">
+        <h2>Profile details</h2>
+        <form onSubmit={handleSubmit}>
+          <label>Full Name:</label>
+          <input
+            type="text"
+            name="fullName"
+            className="form-control"
+            value={farmer.fullName}
             onChange={handleFarmerChange}
-      />
+          />
 
-      <label>Email Address:</label>
-      <input
-        type="text"
-        name="farmerEmailAddress"
-        className="form-control"
-        value={farmer.emailAddress}
-        onChange={handleFarmerChange}
-            
-      />
+          <label>Email Address:</label>
+          <input
+            type="text"
+            name="emailAddress"
+            className="form-control"
+            value={farmer.emailAddress}
+            onChange={handleFarmerChange}
+          />
 
-      <label>Contact Number:</label>
-      <input
-        type="text"
-        name="farmerContactNumber"
-        className="form-control"
-         value={farmer.contactNumber}
-           onChange={handleFarmerChange}
-      />
+          <label>Contact Number:</label>
+          <input
+            type="text"
+            name="contactNumber"
+            className="form-control"
+            value={farmer.contactNumber}
+            onChange={handleFarmerChange}
+          />
 
-      <label>Stall Name:</label>
-      <input
-        type="text"
-        name="farmerStallName"
-        className="form-control"
-        value={farmer.stallName}
-        onChange={handleFarmerChange}
-            
-      />
+          <label>Stall Name:</label>
+          <input
+            type="text"
+            name="stallName"
+            className="form-control"
+            value={farmer.stallName}
+            onChange={handleFarmerChange}
+          />
 
+          {/* Should be auto-generated based on first-come first-serve basis // */}
+          <label>Stall Number:</label>
+          <input
+            type="text"
+            name="stallNumber"
+            className="form-control"
+            value={farmer.stallNumber}
+            onChange={handleFarmerChange}
+          />
 
-    {/* Should be auto-generated based on first-come first-serve basis // */}
-      <label>Stall Number:</label>
-      <input
-        type="text"
-        name="farmerStallNumber"
-        className="form-control"
-        value={farmer.stallNumber}
-        onChange={handleFarmerChange}
-            
-      />
-
-
-      <Link to ="/farmer-dashboard/farmer-setup">
-         <button onClick={handleSubmit}>Submit</button>
-      </Link>
-   
-    </form>
-
-
-            </div>
-        </div>
-    );
+          <button type="submit">Submit</button>
+        </form>
+        <Link to="/farmer-dashboard">Go back to dashboard</Link>
+      </div>
+    </div>
+  );
 }
 
+export default FarmerSetUp;

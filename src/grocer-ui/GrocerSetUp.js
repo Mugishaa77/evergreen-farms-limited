@@ -19,40 +19,32 @@ export default function GrocerSetUp () {
 
   console.log('New grocer:', grocer);
 
-   const handleGrocerChange = (field, value) => {
-        setGrocer(prevGrocer => ({...prevGrocer, [field]: value }));
+    const handleGrocerChange = (event) => {
+  const { name, value } = event.target;
+  setGrocer(prevGrocer => ({...prevGrocer, [name]: value }));
+};
 
-    };
-
-   const handleSubmit = async (event) => {
+const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`${baseUrl}/api/grocers`, {
-        fullName: grocer.fullName,
-        emailAddress: grocer.emailAddress,
-        contactNumber: grocer.contactNumber,
-        stallName: grocer.stallName,
-        stallNumber: grocer.stallNumber
-
-        
-      });
+      await axios.post(`${baseUrl}/api/grocer-profiles`, grocer);
       // display success message to user
-      toast.success ('Successful!', {
+      toast.success('Profile created successfully!', {
         position: 'top-center',
-          theme: 'colored',
-
+        theme: 'colored',
       });
-       
     } catch (err) {
       console.error(err);
       // display error message to user
-
-      toast.error (`Failed`, {
+      toast.error('Failed to create profile', {
         position: 'top-center',
         theme: 'colored',
       });
     }
   };
+
+
+   
       
     return(
         <div className="grocer-setup">
@@ -72,7 +64,7 @@ export default function GrocerSetUp () {
       <label>Email Address:</label>
       <input
         type="text"
-        name="grocerEmailAddress"
+        name="emailAddress"
         className="form-control"
         value={grocer.emailAddress}
         onChange={handleGrocerChange}
@@ -82,7 +74,7 @@ export default function GrocerSetUp () {
       <label>Contact Number:</label>
       <input
         type="text"
-        name="grocerContactNumber"
+        name="contactNumber"
         className="form-control"
          value={grocer.contactNumber}
            onChange={handleGrocerChange}
@@ -91,7 +83,7 @@ export default function GrocerSetUp () {
       <label>Stall Name:</label>
       <input
         type="text"
-        name="grocerStallName"
+        name="stallName"
         className="form-control"
         value={grocer.stallName}
         onChange={handleGrocerChange}
@@ -103,7 +95,7 @@ export default function GrocerSetUp () {
       <label>Stall Number:</label>
       <input
         type="text"
-        name="grocerStallNumber"
+        name="stallNumber"
         className="form-control"
         value={grocer.stallNumber}
         onChange={handleGrocerChange}
