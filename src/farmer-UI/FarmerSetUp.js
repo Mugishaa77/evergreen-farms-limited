@@ -4,11 +4,11 @@ import { baseUrl } from '../features/api';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import 'react-toastify/dist/ReactToastify.css';
-import './Grocer.css';
+import './Farmer.css';
 
-export default function GrocerSetUp () {
+export default function FarmerSetUp () {
 
-  const [grocer, setGrocer] = React.useState({
+  const [farmer, setFarmer] = React.useState({
     fullName: '',
         emailAddress: '',
         contactNumber: '',
@@ -17,22 +17,22 @@ export default function GrocerSetUp () {
 
   })
 
-  console.log('New grocer:', grocer);
+  console.log('New farmer:', farmer);
 
-   const handleGrocerChange = (field, value) => {
-        setGrocer(prevGrocer => ({...prevGrocer, [field]: value }));
+   const handleFarmerChange = (field, value) => {
+        setFarmer(prevFarmer => ({...prevFarmer, [field]: value }));
 
     };
 
    const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`${baseUrl}/api/grocers`, {
-        fullName: grocer.fullName,
-        emailAddress: grocer.emailAddress,
-        contactNumber: grocer.contactNumber,
-        stallName: grocer.stallName,
-        stallNumber: grocer.stallNumber
+      await axios.post(`${baseUrl}/api/farmers`, {
+        fullName: farmer.fullName,
+        emailAddress: farmer.emailAddress,
+        contactNumber: farmer.contactNumber,
+        stallName: farmer.stallName,
+        stallNumber: farmer.stallNumber
 
         
       });
@@ -55,7 +55,7 @@ export default function GrocerSetUp () {
   };
       
     return(
-        <div className="grocer-setup">
+        <div className="farmer-setup">
             <div className="container">
                 <h2>Profile details</h2>
                 <form>
@@ -65,36 +65,36 @@ export default function GrocerSetUp () {
         type="text"
         name="fullName"
         className="form-control"
-        value={grocer.fullName}
-            onChange={handleGrocerChange}
+        value={farmer.fullName}
+            onChange={handleFarmerChange}
       />
 
       <label>Email Address:</label>
       <input
         type="text"
-        name="grocerEmailAddress"
+        name="farmerEmailAddress"
         className="form-control"
-        value={grocer.emailAddress}
-        onChange={handleGrocerChange}
+        value={farmer.emailAddress}
+        onChange={handleFarmerChange}
             
       />
 
       <label>Contact Number:</label>
       <input
         type="text"
-        name="grocerContactNumber"
+        name="farmerContactNumber"
         className="form-control"
-         value={grocer.contactNumber}
-           onChange={handleGrocerChange}
+         value={farmer.contactNumber}
+           onChange={handleFarmerChange}
       />
 
       <label>Stall Name:</label>
       <input
         type="text"
-        name="grocerStallName"
+        name="farmerStallName"
         className="form-control"
-        value={grocer.stallName}
-        onChange={handleGrocerChange}
+        value={farmer.stallName}
+        onChange={handleFarmerChange}
             
       />
 
@@ -103,15 +103,15 @@ export default function GrocerSetUp () {
       <label>Stall Number:</label>
       <input
         type="text"
-        name="grocerStallNumber"
+        name="farmerStallNumber"
         className="form-control"
-        value={grocer.stallNumber}
-        onChange={handleGrocerChange}
+        value={farmer.stallNumber}
+        onChange={handleFarmerChange}
             
       />
 
 
-      <Link to ="/grocer-dashboard/grocer-setup">
+      <Link to ="/farmer-dashboard/farmer-setup">
          <button onClick={handleSubmit}>Submit</button>
       </Link>
    

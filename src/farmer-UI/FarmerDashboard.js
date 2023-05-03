@@ -6,6 +6,10 @@ export default function FarmerDashboard (){
         <div className="farmer-dashboard">
             <div className="side-nav">
                 <h3>Quick links</h3>
+                 <NavLink className={({ isActive }) =>
+                isActive ? "link-active" : "link-inactive"
+            }
+            to ="/farmer-dashboard/farmer-setup">Set up</NavLink>
                 <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }

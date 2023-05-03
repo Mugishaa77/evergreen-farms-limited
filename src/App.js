@@ -37,6 +37,7 @@ import FarmerDashboard from './farmer-UI/FarmerDashboard';
 import FarmerProducts from './farmer-UI/FarmerProducts';
 import Summary from './farmer-UI/Summary';
 import CreateProduct from './farmer-UI/CreateProduct';
+import FarmerSetUp from './farmer-UI/FarmerSetUp';
 
 // stalls
 import StallDisplay from './stalls/StallDisplay';
@@ -75,6 +76,7 @@ function App () {
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>
 
             <Route path="farmer-profile" exact element = {<FarmerProfile/>}/>
+            <Route path="farmer-setup" exact element = {<FarmerSetUp/>}/>
             <Route path="summary" exact element={<Summary/>}/>
             <Route path="farmer-products" exact element={<FarmerProducts/>}>
               <Route path="create-product" exact element={<CreateProduct/>}/>

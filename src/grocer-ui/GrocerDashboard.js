@@ -11,6 +11,10 @@ export default function GrocerDashboard (){
                 <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }
+                to ="/grocer-dashboard/grocer-setup">Setup</NavLink>
+                <NavLink className={({ isActive }) =>
+                isActive ? "link-active" : "link-inactive"
+            }
             to ="/grocer-dashboard/grocer-profile">Profile</NavLink>
                 <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
@@ -20,10 +24,7 @@ export default function GrocerDashboard (){
                 isActive ? "link-active" : "link-inactive"
             }
                 to ="/grocer-dashboard/grocer-products">Products</NavLink>
-                <NavLink className={({ isActive }) =>
-                isActive ? "link-active" : "link-inactive"
-            }
-                to ="/grocer-dashboard/grocer-setup">Setup</NavLink>
+                
                 <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }
