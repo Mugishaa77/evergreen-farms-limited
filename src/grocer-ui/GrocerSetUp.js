@@ -27,7 +27,7 @@ export default function GrocerSetUp () {
 const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`${baseUrl}/api/grocer-profiles`, grocer);
+      await axios.post(`${baseUrl}/grocers`, grocer);
       // display success message to user
       toast.success('Profile created successfully!', {
         position: 'top-center',

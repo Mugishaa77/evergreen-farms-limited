@@ -24,7 +24,7 @@ function FarmerSetUp() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post(`${baseUrl}/api/farmer-profiles`, farmer);
+      await axios.post(`${baseUrl}/farmers`, farmer);
       // display success message to user
       toast.success('Profile created successfully!', {
         position: 'top-center',

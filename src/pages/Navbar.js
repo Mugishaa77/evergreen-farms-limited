@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import evergreen from '../logo/sharpened-evergreen.png';
 import { BasketFill } from "react-bootstrap-icons";
@@ -11,9 +11,11 @@ export default function Navbar () {
   const dispatch = useDispatch ();
   const auth = useSelector((state) => state.auth);
   const { basketTotalQuantity } = useSelector((state) => state.basket);
+  const [activeLink, setActiveLink] = useState('/');
+  
 
   return (
-    <div>
+     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary navbar-style">
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
@@ -26,37 +28,81 @@ export default function Navbar () {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link to="/" className="nav-link active text-light">
+                <Link
+                  to="/"
+                  className={`nav-link text-light ${activeLink === '/' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/')}
+                >
                   Home
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/basket" className="nav-link active text-light">
+                <Link
+                  to="/basket"
+                  className={`nav-link text-light ${activeLink === '/basket' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/basket')}
+                >
                   Market
                 </Link>
               </li> 
               <li className="nav-item">
-                <Link to="/farmer-dashboard" className="nav-link active text-light">Farmer</Link>
+                <Link
+                  to="/farmer-dashboard"
+                  className={`nav-link text-light ${activeLink === '/farmer-dashboard' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/farmer-dashboard')}
+                >
+                  Farmer
+                </Link>
               </li>
               <li className="nav-item">
-                <Link to="/grocer-dashboard" className="nav-link active text-light">Grocer</Link>
+                <Link
+                  to="/grocer-dashboard"
+                  className={`nav-link text-light ${activeLink === '/grocer-dashboard' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/grocer-dashboard')}
+                >
+                  Grocer
+                </Link>
               </li>
               <li className="nav-item">
-                <Link to="/main-display" className="nav-link active text-light">Main Menu</Link>
+                <Link
+                  to="/main-display"
+                  className={`nav-link text-light ${activeLink === '/main-display' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/main-display')}
+                >
+                  Main Menu
+                </Link>
               </li>
               <li className="nav-item">
-                <Link to="/basket-one" className="nav-link active text-light">
+                <Link
+                  to="/basket-one"
+                  className={`nav-link text-light ${activeLink === '/basket-one' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/basket-one')}
+                >
                   <BasketFill color="white" size={24} />:{ basketTotalQuantity }
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/about" className="nav-link active text-light">About Us</Link>
+                <Link
+                  to="/about"
+                  className={`nav-link text-light ${activeLink === '/about' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/about')}
+                >
+                  About Us
+                </Link>
               </li>
               <li className="nav-item">
-                <Link to="/contact-us" className="nav-link active text-light">Talk to Us</Link>
+                <Link
+                  to="/contact-us"
+                  className={`nav-link text-light ${activeLink === '/contact-us' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/contact-us')}
+                >
+                  Talk to Us
+                </Link>
               </li>
             </ul>
           </div>
+
+          
 
           {auth._id ? (
             <div className="links">
