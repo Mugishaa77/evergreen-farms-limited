@@ -158,7 +158,7 @@ font-size: 40px;
             min-height: 30px;
             outline: none;
             border-radius: 5px;
-            border: 1px solid #1F5229;
+            border: 1px solid hsl(132, 45%, 22%);
             margin: 0.3rem, 0;
         }
     
@@ -213,9 +213,7 @@ font-size: 40px;
         }
     
 
-    .create-submit:visited {
-        color: #FFFF00;
-    }
+    
         @media only screen and (max-width: 900px) {
     
             .farmer-products,

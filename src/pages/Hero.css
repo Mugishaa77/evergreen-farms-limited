@@ -1,39 +1,72 @@
+
 .hero {
     background-image: url("../images/hero.jpg");
-    background-repeat: no-repeat;
-    background-color: #EEEEEE;
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    font-family: 'Playfair Display', serif;
-    
+        background-repeat: no-repeat;
+        background-color: #EEEEEE;
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        font-family: 'Pacifico', cursive;
+        
+        
 }
- 
+
 .hero .open-sign {
     top: 150px;
     right: 0px;
     text-align: right;
-}
- 
-.text-below-image {
-    text-align: right;
-    margin-right: 250px;
+   
+       
     
 }
 
-.hero h2,
-h3 {
-    color: #2B6302;
+
+
+
+.text-below-image {
+    text-align: right;
+    margin-right: 250px;
+    font-weight: 100;
+    text-transform: capitalize;
+        animation: shineText 5s ease-in-out infinite;
+    
 }
+
+@keyframes shineText {
+    0% {
+    color:#1F5229;
+    
+        
+    }
+
+    20% {
+        color: greenyellow;
+    }
+
+    80% {
+        color: greenyellow;
+    }
+
+    100% {
+        color:#1F5229;
+        
+        
+    }
+}
+
+
+
+
+
+
 
 
 .hero .btn-outline {
     background-color: #2B6302 !important;
-        
 }
 
 .hero .btn-primary {
-    background-color: #2B6302!important;
+    background-color: #2B6302 !important;
 }
 
 .hero button {
@@ -50,8 +83,6 @@ h3 {
     cursor: pointer;
     opacity: 0.7;
     background-color: #2B6302 !important;
-
-
 }
 
 .hero .call-to-action {
@@ -59,29 +90,23 @@ h3 {
     margin: 70px;
 }
 
-  @media only screen and (max-width: 900px) {
-      .hero {
-          height: 300px;
+@media only screen and (max-width: 900px) {
+    .hero {
+        height: 300px;
         background-image: url("../images/inverted-hero.jpg");
-      }
+    }
 
-      .hero .open-sign {
-          display: none;
-      }
+    .hero .open-sign {
+        display: none;
+    }
 
-      .text-below-image {
-          top: 180px;
-          text-align: center;
-          margin-right: 72px;
-          
-    
-          
-      }
+    .text-below-image {
+        top: 180px;
+        text-align: center;
+        margin-right: 72px;
+    }
 
-         
-
-
-      .hero .call-to-action {
-          margin: 30px;
-      }
-  }
+    .hero .call-to-action {
+        margin: 30px;
+    }
+}

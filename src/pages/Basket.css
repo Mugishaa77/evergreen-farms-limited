@@ -5,11 +5,11 @@
 }
 
 .basket h2 {
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 400;
     text-align: center;
-    font-family: 'Playfair Display', serif;
     color:#1F5229 ;
+    font-family: 'Lato', sans-serif;
 }
 
 .basket .next-link {
@@ -25,9 +25,7 @@
     color: #1F5229;
 }
 
-.basket .next-link:visited {
-    color: #FFFF00;
-}
+
 
 .basket .products {
     display: flex;
