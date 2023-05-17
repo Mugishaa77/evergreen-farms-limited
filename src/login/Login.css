@@ -32,6 +32,10 @@ font-size: 40px;
         color: #1F5229;
 }
 
+.log-in-button:visited {
+    color: #FFFF00;
+}
+
 .log-in .label {
     font-family: 'Poppins', serif;
     color: #1F5229;
@@ -51,4 +55,8 @@ font-size: 40px;
 
 .sign-up-guide .sign-up-here:hover {
     color: orange;
+}
+
+.sign-up-guide .sign-up-here:visited {
+    color: #FFFF00;
 }

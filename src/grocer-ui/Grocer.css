@@ -99,6 +99,10 @@
     color: #1F5229
 }
 
+.grocer-dashboard .add-product-btn:visited {
+    color: #FFFF00;
+}
+
 .grocer-dashboard .delete-btn {
     height: 40px;
     border-radius: 5px;
@@ -115,6 +119,10 @@
 .grocer-dashboard .delete-btn:hover {
     background-color: #BCE29E;
     color: #1F5229;
+}
+
+.grocer-dashboard .delete-btn:visited {
+    color: #FFFF00;
 }
 
 @media screen and (max-width: 900px) {
@@ -305,6 +313,10 @@ input {
 .create-submit:hover {
     background-color: #BCE29E;
     color: #1F5229;
+}
+
+.create-submit:visited {
+    color: #FFFF00;
 }
 
 @media screen and (max-width: 900px) {

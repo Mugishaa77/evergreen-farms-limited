@@ -25,6 +25,10 @@
     color: #1F5229;
 }
 
+.basket .next-link:visited {
+    color: #FFFF00;
+}
+
 .basket .products {
     display: flex;
     justify-content: space-between;
@@ -96,6 +100,8 @@
     background-color: #BCE29E;
     color: #1F5229;
 }
+
+
 
 /* Mobile Responsive Styling */
 @media only screen and (max-width: 900px) {
@@ -429,6 +435,11 @@
     color: #1F5229;
 }
 
+.start-shopping a:visited,
+.continue-shopping a:visited {
+    color: #FFFF00;
+}
+
 .basket-empty {
     font-size: 20px;
     margin-top: 2rem;
@@ -450,6 +461,10 @@
 
 .basket-container .back-link:hover {
     color: #1F5229;
+}
+
+.basket-container .back-link:visited {
+    color: #FFFF00;
 }
 
 @media only screen and (max-width: 900px) {

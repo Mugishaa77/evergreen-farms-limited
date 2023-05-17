@@ -212,6 +212,10 @@ font-size: 40px;
             color: #1F5229;
         }
     
+
+    .create-submit:visited {
+        color: #FFFF00;
+    }
         @media only screen and (max-width: 900px) {
     
             .farmer-products,
