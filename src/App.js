@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter , Route, Routes, Navigate } from 'react-router-dom';
 
 // pages
 import Navbar from './pages/Navbar';
@@ -50,11 +50,15 @@ import Register from './registration/Register';
 
 
 function App () {
+
+  
   return (
     <div className="App">
+      
       <BrowserRouter>
       <ToastContainer/>
       <Navbar />
+
 
       <Routes>
           <Route path="/" exact element={<Hero />} />
@@ -106,8 +110,8 @@ function App () {
 
       </Routes>
       
-      
       </BrowserRouter>
+      
     </div>
   );
 }
