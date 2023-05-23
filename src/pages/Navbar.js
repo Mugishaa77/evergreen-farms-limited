@@ -36,6 +36,13 @@ export default function Navbar () {
                   Home
                 </Link>
               </li>
+              <Link
+                  to="/homepage"
+                  className={`nav-link text-light ${activeLink === '/homepage' ? 'active' : ''}`}
+                  onClick={() => setActiveLink('/homepage')}
+                >
+                  Home 2
+                </Link>
               <li className="nav-item">
                 <Link
                   to="/basket"

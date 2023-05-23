@@ -1,6 +1,134 @@
+/* roots */
+
 :root {
-    --primary-background : #F2F7F0;
-    --card-background: #D8F7CA;
-    --font-color: #1F5229;
-   
+    --descriptive-font: 'Lusitana',
+        serif;
+    --directive-font: 'Ysabeau',
+        sans-serif;
+    --headings: 'Lato',
+        sans-serif;
+    --welcome: 'Amatic SC',
+        cursive;
+    --green-one: #1F5229;
+    --green-two: #F2F7F0;
+}
+
+/* homepage */
+.homepage {
+    background-image: url("./images/new.jpg");
+    background-repeat: no-repeat;
+    background-color: var(--green-one);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    margin: 2rem;
+}
+
+.homepage .welcome {
+    font-weight: 400;
+    font-size: 56px;
+    padding: 220px;
+    font-family: var(--welcome);
+    animation: bounce 2s infinite;
+    color: var(--green-one);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.homepage
+
+/* about */
+.about {
+    background-color: var(--green-two);
+    font-family: var(--descriptive-font);
+    line-height: 1.5;
+    word-wrap: break-word;
+    font-size: 16px;
+    color: var(--green-one);
+    text-align: center;
+    padding: 40px 0;
+}
+
+.about h3 {
+    font-family: var(--welcome);
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.about h4 {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    opacity: 0.8;
+    font-weight: 400;
+
+}
+
+
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about .section {
+    margin-bottom: 40px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* contact section */
+
+.contact {
+    background-color: var(--green-two);
+    text-align: center;
+    color: var(--green-one)
+}
+
+.contact h3 {
+    font-family: var(--welcome);
+    text-align: left;
+}
+
+.contact h4 {
+    opacity: 0.8;
+    font-family: var(--welcome);
+    text-align: center;
+    font-size: 36px;
+}
+
+.contact p {
+    font-family: var(--descriptive-font);
+    opacity: 0.8;
+    text-align: center;
+
+}
+
+.contact .socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contact .socials a {
+    color: var(--green-one);
+    /* Change the font color here */
+    margin-bottom: 10px;
+    /* Adjust the spacing between icons */
 }
