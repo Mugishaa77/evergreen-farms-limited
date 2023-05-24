@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
 import './Checkout.css';
@@ -16,8 +17,13 @@ export default function Checkout () {
  
     return (
         <div className="checkout">
+           <Link to="/basket-one" className="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+</svg>Back
+            </Link>
             <h3> Checkout</h3>
-             <ProgressBar percent={((currentStep + 1) / 4) * 100} unfilledBackground="#D8F7CA" filledBackground="#93B961" >
+             <ProgressBar percent={((currentStep + 1) / 4) * 100} unfilledBackground="#AFEEEE" filledBackground="#8fe051" >
         <Step>
           {({ accomplished, index }) => (
             <div
