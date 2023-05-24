@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import evergreen from '../logo/sharpened-evergreen.png';
 import { BasketFill } from "react-bootstrap-icons";
-import './Navbar.css';
+import '../App.css';
 import { useSelector, useDispatch } from 'react-redux';
 import { logoutUser } from '../features/authSlice';
 import { toast } from 'react-toastify';
