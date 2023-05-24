@@ -29,6 +29,7 @@ export default function Basket() {
       setError(error.message);
     }
   };
+  
 
   useEffect(() => {
     fetchData();
