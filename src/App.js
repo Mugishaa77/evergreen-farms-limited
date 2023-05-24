@@ -44,13 +44,6 @@ import StallLayout from './stalls/StallLayout';
 // register
 import Register from './registration/Register';
 
-
-
-
-
-
-
-
 function App () {
   return (
     <div className="App">
