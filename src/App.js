@@ -7,14 +7,14 @@ import Basket from './pages/Basket';
 import Hero from './pages/Hero';
 import NotFound from './pages/NotFound';
 import BasketOne from './pages/BasketOne';
-import About from './pages/About';
-import Footer from './pages/Footer';
 import Display from './pages/Display';
 import Category from './pages/Category';
 import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
 import Checkout from './pages/Checkout';
 import Homepage from './pages/Homepage';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 
 // login
@@ -47,6 +47,9 @@ import StallLayout from './stalls/StallLayout';
 // register
 import Register from './registration/Register';
 
+// home
+import Trial from './home/Trial';
+
 
 
 
@@ -63,8 +66,6 @@ function App () {
           <Route path="/basket-one" exact element={<BasketOne />} />
           <Route path="/login" exact element={<Login/>} />
           <Route path="/farmer-ui" exact element={<FarmerProfile/>} />
-          <Route path="/about" exact element={<About/>} />
-          <Route path="/contact-us" exact element={<Footer/>}/>
           <Route path="/main-display" exact element={<Display/>}/>
           <Route path="/category" exact element = {<Category/>}/>
           <Route path="/wholesale" exact element= {<Wholesale/>}/>
@@ -73,6 +74,8 @@ function App () {
           <Route path="/checkout" exact element={<Checkout/>}/>
           <Route path="/register" exact element={<Register/>}/>
           <Route path="/homepage" exact element={<Homepage/>}/>
+          <Route path="/trial" exact element ={<Trial/>}/>
+          
           
 
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>

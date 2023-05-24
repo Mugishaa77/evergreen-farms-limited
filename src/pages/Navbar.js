@@ -81,28 +81,11 @@ export default function Navbar () {
                   <BasketFill color="white" size={24} />:{ basketTotalQuantity }
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link
-                  to="/about"
-                  className={`nav-link text-success ${activeLink === '/about' ? 'active' : ''}`}
-                  onClick={() => setActiveLink('/about')}
-                >
-                  About Us
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link
-                  to="/contact-us"
-                  className={`nav-link text-success ${activeLink === '/contact-us' ? 'active' : ''}`}
-                  onClick={() => setActiveLink('/contact-us')}
-                >
-                  Talk to Us
-                </Link>
-              </li>
+             
+      
             </ul>
           </div>
 
-          
 
           {auth._id ? (
             <div className="links">
