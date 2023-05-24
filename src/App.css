@@ -53,7 +53,17 @@
     }
 }
 
-.homepage
+@media (max-width: 900px) {
+    .homepage {
+        height: 400px;
+        margin: 1rem;
+    }
+
+    .homepage .welcome {
+        font-size: 36px;
+        padding: 120px;
+    }
+}
 
 /* about */
 .about {
@@ -99,6 +109,35 @@
 p {
     margin-bottom: 10px;
 }
+
+@media (max-width: 900px) {
+    .about {
+        font-size: 14px;
+        padding: 20px 0;
+    }
+
+    .about h3 {
+        font-size: 24px;
+    }
+
+    .about h4 {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+
+    .about .container {
+        max-width: 600px;
+    }
+
+    .about .section {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-bottom: 5px;
+    }
+}
+
 
 /* contact section */
 

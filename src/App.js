@@ -47,8 +47,7 @@ import StallLayout from './stalls/StallLayout';
 // register
 import Register from './registration/Register';
 
-// home
-import Trial from './home/Trial';
+
 
 
 
@@ -74,7 +73,8 @@ function App () {
           <Route path="/checkout" exact element={<Checkout/>}/>
           <Route path="/register" exact element={<Register/>}/>
           <Route path="/homepage" exact element={<Homepage/>}/>
-          <Route path="/trial" exact element ={<Trial/>}/>
+          <Route path="/about" exact element={<About/>}/>
+          <Route path="/contact" exact element={<Contact/>}/>
           
           
 

@@ -30,7 +30,7 @@ export default function Navbar () {
               <li className="nav-item">
                 <Link
                   to="/"
-                  className={`nav-link text-success ${activeLink === '/' ? 'active' : ''}`}
+                  className={`nav-link text-light ${activeLink === '/' ? 'active' : ''}`}
                   onClick={() => setActiveLink('/')}
                 >
                   Home
@@ -39,7 +39,7 @@ export default function Navbar () {
               <li className="nav-item">
                 <Link
                   to="/basket"
-                  className={`nav-link text-success ${activeLink === '/basket' ? 'active' : ''}`}
+                  className={`nav-link text-light ${activeLink === '/basket' ? 'active' : ''}`}
                   onClick={() => setActiveLink('/basket')}
                 >
                   Market
@@ -48,7 +48,7 @@ export default function Navbar () {
               <li className="nav-item">
                 <Link
                   to="/farmer-dashboard"
-                  className={`nav-link text-success ${activeLink === '/farmer-dashboard' ? 'active' : ''}`}
+                  className={`nav-link text-light ${activeLink === '/farmer-dashboard' ? 'active' : ''}`}
                   onClick={() => setActiveLink('/farmer-dashboard')}
                 >
                   Farmer
@@ -57,7 +57,7 @@ export default function Navbar () {
               <li className="nav-item">
                 <Link
                   to="/grocer-dashboard"
-                  className={`nav-link text-success ${activeLink === '/grocer-dashboard' ? 'active' : ''}`}
+                  className={`nav-link text-light ${activeLink === '/grocer-dashboard' ? 'active' : ''}`}
                   onClick={() => setActiveLink('/grocer-dashboard')}
                 >
                   Grocer
@@ -66,7 +66,7 @@ export default function Navbar () {
               <li className="nav-item">
                 <Link
                   to="/main-display"
-                  className={`nav-link text-success ${activeLink === '/main-display' ? 'active' : ''}`}
+                  className={`nav-link text-light ${activeLink === '/main-display' ? 'active' : ''}`}
                   onClick={() => setActiveLink('/main-display')}
                 >
                   Main Menu
@@ -75,7 +75,7 @@ export default function Navbar () {
               <li className="nav-item">
                 <Link
                   to="/basket-one"
-                  className={`nav-link text-success ${activeLink === '/basket-one' ? 'active' : ''}`}
+                  className={`nav-link text-light ${activeLink === '/basket-one' ? 'active' : ''}`}
                   onClick={() => setActiveLink('/basket-one')}
                 >
                   <BasketFill color="white" size={24} />:{ basketTotalQuantity }
@@ -100,7 +100,7 @@ export default function Navbar () {
             </div>
           ) : (
             <div className="links">
-              <Link to="/login" className="nav-link active text-success">Login</Link>
+              <Link to="/login" className="nav-link active text-light">Login</Link>
             </div>
           )}
 
