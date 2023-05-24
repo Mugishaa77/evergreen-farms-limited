@@ -1,7 +1,7 @@
 .checkout {
     background-color: var(--green-two);
     padding: 2rem 4rem;
-    
+
 }
 
 .checkout .back-link {
@@ -11,13 +11,15 @@
 .checkout .back-link:hover {
     color: var(--green-one);
 }
+
 .checkout h3 {
     font-size: 35px;
     font-weight: 400;
     text-align: center;
     font-family: var(--descriptive-font);
     color: var(--green-one);
-    margin-bottom: 20px;;
+    margin-bottom: 20px;
+    ;
 }
 
 .ProgressBar {
@@ -83,8 +85,8 @@
 
 .checkout p {
     color: var(--green-one);
-        font-family: var(--descriptive-font);
-        font-size: 15px;
+    font-family: var(--descriptive-font);
+    font-size: 15px;
 }
 
 .order-complete {

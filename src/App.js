@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
 // pages
 import Navbar from './pages/Navbar';
 import Basket from './pages/Basket';
-import Hero from './pages/Hero';
 import NotFound from './pages/NotFound';
 import BasketOne from './pages/BasketOne';
 import Display from './pages/Display';
@@ -13,8 +12,6 @@ import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
 import Checkout from './pages/Checkout';
 import Homepage from './pages/Homepage';
-import About from './pages/About';
-import Contact from './pages/Contact';
 
 
 // login
@@ -62,7 +59,7 @@ function App () {
       <Navbar />
 
       <Routes>
-          <Route path="/" exact element={<Hero />} />
+          <Route path="/" exact element={<Homepage />} />
           <Route path="/basket" exact element={<Basket/>} />
           <Route path="/basket-one" exact element={<BasketOne />} />
           <Route path="/login" exact element={<Login/>} />
@@ -75,9 +72,7 @@ function App () {
           <Route path="/checkout" exact element={<Checkout/>}/>
           <Route path="/register" exact element={<Register/>}/>
           <Route path="/homepage" exact element={<Homepage/>}/>
-          <Route path="/about" exact element={<About/>}/>
-          <Route path="/contact" exact element={<Contact/>}/>
-          
+            
           
 
           <Route path = "/farmer-dashboard" exact element={<FarmerDashboard/>}>

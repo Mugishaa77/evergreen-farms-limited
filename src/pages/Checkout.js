@@ -33,6 +33,7 @@ export default function Checkout () {
             >
               <span className="index">{index + 1} </span>
               <p>View Basket</p>
+              
             </div>
           )}
         </Step>
