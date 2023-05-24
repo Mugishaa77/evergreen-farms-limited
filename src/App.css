@@ -9,8 +9,15 @@
         sans-serif;
     --welcome: 'Amatic SC',
         cursive;
+        --navbar: 'Cherry Swash',
+            cursive;
+           --hero: 'Sacramento',
+            cursive;
+    
     --green-one: #1F5229;
     --green-two: #F2F7F0;
+    --orange: #F76D03;
+    --ivory: #F6F7E9;
 }
 
 /* homepage */
@@ -22,6 +29,7 @@
     background-position: center;
     height: 600px;
     margin: 2rem;
+    margin-top: 0;
 }
 
 .homepage .welcome {

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Hero.css';
-import hanging from "../logo/hanging.jpg";
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -8,11 +7,10 @@ export default function Hero() {
 
   return (
     <div className="hero">
-         <div className="open-sign">
-          <img src={hanging} width="320" height="160" alt="open 24hrs" />
-         </div>
+         
           
-        <div className="text-below-image">
+        <div className="text">
+          
             <h2>Your one stop shop for all your<br/>
             grocery and vegetable needs</h2>
             <hr/>
@@ -20,6 +18,7 @@ export default function Hero() {
               <Link to="/basket">
               <button type="button" class="btn btn-primary btn-lg rounded-5">Shop now</button>
             </Link>
+           
                 </div>
       </div>
     

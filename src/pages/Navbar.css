@@ -4,13 +4,17 @@
 
 }
 
+.navbar .text-success {
+    color: var(--ivory) !important ;
+}
+
 
 .navbar-style {
     background-color: #00929C !important;
 }
 
 .navbar li {
-font-family: 'Poppins', serif;
+font-family: var(--navbar)
 
 }
 
@@ -20,7 +24,7 @@ font-family: 'Poppins', serif;
 
 .nav-link.active {
   
-   font-family: 'Poppins', serif;
+   
    color: #BCE29E;
    font-size: 18px;
 }

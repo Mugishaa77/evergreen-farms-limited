@@ -6,71 +6,30 @@
         background-size: cover;
         background-position: center;
         height: 500px;
-        font-family: 'Pacifico', cursive;
+        font-family: var(--hero);
         
         
 }
 
-.hero .open-sign {
-    top: 150px;
-    right: 0px;
+   .hero .text {
     text-align: right;
-   
-       
+    padding-top: 150px;
+    margin-right: 150px;
+    color: var(--green-one);
+    font-size: 48px;
     
-}
-
-
-
-
-.text-below-image {
-    text-align: right;
-    margin-right: 250px;
-    font-weight: 100;
-    text-transform: capitalize;
-        animation: shineText 5s ease-in-out infinite;
-    
-}
-
-@keyframes shineText {
-    0% {
-    color:#1F5229;
-    
-        
-    }
-
-    20% {
-        color: greenyellow;
-    }
-
-    80% {
-        color: greenyellow;
-    }
-
-    100% {
-        color:#1F5229;
-        
-        
-    }
-}
-
-
-
-
-
-
-
+   }
 
 .hero .btn-outline {
-    background-color: #2B6302 !important;
+    background-color: var(--green-one) !important;
 }
 
 .hero .btn-primary {
-    background-color: #2B6302 !important;
+    background-color: var(--green-one) !important;
 }
 
 .hero button {
-    font-family: 'Poppins', serif;
+    font-family: var(--navbar);
 }
 
 .hero button {
@@ -82,11 +41,11 @@
 .hero button:hover {
     cursor: pointer;
     opacity: 0.7;
-    background-color: #2B6302 !important;
+    background-color: var(--green-one) !important;
 }
 
 .hero .call-to-action {
-    font-family: 'Poppins', serif;
+    font-family: var(--navbar);
     margin: 70px;
 }
 
@@ -96,11 +55,7 @@
         background-image: url("../images/inverted-hero.jpg");
     }
 
-    .hero .open-sign {
-        display: none;
-    }
-
-    .text-below-image {
+    .hero .text {
         top: 180px;
         text-align: center;
         margin-right: 72px;
