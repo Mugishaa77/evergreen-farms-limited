@@ -1,14 +1,12 @@
 import React from 'react';
-import './Hero.css';
+import '../App.css';
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
 
 
   return (
-    <div className="hero">
-         
-          
+    <div className="hero"> 
         <div className="text">
           
             <h2>Your one stop shop for all your<br/>
