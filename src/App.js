@@ -10,7 +10,6 @@ import Display from './pages/Display';
 import Category from './pages/Category';
 import Wholesale from './pages/Wholesale';
 import Retail from './pages/Retail';
-import Checkout from './pages/Checkout';
 import Homepage from './pages/Homepage';
 
 
@@ -43,6 +42,11 @@ import StallLayout from './stalls/StallLayout';
 
 // register
 import Register from './registration/Register';
+
+// checkout
+import Checkout from './checkout/Checkout';
+
+
 
 function App () {
   return (

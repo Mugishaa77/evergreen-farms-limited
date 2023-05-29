@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faFacebook, faInstagram, faTwitter, faWhatsapp  } from "@fortawesome/free-brands-svg-icons";
@@ -11,6 +12,11 @@ export default function Homepage () {
         <div className="homepage">
             <div className="welcome">
               <span>Welcome to Evergreen!</span>
+              <Link>
+              <button>
+                View Products
+              </button>
+              </Link>
               
             </div>
              <div class="about">
