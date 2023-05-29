@@ -1,7 +1,7 @@
 /* Dashboard */
 
 .farmer-dashboard {
-    background-color: #F2F7F0;
+    background-color: var(--green-two);
         padding: 2rem 4rem;;
 }
 
@@ -239,20 +239,23 @@ font-size: 40px;
                  .farmer-setup {
                      margin-right: 150px;
                      margin-left: 0;
-                     background-color: #E5FFDA
+                     background-color: var(--green-two);
                  }
         
                  .farmer-setup h2 {
-                     font-family: 'Times New Roman', Times, serif;
+                     font-family: var(--descriptive-font);
                      font-weight: 400;
                      text-align: center;
                      letter-spacing: 1.15px;
+                     font-size: 32px;
                  }
         
                  .farmer-setup label {
-                     font-family: 'Poppins', serif;
-                     color: #1F5229;
-                     padding: 1rem;
+                     font-family: var(--descriptive-font);
+                     color: var(--green-one);
+                     font-size: 20px;
+                     padding: 0.5rem;
+                
                  }
         
                  .farmer-setup button {
@@ -262,18 +265,34 @@ font-size: 40px;
                      margin-top: 2rem;
                      font-weight: 400;
                      cursor: pointer;
-                     background-color: #1F5229;
-                     color: #8fe051;
+                     background-color: var(--green-one);
+                     color: var(--green-four);
                      letter-spacing: 1.15px;
-                     outline: #8fe051;
+                     outline: var(--green-five);
                      border: none;
                      margin: 1rem;
+                     font-family: var(--directive-font);
+                 }
+
+                 .farmer-setup button:hover {
+                    background-color: var(--checkout-green);
+                    color: var(--green-one);
                  }
         
                  .farmer-setup .container {
                      max-width: 800px;
                      margin: 0 auto;
                      padding: 20px;
+                 }
+
+                 .farmer-setup a {
+                    color: var(--orange);
+                    font-size: 20px;
+                   
+                 }
+
+                 .farmer-setup a:hover {
+                    color: var(--green-one);
                  }
         
                  @media screen and (max-width: 900px) {

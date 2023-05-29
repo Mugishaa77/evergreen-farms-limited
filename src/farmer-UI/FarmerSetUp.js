@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import './Farmer.css';
 
 function FarmerSetUp() {
-  
+  // 
   const [farmer, setFarmer] = useState({
     fullName: '',
     emailAddress: '',
