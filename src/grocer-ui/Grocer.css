@@ -3,11 +3,11 @@
 .grocer-setup {
     margin-right: 150px;
     margin-left: 0;
-    background-color: #E5FFDA
+    background-color: var(--green-two);
 }
 
 .grocer-setup h2 {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: var(--descriptive-font);
     font-weight: 400;
     text-align: center;
     letter-spacing: 1.15px;
@@ -16,31 +16,47 @@
 }
 
 .grocer-setup label {
-    font-family: 'Poppins', serif;
-    color: #1F5229;
-    padding: 1rem;
+    font-family: var(--descriptive-font);
+        color: var(--green-one);
+        font-size: 20px;
+        padding: 0.5rem;
 
 }
 
 .grocer-setup button {
     width: 100px;
-    height: 40px;
-    border-radius: 5px;
-    margin-top: 2rem;
-    font-weight: 400;
-    cursor: pointer;
-    background-color: #1F5229;
-    color: #8fe051;
-    letter-spacing: 1.15px;
-    outline: #8fe051;
-    border: none;
-    margin: 1rem;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        font-weight: 400;
+        cursor: pointer;
+        background-color: var(--green-one);
+        color: var(--green-four);
+        letter-spacing: 1.15px;
+        outline: var(--green-five);
+        border: none;
+        margin: 1rem;
+        font-family: var(--directive-font);
 }
-
+.grocer-setup button:hover {
+    background-color: var(--checkout-green);
+        color: var(--green-one);
+}
 .grocer-setup .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
+}
+
+
+.grocer-setup a {
+    color: var(--orange);
+    font-size: 24px;
+
+}
+
+.grocer-setup a:hover {
+    color: var(--green-one);
 }
 
 @media screen and (max-width: 900px) {
@@ -70,10 +86,41 @@
     }
 }
 
+/* Grocer Profile */
+.grocer-profile h1 {
+    font-family: var(--descriptive-font);
+    text-transform: capitalize;
+    color: var(--green-one);
+    font-size: 32px;
+    text-align: center;
+}
+
+.grocer-profile .contact-info {
+    margin-top: 1rem;
+    text-decoration: underline;
+    text-decoration-thickness: 0.5px;
+}
+
+.grocer-profile h6 {
+    font-family: var(--descriptive-font);
+    text-transform: capitalize;
+    color: var(--green-one);
+    font-size: 28px;
+    text-align: left;
+    opacity: 0.9;
+}
+
+.grocer-profile p {
+    font-family: var(--descriptive-font);
+    color: var(--green-one);
+    font-size: 22px;
+    text-align: left;
+    opacity: 0.85;
+}
 /*Grocer Dashboard*/
 
 .grocer-dashboard {
-    background-color: #F2F7F0;
+    background-color: var(--green-two);
     padding: 2rem 4rem;
     
 }
@@ -82,12 +129,12 @@
     font-size: 40px;
     font-weight: 400;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: #1F5229;
+    font-family: var(--descriptive-font);
+    color: var(--green-one);
 }
 
 .grocer-dashboard .add-product-btn {
-    font-weight: 'Poppins', serif;
+    font-weight: var(--directive-font);
     color: orangered;
     text-decoration: none;
     cursor: pointer;
@@ -96,7 +143,7 @@
 }
 
 .grocer-dashboard .add-product-btn:hover {
-    color: #1F5229
+    color: var(--green-one);
 }
 
 .grocer-dashboard .add-product-btn:visited {
@@ -111,14 +158,14 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #1F5229;
-    color: #8fe051;
+    background-color: var(--green-one);
+    color: var(--green-five);
     letter-spacing: 1.15px;
 }
 
 .grocer-dashboard .delete-btn:hover {
-    background-color: #BCE29E;
-    color: #1F5229;
+    background-color: var(--green-four);
+    color: var(--green-one);
 }
 
 .grocer-dashboard .delete-btn:visited {
@@ -161,7 +208,7 @@
     flex-direction: column;
     padding: 2rem;
     top: 300;
-    border-right: 1px solid #1F5229;
+    border-right: 1px solid var(--green-one);
 
 
 }
@@ -170,7 +217,9 @@
     margin: 0 0 1rem 0;
     padding: 0;
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 16px;
+    color: var(--green-one);
+    font-family: var(--descriptive-font);
 }
 
 .grocer-dashboard a {
@@ -202,7 +251,7 @@
         width: 100%;
         height: auto;
         border: none;
-        border-bottom: 1px solid #1F5229;
+        border-bottom: 1px solid var(--green-one);
         padding: 1rem;
         overflow-x: auto;
         overflow-y: hidden;
@@ -240,12 +289,13 @@
     border-radius: 5px;
     font-weight: 400;
     letter-spacing: 1.15px;
-    background-color: #1F5229;
+    background-color: var(--green-one);
     color: #BCE29E;
     border: none;
     outline: none;
     cursor: pointer;
     margin: 0.5rem 0;
+    font-family: var(--directive-font);
 }
 
 .styled-form {
@@ -261,18 +311,18 @@ input {
     min-height: 30px;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #1F5229;
+    border: 1px solid var(--green-one);
     margin: 0.3rem, 0;
 }
 
 .styled-form select {
-    color: #1F5229;
+    color: var(--green-one);
 }
 
 .image-preview {
     margin: 2rem 0 2rem 2rem;
     padding: 2rem;
-    border: 1px solid #1F5229;
+    border: 1px solid var(--green-one);
     max-width: 300px;
     max-height: 300px;
     width: 100%;
@@ -283,8 +333,8 @@ input {
 }
 
 .image-preview p {
-    color: #1F5229;
-    font-family: 'Times New Roman', Times, serif;
+    color: var(--green-one);
+    font-family: var(--descriptive-font);
 }
 
 .grocer-products img {

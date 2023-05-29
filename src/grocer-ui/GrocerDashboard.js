@@ -7,7 +7,8 @@ export default function GrocerDashboard (){
     return(
         <div className="grocer-dashboard">
             <div className="side-nav">
-                <h3>Quick links</h3>
+                <h3>
+                    <strong>Quick links</strong></h3>
                 <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }

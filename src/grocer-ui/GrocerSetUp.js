@@ -103,11 +103,15 @@ const handleSubmit = async (event) => {
       />
 
 
-      <Link to ="/grocer-dashboard/grocer-setup">
+      
          <button onClick={handleSubmit}>Submit</button>
-      </Link>
-   
+      
+
+        
     </form>
+    <Link to="/farmer-dashboard">
+          Go back to dashboard</Link>
+   
 
 
             </div>
