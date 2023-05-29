@@ -1,24 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { clearBasket } from '../features/basketSlice';
+import { clearBasket, getTotals  } from '../features/basketSlice';
 
 import './Checkout.css';
 
 
 export default function StepThree() {
 
+  const dispatch = useDispatch();
+
  const basket = useSelector((state) => state.basket);
+
+ useEffect (() => {
+        dispatch(getTotals());
+    }, [basket, dispatch]);
+
  
   const handleClearBasket = () => {
         dispatch(clearBasket());
     };
 
-    const dispatch = useDispatch();
+    
 
-    useEffect (() => {
-        dispatch(getTotals());
-    }, [basket, dispatch]);
-
+    
 
   return (
     <div className="stepThree">

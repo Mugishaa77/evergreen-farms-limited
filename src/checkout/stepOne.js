@@ -1,12 +1,14 @@
-import React from 'react';
- const basket = useSelector((state) => state.basket);
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { addToBasket, decreaseBasket, removeFromBasket, getTotals } from '../features/basketSlice';
 import './Checkout.css';
 
 
 export default function StepOne() {
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
+
+  const basket = useSelector((state) => state.basket);
 
     useEffect (() => {
         dispatch(getTotals());
