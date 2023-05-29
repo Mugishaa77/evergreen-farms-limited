@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Link } from 'react-router-dom';
 import "react-step-progress-bar/styles.css";
 import { ProgressBar, Step } from "react-step-progress-bar";
+import StepOne from "./stepOne";
+import StepTwo from "./stepTwo";
+import StepThree from "./stepThree";
+import StepFour from "./stepFour";
 import './Checkout.css';
 
 
@@ -11,6 +15,21 @@ export default function Checkout () {
 
   const handleNextStep = () => {
     setCurrentStep(currentStep + 1);
+  };
+
+  const renderStep = () => {
+    switch (currentStep) {
+      case 0:
+        return <StepOne handleNextStep={handleNextStep} />;
+      case 1:
+        return <StepTwo handleNextStep={handleNextStep} />;
+      case 2:
+        return <StepThree handleNextStep={handleNextStep} />;
+      case 3:
+        return <StepFour handleNextStep={handleNextStep} />;
+      default:
+        return null;
+    }
   };
 
 
@@ -106,7 +125,7 @@ export default function Checkout () {
       )}
       </div>
 
-          
+           {renderStep()}
             
 
         </div>
