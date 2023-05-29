@@ -5,39 +5,6 @@
         padding: 2rem 4rem;;
 }
 
-
-
-.farmer-dashboard .add-product-btn{
-   font-weight: 'Poppins', serif;
-   color: orangered;
-   text-decoration: none;
-   cursor: pointer;
-   font-weight: 400;
-    
-}
-
-.farmer-dashboard .add-product-btn:hover {
-    color: var(--green-one);
-}
-
-.farmer-dashboard .delete-btn {
-    height: 40px;
-        border-radius: 5px;
-        margin-top: 2rem;
-        font-weight: 400;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background-color: var(--green-one);
-        color: var(--green-five);
-        letter-spacing: 1.15px;
-}
-
-.farmer-dashboard .delete-btn:hover {
-    background-color: var(--green-three);
-        color: var(--green-one);
-}
-
         /* Media query for screens smaller than 900px */
             @media screen and (max-width: 900px) {
                 .farmer-dashboard {
@@ -132,8 +99,7 @@
         .farmer-products,
         .create-product {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+           justify-content: space-between;
         }
     
         .farmer-products button {
@@ -190,7 +156,7 @@
     
         .image-preview p {
             color: var(--green-one);
-            font-family: 'Times New Roman', Times, serif;
+            font-family: var(--descriptive-font);
         }
     
         .farmer-products img {
@@ -221,10 +187,6 @@
             background-color: var(--green-four);
             color: var(--green-one);
         }
-
-                
-    
-
     
         @media only screen and (max-width: 900px) {
     
@@ -246,7 +208,7 @@
         }
 
 
-                 /* Farmer's Profile */
+                 /* Farmer's Setup */
         
                  .farmer-setup {
                      margin-right: 150px;
@@ -332,12 +294,6 @@
                      .farmer-setup .container {
                          max-width: 600px;
                      }
-                 }
-    
-                 .farmer-profile h2 {
-                    color: #1F5229;
-                    font-family: 'Times New Roman', Times, serif;
-
                  }
 
                  /*farmer-profile  */

@@ -48,7 +48,7 @@ export default function GrocerCreateProduct() {
   return (
     <div className="grocer-create-product">
       <form className="styled-form" onSubmit={handleSubmit}>
-        <h3>Create a product</h3>
+        <h4 >Create a product</h4>
         <input type="file" accept="image/*" onChange={handleProductImageUpload} required />
         <select onChange={(e) => setCategory(e.target.value)} required>
           <option value="">Select Category</option>

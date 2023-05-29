@@ -42,9 +42,11 @@
     font-size: 56px;
     padding: 220px;
     font-family: var(--welcome);
-    animation: bounce 2s infinite;
     color: var(--green-one);
+    animation: bounce 2s infinite;
 }
+
+
 
 @keyframes bounce {
 
@@ -109,6 +111,38 @@
 
 .homepage a {
     text-decoration: none;
+}
+
+.homepage .last-note {
+    text-align: center;
+}
+
+.homepage .cta {
+    animation: shineDisplay 5s linear infinite;
+}
+
+@keyframes shineDisplay {
+    0% {
+        color: var(--green-four);
+    }
+
+    25% {
+    
+        color: var(--green-five);
+    }
+
+    50% {
+       
+        color: var(--green-four);
+    }
+
+    75% {
+        color: var(--green-five);
+    }
+
+    100% {
+        color: var(--green-four);
+    }
 }
 /* navbar */
 .navbar .container {
