@@ -5,13 +5,7 @@
         padding: 2rem 4rem;;
 }
 
-.farmer-dashboard h2 {
-font-size: 40px;
-    font-weight: 400;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: #1F5229;
-}
+
 
 .farmer-dashboard .add-product-btn{
    font-weight: 'Poppins', serif;
@@ -23,7 +17,7 @@ font-size: 40px;
 }
 
 .farmer-dashboard .add-product-btn:hover {
-    color: #1F5229
+    color: var(--green-one);
 }
 
 .farmer-dashboard .delete-btn {
@@ -34,14 +28,14 @@ font-size: 40px;
         border: none;
         outline: none;
         cursor: pointer;
-        background-color: #1F5229;
-        color: #8fe051;
+        background-color: var(--green-one);
+        color: var(--green-five);
         letter-spacing: 1.15px;
 }
 
 .farmer-dashboard .delete-btn:hover {
-    background-color: #BCE29E;
-        color: #1F5229;
+    background-color: var(--green-three);
+        color: var(--green-one);
 }
 
         /* Media query for screens smaller than 900px */
@@ -71,7 +65,7 @@ font-size: 40px;
     flex-direction: column;
     padding: 2rem;
     top: 300;
-    border-right: 1px solid #1F5229;
+    border-right: 1px solid var(--green-one);
     
 
 }
@@ -79,10 +73,20 @@ font-size: 40px;
 .farmer-dashboard h3 {
     margin: 0 0 1rem 0;
     padding: 0;
-    text-transform: uppercase;
-    font-size: 17px;
+    text-transform: capitalize;
+    font-size: 32px;
+    font-family: var(--descriptive-font);
+    color: var(--green-one);
 }
 
+.farmer-dashboard .main-title {
+    margin: 0 0 1rem 0;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: var(--green-one);
+
+}
 .farmer-dashboard a {
     text-decoration: none;
     margin-bottom: 1 rem;
@@ -91,7 +95,7 @@ font-size: 40px;
 
 .farmer-dashboard .content {
     margin-left: 201px;
-    padding: 2rem 2rem;
+   
     width: calc(100% - 200px);
 }
 
@@ -100,7 +104,7 @@ font-size: 40px;
 }
 
 .farmer-dashboard .link-inactive {
-    color: #8fe051;
+    color: var(--green-five);
 }
 
 @media (max-width: 900px) {
@@ -137,14 +141,19 @@ font-size: 40px;
             border-radius: 5px;
             font-weight: 400;
             letter-spacing: 1.15px;
-            background-color: #1F5229;
-            color: #BCE29E;
-            border: none;
+            background-color: var(--green-one);
+            color: var(--green-four);
+            border: 1px solid var(--green-four);
             outline: none;
             cursor: pointer;
             margin: 0.5rem 0;
+            font-family: var(--directive-font);
         }
     
+        .farmer-products button:hover {
+           color: var(--green-one);
+                background-color: var(--green-four);
+        }
         .styled-form {
             display: flex;
             flex-direction: column;
@@ -158,18 +167,18 @@ font-size: 40px;
             min-height: 30px;
             outline: none;
             border-radius: 5px;
-            border: 1px solid hsl(132, 45%, 22%);
+            border: 1px solid var(--green-one);
             margin: 0.3rem, 0;
         }
     
         .styled-form select {
-            color: #1F5229;
+            color: var(--green-one);
         }
     
         .image-preview {
             margin: 2rem 0 2rem 2rem;
             padding: 2rem;
-            border: 1px solid #1F5229;
+            border: 1px solid var(--green-one);
             max-width: 300px;
             max-height: 300px;
             width: 100%;
@@ -180,7 +189,7 @@ font-size: 40px;
         }
     
         .image-preview p {
-            color: #1F5229;
+            color: var(--green-one);
             font-family: 'Times New Roman', Times, serif;
         }
     
@@ -202,15 +211,18 @@ font-size: 40px;
             border: none;
             outline: none;
             cursor: pointer;
-            background-color: #1F5229;
-            color: #8fe051;
+            background-color: var(--green-one);
+            color: var(--green-four);
             letter-spacing: 1.15px;
+            font-family: var(--directive-font);
         }
     
         .create-submit:hover {
-            background-color: #BCE29E;
-            color: #1F5229;
+            background-color: var(--green-four);
+            color: var(--green-one);
         }
+
+                
     
 
     
@@ -360,3 +372,21 @@ font-size: 40px;
                     text-align: left;
                     opacity: 0.85;
                  }
+
+                 /* Summary */
+
+                 .summary h3 {
+                    font-family: var(--descriptive-font);
+                        text-transform: capitalize;
+                        color: var(--green-one);
+                        font-size: 32px;
+                        text-align: center;
+                 }
+
+                 /* create product */
+
+                                 .create-product h4 {
+                                     font-size: 28px;
+                                     font-family: var(--descriptive-font);
+                                     color: var(--green-one);
+                                 }

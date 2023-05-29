@@ -5,7 +5,8 @@ export default function FarmerDashboard (){
     return(
         <div className="farmer-dashboard">
             <div className="side-nav">
-                <h3>Quick links</h3>
+                <h3 className="main-title">
+                    <strong>Quick links</strong></h3>
                  <NavLink className={({ isActive }) =>
                 isActive ? "link-active" : "link-inactive"
             }

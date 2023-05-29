@@ -9,7 +9,7 @@ export default function FarmerProfile (farmer) {
 
       <h3 className="contact-info"> Farmer's Contact information</h3>
       <p>Name: {farmer.fullName} </p>
-      <p>Email:<a href="mailto:{farmer.emailAddress}"
+      <p>Email:<a href="mailto:farmer.emailAddress"
                 title="Email"
                 rel="noopener noreferrer"
                 className="email-link"></a> {farmer.emailAddress}</p>
