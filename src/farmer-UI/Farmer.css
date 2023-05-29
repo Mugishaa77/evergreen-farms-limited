@@ -327,3 +327,36 @@ font-size: 40px;
                     font-family: 'Times New Roman', Times, serif;
 
                  }
+
+                 /*farmer-profile  */
+
+                 .farmer-profile h3 {
+                    font-family: var(--descriptive-font);
+                    text-transform: capitalize;
+                    color: var(--green-one);
+                    font-size: 32px;
+                    text-align: center; 
+                 }
+
+                 .farmer-profile .contact-info {
+                    margin-top: 1rem;
+                    text-decoration: underline;
+                        text-decoration-thickness: 0.5px;
+                 }
+
+                 .farmer-profile h2 {
+                    font-family: var(--descriptive-font);
+                    text-transform: capitalize;
+                        color: var(--green-one);
+                        font-size: 28px;
+                        text-align: left;
+                        opacity: 0.9;
+                 }
+
+                 .farmer-profile p {
+                    font-family: var(--descriptive-font);
+                    color: var(--green-one);
+                    font-size: 22px;
+                    text-align: left;
+                    opacity: 0.85;
+                 }
