@@ -13,14 +13,14 @@ export default function Homepage () {
             <div className="welcome">
               <span>Welcome to Evergreen!</span>
               
-              <Link>
+              <Link to = "/basket">
               <button>
                 Fresh Produce Here!
               </button>
               </Link>
               
             </div>
-             <div class="about">
+             <div class="about" id="about">
   <div class="container">
     <h3>ABOUT US</h3>
     <hr/>
@@ -56,7 +56,7 @@ export default function Homepage () {
     </div>
   </div>
 </div>
-<div class="contact">
+<div class="contact" id="contact">
   <div class="container">
     <h3>Contact Us</h3>
     <hr/>
