@@ -11,7 +11,7 @@ export default function Homepage () {
     return (
         <div className="homepage">
          
-            <a href="#about" className="scroll-down">
+            <a href="/#about" className="scroll-down">
                <span >
 
 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">

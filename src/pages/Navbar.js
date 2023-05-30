@@ -84,22 +84,22 @@ export default function Navbar () {
 
                <li className="nav-item">
                 <a
-                  href="#about"
+                  href="/#about"
                   className={`nav-link text-light ${
-                    activeLink === '/about' ? 'active' : ''
+                    activeLink === '/' ? 'active' : ''
                   }`}
-                  onClick={() => setActiveLink('/about')}
+                  onClick={() => setActiveLink('/#about')}
                 >
                   About
                 </a>
               </li>
               <li className="nav-item">
                 <a
-                  href="#contact"
+                  href="/#contact"
                   className={`nav-link text-light ${
-                    activeLink === '/contact' ? 'active' : ''
+                    activeLink === '/' ? 'active' : ''
                   }`}
-                  onClick={() => setActiveLink('/contact')}
+                  onClick={() => setActiveLink('/#contact')}
                 >
                   Contact
                 </a>

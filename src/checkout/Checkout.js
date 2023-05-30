@@ -101,25 +101,25 @@ export default function Checkout () {
       {currentStep === 0 && (
         <div>
           <p>Step 1: View Basket</p>
-          <button onClick={handleNextStep}>Next Step</button>
+          <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
       {currentStep === 1 && (
         <div>
           <p>Step 2: Payment method</p>
-          <button onClick={handleNextStep}>Next Step</button>
+          <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
       {currentStep === 2 && (
         <div>
           <p>Step 3: Order Summary</p>
-          <button onClick={handleNextStep}>Next Step</button>
+          <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
       {currentStep === 3 && (
         <div>
           <p>Step 4: Order Complete</p>
-          <button onClick={() => setCurrentStep(0)}>Restart</button>
+          <button onClick={() => setCurrentStep(0)} className="next-step-button">Restart</button>
           </div>
         
       )}
