@@ -54,7 +54,9 @@
     color: var(--green-four);
     cursor:pointer;
     animation: bounce 2s infinite;
-    float: right;
+    text-align: right;
+    margin-right: 20px;
+    padding-top: 10px;
    
 }
 
@@ -310,7 +312,7 @@
 .about h3 {
     font-family: var(--welcome);
     font-size: 28px;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
     text-align: left;
 }
 
@@ -338,6 +340,37 @@
 
 p {
     margin-bottom: 10px;
+}
+
+.about a {
+    text-decoration: none;
+}
+
+.about .up {
+    color: var(--green-one);
+    text-align: left;
+    margin-left: 20px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    
+}
+
+.about .up:hover {
+    color: var(--checkout-green);
+}
+
+
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 @media (max-width: 900px) {
