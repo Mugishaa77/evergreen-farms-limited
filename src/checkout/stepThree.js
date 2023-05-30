@@ -27,18 +27,7 @@ export default function StepThree() {
 
   return (
     <div className="stepThree">
-      <div>
-       
-          <div className="sub-total">
-          
-            <span>Subtotal:</span>
-            <span>
-              <strong>Kshs {JSON.stringify(basket.basketTotalAmount)}</strong>
-            </span>
-          </div>
-         
-         
-          </div>
+      
         </div>
       
    

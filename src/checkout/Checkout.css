@@ -6,6 +6,7 @@
 
 .checkout .back-link {
     color: var(--orange);
+    font-family: var(--directive-font);
 }
 
 .checkout .back-link:hover {
@@ -65,7 +66,7 @@
 
 .checkout button {
     width: 100px;
-    height: 40px;
+    height: 32px;
     border-radius: 5px;
     margin-top: 2rem;
     font-weight: 400;
@@ -145,78 +146,4 @@
     }
 }
 
-/* Step One */
-.step-one .item,
-.titles {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 3fr 1fr 1fr 1fr;
-    column-gap: 0.5rem;
-    justify-content: space-between;
-        border-bottom: 1px solid var(--green-four);
-        padding-bottom: 0.5rem;
-
-}
-
-.step-one h5 {
-    font-family: var(--descriptive-font);
-    color: var(--green-one);
-
-}
-
-.step-one img {
-    width: 75px;
-    height: 75px;
-    border-radius: 8px;
-}
-
-.step-one .product p {
-    font-family: var(--headings);
-    color: var(--green-one);
-    font-size: 20px;
-   
-}
-
-.step-one .quantity {
-    display: flex;
-    justify-content: center;
-}
-
-.step-one .quantity button {
-    width: 25px;
-    background-color: var(--green-four);
-    height: 25px;
-    border-radius: 15px;
-    border: 1px solid var(--green-five);
-}
-
-.step-one .quantity button:hover {
-    color: var(--navbar-blue);
-}
-
-.step-one .quantity .less {
-    color: orangered;
-}
-
-.step-one .quantity .count {
-    font-size: 20px;
-    font-family: var(--headings);
-    color: var(--green-one);
-}
-
-.step-one .quantity .more {
-    color: var(--green-one);
-}
-
-.step-one .price,
-.step-one .total {
-    font-family: var(--descriptive-font);
-    color: var(--green-one);
-    
-}
-
-.step-one .total {
-    justify-self: right;
-    font-weight: 700;
-}
-
+/* step two */

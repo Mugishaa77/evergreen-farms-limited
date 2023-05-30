@@ -4,16 +4,39 @@ import './Checkout.css';
 
 export default function StepTwo () {
     return (
-        <div className="stepTwo">
-            <div className="container">
-                <h3>You may pia via:</h3>
-                <p><span>Cash</span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash" viewBox="0 0 16 16">
-  <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
-  <path d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
-</svg></p>
-        <p><span>Mpesa </span></p>
-        
-            </div>
+        <div className="step-two">
+            <h1>Order Summary Receipt</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Product 1</td>
+            <td>2</td>
+            <td>$10</td>
+            <td>$20</td>
+          </tr>
+          <tr>
+            <td>Product 2</td>
+            <td>1</td>
+            <td>$15</td>
+            <td>$15</td>
+          </tr>
+          <tr>
+            <td colSpan="3"><strong>Grand Total</strong></td>
+            <td><strong>$35</strong></td>
+          </tr>
+        </tbody>
+      </table>
+  
+            
             
         </div>
     );
