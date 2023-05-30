@@ -146,32 +146,27 @@
 }
 
 /* Step One */
-.step-one .titles {
-    display: flex;
+.step-one .item,
+.titles {
+    display: grid;
     align-items: center;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    column-gap: 0.5rem;
     justify-content: space-between;
-    border-bottom: 1px solid var(--green-four);
-    padding-bottom: 0.5rem;
-}
+        border-bottom: 1px solid var(--green-four);
+        padding-bottom: 0.5rem;
 
-.step-one .items {
-    border-top: 1px solid var(--green-four);
-    padding: 1rem 0;
 }
 
 .step-one h5 {
     font-family: var(--descriptive-font);
     color: var(--green-one);
-    padding-top: 1rem;
-    margin: 0;
+
 }
 
 .step-one img {
     width: 75px;
     height: 75px;
-    margin-top: 1rem;
-    margin-right: auto;
-    margin-left: auto;
     border-radius: 8px;
 }
 
@@ -179,7 +174,7 @@
     font-family: var(--headings);
     color: var(--green-one);
     font-size: 20px;
-    margin: 0;
+   
 }
 
 .step-one .quantity {
@@ -204,11 +199,9 @@
 }
 
 .step-one .quantity .count {
-    padding: 0.8rem 0;
     font-size: 20px;
     font-family: var(--headings);
     color: var(--green-one);
-    margin: 0;
 }
 
 .step-one .quantity .more {
@@ -219,11 +212,11 @@
 .step-one .total {
     font-family: var(--descriptive-font);
     color: var(--green-one);
-    margin: 0;
+    
 }
 
 .step-one .total {
     justify-self: right;
-    padding-right: 0.5rem;
     font-weight: 700;
 }
+

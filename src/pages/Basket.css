@@ -192,7 +192,7 @@
     font-weight: 400;
     text-transform: uppercase;
 }
-
+/*  */
 .basket-item, .basket-container .titles {
     display: grid;
     align-items: center;

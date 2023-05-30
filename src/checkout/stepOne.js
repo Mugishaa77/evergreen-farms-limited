@@ -34,6 +34,7 @@ export default function StepOne() {
   <div className="items">
     {/* Mapping through the basket items */}
     {basket.basketItems?.map(basketItem => (
+      <div className="item">
       <div key={basketItem._id}>
         <div className="product ">
           <img src={basketItem.image} alt={basketItem.name} />
@@ -49,6 +50,7 @@ export default function StepOne() {
               </button>
             </div>
             <div className="price ">Kshs{basketItem.price}</div>
+            </div>
             <div className="total ">Kshs{basketItem.price * basketItem.basketQuantity}</div>
           </div>
         </div>

@@ -64,7 +64,7 @@ export default function Checkout () {
               }`}
             >
               <span className="index"> {index + 1} </span>{" "}
-              <p> Payment method</p>
+              <p> Order Summary</p>
             </div>
           )}
         </Step>
@@ -76,7 +76,7 @@ export default function Checkout () {
               }`}
             >
               <span className="index"> {index + 1} </span>
-              <p>Order Summary</p>
+              <p>Payment</p>
             </div>
           )}
         </Step>
@@ -106,13 +106,13 @@ export default function Checkout () {
       )}
       {currentStep === 1 && (
         <div>
-          <p>Step 2: Payment method</p>
+          <p>Step 2: Order Summary</p>
           <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
       {currentStep === 2 && (
         <div>
-          <p>Step 3: Order Summary</p>
+          <p>Step 3: Payment</p>
           <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
