@@ -64,7 +64,6 @@ export default function BasketOne () {
                    <h3 className="quantity">Quantity</h3>
                    <h3 className="total">Total</h3>
                 </div>
-
                 <div className="basket-items">
                     {basket.basketItems?.map(basketItem => (
                         <div className="basket-item" key={basketItem._id}>

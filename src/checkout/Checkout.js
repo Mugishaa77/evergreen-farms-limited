@@ -6,6 +6,7 @@ import StepOne from "./stepOne";
 import StepTwo from "./stepTwo";
 import StepThree from "./stepThree";
 import StepFour from "./stepFour";
+import StepFive from './stepFive';
 import './Checkout.css';
 
 
@@ -27,6 +28,8 @@ export default function Checkout () {
         return <StepThree handleNextStep={handleNextStep} />;
       case 3:
         return <StepFour handleNextStep={handleNextStep} />;
+        case 4:
+          return <StepFive handleNextStep={handleNextStep} />
       default:
         return null;
     }
@@ -42,7 +45,7 @@ export default function Checkout () {
 </svg>Back
             </Link>
             <h3> Checkout</h3>
-             <ProgressBar percent={((currentStep + 1) / 4) * 100} unfilledBackground="#AFEEEE" filledBackground="#8fe051" >
+             <ProgressBar percent={((currentStep + 1) / 5) * 100} unfilledBackground="#AFEEEE" filledBackground="#8fe051" >
         <Step>
           {({ accomplished, index }) => (
             <div
@@ -51,7 +54,7 @@ export default function Checkout () {
               }`}
             >
               <span className="index">{index + 1} </span>
-              <p>View Basket</p>
+              <p>Order Summary</p>
               
             </div>
           )}
@@ -64,7 +67,7 @@ export default function Checkout () {
               }`}
             >
               <span className="index"> {index + 1} </span>{" "}
-              <p> Order Summary</p>
+              <p>Billing Information</p>
             </div>
           )}
         </Step>
@@ -76,7 +79,19 @@ export default function Checkout () {
               }`}
             >
               <span className="index"> {index + 1} </span>
-              <p>Payment</p>
+              <p>Payment Method</p>
+            </div>
+          )}
+        </Step>
+        <Step>
+          {({ accomplished, index }) => (
+            <div
+              className={`indexedStep ${
+                accomplished ? "accomplished" : null
+              }`}
+            >
+              <span className="index"> {index + 1} </span>
+              <p>Order Confirmation</p>
             </div>
           )}
         </Step>
@@ -100,25 +115,33 @@ export default function Checkout () {
 
       {currentStep === 0 && (
         <div>
-          <p>Step 1: View Basket</p>
+          <p>Step 1: Order Summary</p>
           <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
       {currentStep === 1 && (
         <div>
-          <p>Step 2: Order Summary</p>
+          <p>Step 2: Billing Information</p>
           <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
       {currentStep === 2 && (
         <div>
-          <p>Step 3: Payment</p>
+          <p>Step 3: Payment Method</p>
           <button onClick={handleNextStep} className="next-step-button">Next Step</button>
         </div>
       )}
       {currentStep === 3 && (
         <div>
-          <p>Step 4: Order Complete</p>
+          <p>Step 4: Order Confirmation</p>
+           <button onClick={handleNextStep} className="next-step-button">Next Step</button>
+          
+          </div>
+        
+      )}
+      {currentStep === 4 && (
+        <div>
+          <p>Step 5: Order Complete</p>
           <button onClick={() => setCurrentStep(0)} className="next-step-button">Restart</button>
           </div>
         

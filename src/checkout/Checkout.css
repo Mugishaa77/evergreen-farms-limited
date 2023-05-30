@@ -146,4 +146,116 @@
     }
 }
 
-/* step two */
+/* step one */
+.step-one {
+    font-family: var(--descriptive-font);
+    padding: 20px;
+    color: var(--green-one);
+}
+
+.step-one h1 {
+    font-size:20px;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.order-table th,
+.order-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-table th {
+    background-color: #f5f5f5;
+}
+
+.order-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.order-table tfoot td {
+    text-align: right;
+}
+
+.order-table tfoot strong {
+    font-weight: bold;
+}
+
+
+/* Step two */
+.step-two {
+    font-family: var(--descriptive-font);
+    padding: 20px;
+    color: var(--green-one);
+}
+
+.step-two h1 {
+    font-size: 20px;
+}
+
+.step-two input {
+    height: 18px;
+    width: 180px;
+    border-radius: 2px;
+    display: flex;
+   align-items: center;
+    
+}
+
+.step-two button {
+    display: block;
+}
+
+/* Step Three */
+.step-three {
+    font-family: var(--descriptive-font);
+    padding: 20px;
+    color: var(--green-one);
+}
+
+.step-three h1 {
+    font-size: 20px;
+}
+
+.step-three h2 {
+    font-family: var(--directive-font);
+    font-size: 20px;
+}
+
+.step-three a {
+    text-decoration: none;
+    display: block;
+    font-size: 22px;
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.step-three a:hover {
+    color: orangered;
+}
+
+/* Step Four */
+.step-four {
+    font-family: var(--descriptive-font);
+    padding: 20px;
+    color: var(--green-one);
+}
+
+.step-four h1 {
+    font-size: 20px;
+}
+
+/* Step Five */
+.step-five {
+    font-family: var(--descriptive-font);
+    padding: 20px;
+    color: var(--green-one);
+}
+
+.step-five h1 {
+    font-size: 20px;
+}
