@@ -1,30 +1,109 @@
 .category {
-    background-color: #F2F7F0;
+    background-color: var(--green-two);
     padding: 2rem 4rem;
 
+}
+
+.category .back-link {
+    color: var(--orange);
+    cursor: pointer;
+    position: absolute;
+    top: 180px;
+    left: 20px;
+    font-family: var(--directive-font);
+
+}
+
+.category .back-link:hover {
+    color: var(--green-one);
+}
+
+.category .next-link {
+    color: var(--orange);
+    cursor: pointer;
+    position: absolute;
+    top: 175px;
+    right: 20px;
+    font-family: var(--directive-font)
+
+}
+
+.category .next-link:hover {
+    color: var(--green-one);
 }
 
 .category h3 {
     font-size: 35px;
     font-weight: 400;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: #1F5229;
+    padding-top: 2rem;
+    font-family: var(--descriptive-font);
+    color: var(--green-one);
 }
 
- .category .btn-success {
-     background-color: orange !important;
-     color: white !important;
-     font-family: 'Poppins',
-         serif;
+.category h6 {
+    font-size: 18px;
+    font-family: var(--descriptive-font);
+    color: var(--navbar-blue);
+    opacity: 0.9;
+}
+
+.category h4 {
+    text-align: left;
+    font-family: var(--descriptive-font);
+    color: var(--green-one);
+    font-size: 18px;
+    text-decoration: underline;
+    padding-top: 1rem;
+}
+
+.category button {
+    width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 2rem;
+        border: 2px solid var(--green-five);
+        outline: none;
+        cursor: pointer;
+        background-color: var(--green-one);
+        color: var(--green-five);
+        letter-spacing: 1.15px;
+        font-family: var(--descriptive-font);
+        font-size: 20px;
+        text-align: center;
+}
+
+.category button:hover {
+    background-color: var(--green-four);
+    color: var(--green-one);
+}
+ .category li {
+     list-style: none;
+     color: var(--orange);
+     font-size: 16px;
+     font-family: var(--headings);
 
  }
 
- .category li {
-     list-style: none;
-     color: #357402;
-     font-size: 28px;
+ .category .foot-note {
+     margin-bottom: 10px;
 
+ }
+
+ .category p {
+    text-align: center;
+        color: var(--orange);
+ }
+
+ .category a {
+    text-decoration: none;
+ }
+
+ .category h5 {
+     text-align: center;
+     font-family: var(--directive-font);
+     font-size: 20px;
+     color: var(--orange);
  }
 
  @media (max-width: 900px) {
@@ -33,34 +112,7 @@
     }
  }
 
- .category .back-link {
-     color: #F76400;
-     cursor: pointer;
-     position: absolute;
-     top: 180px;
-     left: 20px;
-
- }
-
- .category .back-link:hover {
-     color: #1F5229;
- }
-
  
-
- .category .next-link {
-     color: #F76400;
-     cursor: pointer;
-     position: absolute;
-     top: 175px;
-     right: 20px;
-
- }
-
- .category .next-link:hover {
-     color: #1F5229;
- }
-
  
 
  

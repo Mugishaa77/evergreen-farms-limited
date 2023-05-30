@@ -39,6 +39,8 @@ import FarmerSetUp from './farmer-UI/FarmerSetUp';
 // stalls
 import StallDisplay from './stalls/StallDisplay';
 import StallLayout from './stalls/StallLayout';
+import StallNumbers from './stalls/StallNumber';
+import StallNames from './stalls/StallNames';
 
 // register
 import Register from './registration/Register';
@@ -69,6 +71,8 @@ function App () {
           <Route path="/checkout" exact element={<Checkout/>}/>
           <Route path="/register" exact element={<Register/>}/>
           <Route path="/homepage" exact element={<Homepage/>}/>
+          <Route path="/stall-numbers" exact element={<StallNumbers/>}/>
+          <Route path="/stall-names" exact element={<StallNames/>}/>
             
           
 
