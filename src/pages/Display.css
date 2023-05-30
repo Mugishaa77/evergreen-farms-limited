@@ -208,6 +208,11 @@
 
 }
 
+.wholesale-goods .foot-note {
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
 /*Retail*/
 
 .retail {
@@ -319,4 +324,23 @@
     letter-spacing: 1.15px;
     font-family: var(--descriptive-font);
 
+}
+
+.retail .foot-note {
+    text-align: center;
+    padding: 2rem 2rem;
+}
+
+.foot-note a {
+text-decoration: none;
+}
+
+.foot-note p {
+        color: var(--orange);
+}
+
+.foot-note h5 {
+        font-family: var(--directive-font);
+        font-size: 20px;
+        color: var(--orange);
 }

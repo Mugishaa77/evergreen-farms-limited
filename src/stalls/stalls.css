@@ -31,7 +31,14 @@
     font-size: 20px;
     font-family: var(--descriptive-font);
     color: var(--navbar-blue);
+} 
+
+.stall-numbers .foot-note,
+.stall-names .foot-note {
+    text-align: center;
+    margin-top: 250px;
 }
+
 
 /* Stall Names */
 .stall-names {
@@ -89,10 +96,11 @@
     color: var(--orange);
 }
 
+
 .stall-display h6 {
     color: var(--navbar-blue);
     font-family: var(--descriptive-font);
-    font-size: 18px;
+    font-size: 16px;
   padding: 2rem 2rem;
   
 }
