@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Display.css';
 
-
-
 export default function Display (){
     return(
         <div className="main-display">

@@ -64,6 +64,7 @@
 .main-display p {
     font-family: var(--headings);
     font-size: 18px;
+    color: var(--navbar-blue);
 }
  .main-display p:hover {
     color: var(--checkout-green);
@@ -88,13 +89,12 @@
 
 
 
-
 /*Position the nav divs appropriately to enable mobile view */
 /* Start on media queries and mobile responsiveness from this section next time */
 
 /*Wholesale */
 .wholesale-goods {
-    background-color: #F2F7F0;
+    background-color: var(--green-two);
     padding: 2rem 4rem;
 
 }
@@ -103,34 +103,36 @@
     font-size: 35px;
     font-weight: 400;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: #1F5229;
+    font-family: var(--descriptive-font);
+    color: var(--green-one);
 }
 
 .wholesale-goods .back-link {
-    color: #F76400;
+    color: var(--orange);
     cursor: pointer;
     position: absolute;
     top: 175px;
     left: 20px;
+    font-family: var(--directive-font);
 
 }
 
 .wholesale-goods .back-link:hover {
-    color: #1F5229;
+    color: var(--green-one);
 }
 
 .wholesale-goods .next-link {
-    color: #F76400;
+    color: var(--orange);
     cursor: pointer;
     position: absolute;
     top: 175px;
     right: 20px;
+    font-family: var(--directive-font);
 
 }
 
 .wholesale-goods .next-link:hover {
-    color: #1F5229;
+    color: var(--green-one);
 }
 
 .wholesale-goods button {
@@ -140,29 +142,76 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #1F5229;
-    color: #8fe051;
+    background-color: var(--green-one);
+    color: var(--green-four);
     letter-spacing: 1.15px;
+    font-family: var(--directive-font);
 }
 
 .wholesale-goods button:hover {
-    background-color: #BCE29E;
-    color: #1F5229;
+    background-color: var(--green-four);
+    color: var(--green-one);
 }
 
 .wholesale-goods p {
-    color: #1F5229;
-    font-family: 'Poppins', serif;
+    color: var(--green-one);
+    font-family: var(--descriptive-font);
 }
 
 .product-search {
     text-align: right;
 }
 
+.wholesale-goods h6 {
+    font-family: var(--descriptive-font);
+    color: var(--navbar-blue);
+    font-size: 18px;
+    padding: 2rem 2rem;
+}
+
+.wholesale-goods .product {
+    width: 250px;
+    max-width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: var(--green-three);
+    box-shadow: -5px -5px 10px var(--green-four),
+        2px 2px 5px var(--green-three);
+}
+
+.wholesale-goods h4 {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: var(--descriptive-font);
+    opacity: 0.8;
+
+}
+
+.wholesale-goods .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.wholesale-goods .details .price {
+    font-weight: 20px;
+    font-weight: 700;
+    color: var(--green-one);
+    letter-spacing: 1.15px;
+    font-family: var(--descriptive-font);
+
+}
+
 /*Retail*/
 
 .retail {
-    background-color: #F2F7F0;
+    background-color: var(--green-two);
     padding: 2rem 4rem;
 
 }
@@ -171,34 +220,36 @@
     font-size: 35px;
     font-weight: 400;
     text-align: center;
-    font-family: 'Playfair Display', serif;
-    color: #1F5229;
+    font-family: var(--descriptive-font);
+    color: var(--green-one);
 }
 
 .retail .back-link {
-    color: #F76400;
+    color: var(--orange);
     cursor: pointer;
     position: absolute;
     top: 175px;
     left: 20px;
+    font-family: var(--directive-font)
 
 }
 
 .retail .back-link:hover {
-    color: #1F5229;
+    color: var(--green-one);
 }
 
 .retail .next-link {
-    color: #F76400;
+    color: var(--orange);
     cursor: pointer;
     position: absolute;
     top: 175px;
     right: 20px;
+    font-family: var(--directive-font);
 
 }
 
 .retail .next-link:hover {
-    color: #1F5229;
+    color: var(--green-one);
 }
 
 .retail button {
@@ -208,17 +259,64 @@
     border: none;
     outline: none;
     cursor: pointer;
-    background-color: #1F5229;
-    color: #8fe051;
+    background-color: var(--green-one);
+    color: var(--green-four);
     letter-spacing: 1.15px;
+    font-family: var(--directive-font);
 }
 
 .retail button:hover {
-    background-color: #BCE29E;
-    color: #1F5229;
+    background-color: var(--green-four);
+    color: var(--green-one);
 }
 
 .retail p {
-    color: #1F5229;
-    font-family: 'Poppins', serif;
+    color: var(--green-one);
+    font-family: var(--descriptive-font);
+}
+
+.retail h6 {
+    font-family: var(--descriptive-font);
+    color: var(--navbar-blue);
+    font-size: 18px;
+    padding: 2rem 2rem;
+}
+
+.retail .product {
+    width: 250px;
+    max-width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: var(--green-three);
+    box-shadow: -5px -5px 10px var(--green-four),
+        2px 2px 5px var(--green-three);
+}
+
+.retail h4 {
+    font-size: 25px;
+    font-weight: 400;
+    font-family: var(--descriptive-font);
+    opacity: 0.8;
+
+}
+
+.retail .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.retail .details .price {
+    font-weight: 20px;
+    font-weight: 700;
+    color: var(--green-one);
+    letter-spacing: 1.15px;
+    font-family: var(--descriptive-font);
+
 }

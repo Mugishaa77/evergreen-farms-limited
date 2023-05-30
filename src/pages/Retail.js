@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { addToBasket } from '../features/basketSlice';
+import './Display.css';
 
 export default function Retail () {
+    const dispatch = useDispatch();
+ const navigate = useNavigate();
+ const product = {};
+    const handleAddToBasket = (product) => {
+    dispatch(addToBasket(product));
+    navigate('/basket-one');
+  };
     return (
         <div className="retail">
             <Link to="/main-display" className="back-link">
@@ -21,7 +32,20 @@ export default function Retail () {
 </svg></p>
           <input type="text" placeholder="Search Here"></input><button>Search</button>
   </div>
-  
+   <h6>Here, products entered by farmers and grocers that are of retail category will appear for purchase just as shown in the fresh market as follows;</h6>
+   <div key="" className="product">
+      <h4>Product Name</h4>
+      <img src="https://res.cloudinary.com/sallymugisha/image/upload/v1677225882/Evergreen%20Farm%20Produce/produce/sagaa_q95lhr.jpg" alt="product" />
+      <div className="details">
+        <span>Product Description</span>
+        <span className="price">Kshs 10</span>
+      </div>
+      <button onClick={() => handleAddToBasket(product)}>
+        Add to Basket
+      </button>
+    </div>
+
+
         </div>
     );
 }
