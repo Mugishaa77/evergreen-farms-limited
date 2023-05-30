@@ -276,12 +276,14 @@
     color: orangered;
 }
 
+
 .basket-product-quantity .more {
     color: var(--green-one);
 }
 .basket-product-quantity .count {
     padding: 0.8rem 0;
     font-size: 20px;
+    
 }
 
 .basket-product-total-price {

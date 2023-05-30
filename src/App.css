@@ -50,12 +50,16 @@
     text-decoration: none;
 }
 
-.homepage  .scroll-down {
+.homepage  .down {
     color: var(--green-four);
-    position: absolute;
-    top: 200px;
-    right: 20px;
+    cursor:pointer;
     animation: bounce 2s infinite;
+    float: right;
+   
+}
+
+.homepage .down:hover {
+    color: var(--checkout-green);
 }
 
 
