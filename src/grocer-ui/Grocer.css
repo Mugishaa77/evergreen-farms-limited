@@ -356,6 +356,14 @@ input {
                         text-align: center;
                  }
 
+                                 .grocer-summary p {
+                                     font-family: var(--descriptive-font);
+                                     text-transform: capitalize;
+                                     color: var(--navbar-blue);
+                                     font-size: 28px;
+                                     text-align: center;
+                                 }
+
                  /* create product */
 
                                  .grocer-create-product h3 {

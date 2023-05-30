@@ -26,10 +26,7 @@ export default function GrocerDashboard (){
             }
                 to ="/grocer-dashboard/grocer-products">Products</NavLink>
                 
-                <NavLink className={({ isActive }) =>
-                isActive ? "link-active" : "link-inactive"
-            }
-                to ="/grocer-dashboard/stall-layout">View My Stall</NavLink>
+               
 
 
             </div>

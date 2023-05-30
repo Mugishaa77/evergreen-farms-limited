@@ -46,6 +46,18 @@
     animation: bounce 2s infinite;
 }
 
+.homepage a  {
+    text-decoration: none;
+}
+
+.homepage  .scroll-down {
+    color: var(--green-four);
+    position: absolute;
+    top: 200px;
+    right: 20px;
+    animation: bounce 2s infinite;
+}
+
 
 
 @keyframes bounce {
@@ -109,14 +121,6 @@
             font-weight: 450;
 }
 
-.homepage a {
-    text-decoration: none;
-}
-
-.homepage .last-note {
-    text-align: center;
-}
-
 .homepage .cta {
     animation: shineDisplay 5s linear infinite;
 }
@@ -144,6 +148,19 @@
         color: var(--green-four);
     }
 }
+
+.homepage a .last-note {
+    text-align: center;
+    padding: 2rem 2rem;
+    color: var(--orange);
+    font-size: 20px;
+    font-family: var(--descriptive-font);
+}
+
+.homepage a .last-note:hover {
+    color: orangered;
+}
+
 /* navbar */
 .navbar .container {
     width: 100% !important;

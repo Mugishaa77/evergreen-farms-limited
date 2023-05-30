@@ -12,6 +12,16 @@
     font-family: var(--descriptive-font);
 }
 
+.basket .back-link {
+    color: var(--orange);
+    cursor: pointer;
+    font-family: var(--directive-font);
+}
+
+.basket .back-link:hover {
+    color: var(--green-one);
+}
+
 .basket .next-link {
     color: var(--orange);
     font-family: var(--directive-font);

@@ -339,6 +339,15 @@
                         text-align: center;
                  }
 
+                 .summary p {
+                    font-family: var(--descriptive-font);
+                    text-transform: capitalize;
+                        color: var(--navbar-blue);
+                        font-size: 28px;
+                        text-align: center;
+
+                 }
+
                  /* create product */
 
                                  .create-product h4 {
