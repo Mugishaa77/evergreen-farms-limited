@@ -93,8 +93,7 @@
     .homepage .welcome {
         font-size: 36px;
        padding: 50px;
-       top: 20px;
-       left: 20px;
+       text-align: left;
     }
 
     .homepage .down {
