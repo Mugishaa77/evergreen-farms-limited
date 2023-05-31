@@ -41,8 +41,8 @@
 
 .homepage .welcome {
     font-weight: 400;
-    font-size: 56px;
-    padding: 220px;
+    font-size: 70px;
+    padding: 200px;
     font-family: var(--welcome);
     color: var(--green-one);
     animation: bounce 2s infinite;
@@ -79,33 +79,11 @@
     }
 }
 
-@media (max-width: 900px) {
-    
-    .homepage {
-  
-        background-image: url("./images/new-small.jpg");
-        width: 900px;
-        height: 350px;
-        margin: 0;
-            }
-    
-
-    .homepage .welcome {
-        font-size: 36px;
-       padding: 50px;
-       text-align: left;
-    }
-
-    .homepage .down {
-        margin-right: 10px;
-        padding-top: 5px;
-    }
-}
 
 .homepage button {
     display: block;
-    width: 180px;
-    height: 50px;
+    width: 240px;
+    height: 60px;
     border-radius: 1px;
    margin-top: 2rem;
     margin-left: 100px;
@@ -114,8 +92,8 @@
     cursor: pointer;
     background-color: rgba(31, 82, 41, 0.5);
     color: var(--green-five);
-    font-size: 30px;
-    font-weight: 10;
+    font-size: 36px;
+    font-weight: 20;
     font-family: var(--welcome);
     opacity: 0.8;
     position: relative;
@@ -181,19 +159,45 @@
 
 @media (max-width: 900px) {
     
+            .homepage {
+    
+                background-image: url("./images/new-small.jpg");
+                height: 300px;
+                margin: 0;
+            }
 
+           .homepage .welcome {
+            font-size: 36px;
+            padding: 50px;
+           }
+
+    
+            .homepage .down {
+                margin-right: 10px;
+                padding-top: 5px;
+                color: var(--green-four);
+                width: 20;
+                height: 20;
+            }
+
+            .homepage .first {
+                margin-top: 30px;
+            }
+       
     .homepage button {
-        margin-left: 20px;
+        text-align: left;
+        margin-left: 30px;
         font-size: 24px;
+        width: 150px;
+        height: 50px;
+        padding-top: 0;
+        cursor: pointer;
     }
 
-    .homepage button::before {
-        top: -4px;
-        left: -4px;
-        width: calc(100% + 8px);
-        height: calc(100% + 8px);
-    }
+    .homepage button:hover {
+        background-color: var(--green-four);
 
+    }
 
     .homepage a .last-note {
         padding: 1rem;
@@ -524,7 +528,17 @@ p {
     color: var(--green-one);
     /* Change the font color here */
     margin-bottom: 10px;
+    opacity: 0.8;
     /* Adjust the spacing between icons */
+}
+
+.contact .socials a:hover {
+    color: var(--orange);
+}
+
+.contact .socials span {
+    padding: 1rem 1rem;
+    font-family: var(--descriptive-font);
 }
 
 .contact .container {

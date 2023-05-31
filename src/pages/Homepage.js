@@ -16,7 +16,7 @@ export default function Homepage () {
         <div className="homepage">
                 <a  href="/#about">
   <div className="down">
-<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="36" fill="currentColor" class="bi bi-arrow-down-square" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M15 2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2zM0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm8.5 2.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z"/>
 </svg>
 </div>
@@ -109,7 +109,7 @@ export default function Homepage () {
                 <FontAwesomeIcon
                   icon={faInstagram}
                   className="instagram-icon"
-                />
+                /> <span>@EvergreenFarmsKe</span>
               </a>
 
               <a
@@ -119,6 +119,7 @@ export default function Homepage () {
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faTwitter} className="twitter-icon" />
+                <span>@EvergreenFarmsKe</span>
               </a>
 
               <a
@@ -128,6 +129,7 @@ export default function Homepage () {
                 className="email-link"
               >
                 <FontAwesomeIcon icon={faEnvelope} className="envelope-icon" />
+                <span>Lesliejobita@outlook.com</span>
               </a>
 
               <a
@@ -139,20 +141,21 @@ export default function Homepage () {
                 <FontAwesomeIcon
                   icon={faFacebook}
                   className="facebook-icon"
-                />
+                /> <span>@EvergreenFarmsKe</span>
               </a>
 
               <a
-                href="tel:1234567890"
+                href="tel:+254780601607"
                 target="_blank"
                 title="Phone"
                 rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faPhone} className="phone-icon" />
+                <span>+254 780 601 607</span>
               </a>
 
               <a
-                href="https://api.whatsapp.com/send?phone=1234567890"
+                href="https://api.whatsapp.com/send?phone=+254727601607"
                 target="_blank"
                 title="WhatsApp"
                 rel="noopener noreferrer"
@@ -160,7 +163,8 @@ export default function Homepage () {
                 <FontAwesomeIcon
                   icon={faWhatsapp}
                   className="whatsapp-icon"
-                />
+
+                /><span>+254 727 601 607</span>
               </a>
             </div>
     
