@@ -18,16 +18,22 @@ export default function Checkout () {
     setCurrentStep(currentStep + 1);
   };
 
+  const [storedData, setStoredData] = React.useState(null);
+
+  const handleFormSubmit = (data) => {
+    setStoredData(data);
+  };
+
   const renderStep = () => {
     switch (currentStep) {
       case 0:
         return <StepOne handleNextStep={handleNextStep} />;
       case 1:
-        return <StepTwo handleNextStep={handleNextStep} />;
+        return <StepTwo handleNextStep={handleNextStep} onFormSubmit={handleFormSubmit}/>;
       case 2:
         return <StepThree handleNextStep={handleNextStep} />;
       case 3:
-        return <StepFour handleNextStep={handleNextStep} />;
+        return <StepFour handleNextStep={handleNextStep} storedData={storedData} />;
         case 4:
           return <StepFive handleNextStep={handleNextStep} />
       default:

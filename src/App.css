@@ -221,7 +221,8 @@
 }
 
 .navbar li {
-    font-family: var(--navbar)
+    font-family: var(--navbar);
+    font-size: 18px;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -231,8 +232,8 @@
 .nav-link.active {
 
 
-    color: var(--green-two);
-    font-size: 18px;
+    color: var(--green-four)!important;
+    font-size: 20px;
 }
 
 /* hero */
