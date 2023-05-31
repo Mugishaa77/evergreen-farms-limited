@@ -267,6 +267,11 @@
             padding: 1.5rem;
         }
 
+        .wholesale-goods img {
+            max-width: 180px;
+            height: 180px;
+        }
+
 
     
     }
@@ -439,6 +444,11 @@ text-decoration: none;
             margin: 0.5rem auto;
             padding: 0.5rem;
             border-radius: 10px;
+        }
+
+        .retail img {
+            max-width: 180px;
+            height: 180px;
         }
     
         .retail h4 {
