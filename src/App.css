@@ -303,7 +303,7 @@
     font-family: var(--descriptive-font);
     line-height: 1.5;
     word-wrap: break-word;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--green-one);
     text-align: center;
     padding: 40px 0;
@@ -311,15 +311,16 @@
 
 .about h3 {
     font-family: var(--welcome);
-    font-size: 28px;
+    font-size: 32px;
     padding-bottom: 20px;
     text-align: left;
 }
 
 .about h4 {
     text-align: left;
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 10px;
+    padding-top: 10px;
 }
 
 .about p {
@@ -359,6 +360,14 @@ p {
     color: var(--checkout-green);
 }
 
+.about .down {
+    color: var(--green-one);
+}
+
+.about .down:hover {
+    color: var(--orange);
+}
+
 
 
 @keyframes bounce {
@@ -371,6 +380,11 @@ p {
     50% {
         transform: translateY(-10px);
     }
+}
+
+.about .anchors {
+    display: flex;
+    justify-content: space-between;
 }
 
 @media (max-width: 900px) {
@@ -404,23 +418,47 @@ p {
 
 /* contact section */
 
-.contact {
+.contact  {
     background-color: var(--green-two);
     text-align: center;
-    color: var(--green-one)
+    color: var(--green-one);
+    font-size: 20px;
+               
 }
 
 .contact h3 {
     font-family: var(--welcome);
-    text-align: left;
+        font-size: 32px;  
+        text-align: left; 
+        padding-bottom: 20px;
+            
 }
+
 
 .contact h4 {
     opacity: 0.8;
     font-family: var(--welcome);
     text-align: center;
-    font-size: 36px;
-}
+    font-size: 50px;
+    animation: shine 4s ease-in infinite;
+    
+    }
+    
+    @keyframes shine {
+    
+        0% {
+            color: var(--green-one);
+    
+        }
+
+        50% {
+            color: #008400;
+        }
+
+         
+       
+    }
+
 
 .contact p {
     font-family: var(--descriptive-font);
@@ -441,4 +479,9 @@ p {
     /* Change the font color here */
     margin-bottom: 10px;
     /* Adjust the spacing between icons */
+}
+
+.contact .container {
+    max-width: 800px;
+    margin: 0 auto;
 }

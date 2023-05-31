@@ -74,6 +74,7 @@ function App () {
           <Route path="/stall-numbers" exact element={<StallNumbers/>}/>
           <Route path="/stall-names" exact element={<StallNames/>}/>
           <Route path="/#about" exact element={<Homepage/>}/>
+            <Route path="/#contact" exact element={<Homepage/>}/>
             
           
 
