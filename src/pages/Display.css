@@ -93,6 +93,7 @@
 /* Start on media queries and mobile responsiveness from this section next time */
 
 /*Wholesale */
+/*Wholesale */
 .wholesale-goods {
     background-color: var(--green-two);
     padding: 2rem 4rem;
@@ -165,7 +166,7 @@
 .wholesale-goods h6 {
     font-family: var(--descriptive-font);
     color: var(--navbar-blue);
-    font-size: 18px;
+    font-size: 22px;
     padding: 2rem 2rem;
 }
 
@@ -213,6 +214,62 @@
     padding: 2rem 2rem;
 }
 
+@media screen and (max-width: 900px) {
+    .wholesale-goods {
+        padding: 2rem;
+    }
+
+        .wholesale-goods h3 {
+            font-size: 30px;
+        }
+    
+        .wholesale-goods .back-link {
+            top: 150px;
+        }
+    
+        .wholesale-goods .next-link {
+            top: 150px;
+        }
+    
+        .wholesale-goods button {
+            height: 35px;
+            letter-spacing: 1px;
+        }
+    
+        .wholesale-goods p {
+            font-size: 16px;
+        }
+    
+        .wholesale-goods h6 {
+            font-size: 16px;
+            padding: 1.5rem;
+        }
+    
+        .wholesale-goods .product {
+            width: 200px;
+            height: 350px;
+            margin: 0.5rem auto;
+            padding: 0.5rem;
+            border-radius: 10px;
+            font-family: var(--descriptive-font);
+        }
+    
+        .wholesale-goods h4 {
+            font-size: 20px;
+            padding: 1rem 1rem;
+        }
+    
+        .wholesale-goods .details .price {
+            font-size: 16px;
+        }
+    
+        .wholesale-goods .foot-note {
+            padding: 1.5rem;
+        }
+
+
+    
+    }
 /*Retail*/
 
 .retail {
@@ -344,3 +401,67 @@ text-decoration: none;
         font-size: 20px;
         color: var(--orange);
 }
+
+@media screen and (max-width: 900px) {
+    .retail {
+        padding: 2rem;
+    }
+
+        .retail h3 {
+            font-size: 30px;
+        }
+    
+        .retail .back-link {
+            top: 150px;
+        }
+    
+        .retail .next-link {
+            top: 150px;
+        }
+    
+        .retail button {
+            height: 35px;
+            letter-spacing: 1px;
+        }
+    
+        .retail p {
+            font-size: 16px;
+        }
+    
+        .retail h6 {
+            font-size: 16px;
+            padding: 1.5rem;
+        }
+    
+        .retail .product {
+            width: 200px;
+            height: 350px;
+            margin: 0.5rem auto;
+            padding: 0.5rem;
+            border-radius: 10px;
+        }
+    
+        .retail h4 {
+            font-size: 20px;
+        }
+    
+        .retail .details .price {
+            font-size: 16px;
+        }
+    
+        .retail .foot-note {
+            padding: 1.5rem;
+        }
+    
+        .retail .foot-note a {
+            text-decoration: none;
+        }
+    
+        .retail .foot-note p {
+            color: var(--orange);
+        }
+    
+        .retail .foot-note h5 {
+            font-size: 20px;
+        }
+    }
