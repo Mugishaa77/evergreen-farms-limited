@@ -102,7 +102,7 @@ export default function BasketOne () {
                         </div>
                         <p>Taxes and Delivery calculated at checkout</p>
                         <Link to="/checkout">
-                            <button>Check-out</button>
+                            <button className="checkout-btn">Check-out</button>
                         </Link>
                         
                         <div className="continue-shopping">

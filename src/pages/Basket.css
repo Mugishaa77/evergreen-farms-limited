@@ -139,15 +139,19 @@
     }
 
     .basket .product {
+        display: flex;
+        flex-direction: column;
         height: auto;
-        width: 90%;
+        width: 180px;
         max-width: 350px;
         margin: 1rem auto;
     }
 
     .basket img {
-        width: 100%;
-        height: auto;
+        width: 100px;
+        height: 100px;
+        
+       
     }
 
     .basket h3 {
@@ -159,7 +163,7 @@
     }
 
     .basket button {
-        width: 100%;
+        width: 150px;
         margin-top: 1rem;
         font-size: 16px;
     }
@@ -303,12 +307,19 @@
 
     .basket-container .titles h3 {
         font-size: 12px;
+        padding-left: 5px;
+
     }
 
-    .basket-item,
+
+.basket-item,
     .basket-container .titles {
-        display: block;
-        padding: 1rem 0;
+        font-family: var(--descriptive-font);
+        color: var(--green-one);
+        display: grid;
+            align-items: center;
+            grid-template-columns: 3fr 1fr 1fr 1fr;
+            column-gap: 0.5rem;
     }
 
     .basket-item {
@@ -353,6 +364,7 @@
     .basket-product-quantity button {
         padding: 0.5rem;
         font-size: 16px;
+        
     }
 
     .basket-product-quantity .count {
@@ -362,6 +374,12 @@
 
     .basket-product-total-price {
         font-size: 18px;
+    }
+
+    .checkout-btn {
+        max-width: 100px;
+        
+      
     }
 }
 
@@ -498,8 +516,9 @@
     }
 
     .basket-summary .clear-basket {
-        width: 100%;
+        width: 150px;
         margin-bottom: 1rem;
+        font-size: 17px;
     }
 
     .basket-checkout {

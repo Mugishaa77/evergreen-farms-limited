@@ -84,7 +84,7 @@
     display: block;
     width: 240px;
     height: 60px;
-    border-radius: 1px;
+    border-radius: 4px;
    margin-top: 2rem;
     margin-left: 100px;
     border: 1.5px solid var(--green-five);

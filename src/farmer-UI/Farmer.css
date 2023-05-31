@@ -329,6 +329,30 @@
                     opacity: 0.85;
                  }
 
+                                 @media (max-width: 900px) {
+                                     .farmer-profile h3 {
+                                         font-size: 24px;
+                                         text-align: center;
+                                     }
+                
+                                     .farmer-profile .contact-info {
+                                         margin-top: 0.5rem;
+                                         text-decoration-thickness: 0.5px;
+                                     }
+                
+                                     .farmer-profile h2 {
+                                         font-size: 20px;
+                                        
+                                         opacity: 1;
+                                     }
+                
+                                     .farmer-profile p {
+                                         font-size: 18px;
+                                        
+                                         opacity: 1;
+                                     }
+                                 }
+
                  /* Summary */
 
                  .summary h3 {
@@ -371,3 +395,33 @@
                                      font-family: var(--descriptive-font);
                                      color: var(--green-one);
                                  }
+
+                                                                 @media (max-width: 900px) {
+                                                                     .summary h3 {
+                                                                         font-size: 24px;
+                                                                         text-align: center;
+                                                                         text-decoration: underline;
+                                                                         padding: 1rem;
+                                                                     }
+                                
+                                                                     .summary p {
+                                                                         font-size: 20px;
+                                                                        
+                                                                         padding: 1rem;
+                                                                     }
+                                
+                                                                     .summary ul {
+                                                                         padding: 1rem;
+                                                                     }
+                                
+                                                                     .summary li {
+                                                                         font-size: 18px;
+                                                            
+                                                                         opacity: 1;
+                                                                         list-style: circle;
+                                                                     }
+                                
+                                                                     .create-product h4 {
+                                                                         font-size: 24px;
+                                                                     }
+                                                                 }

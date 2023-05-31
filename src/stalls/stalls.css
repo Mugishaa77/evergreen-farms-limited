@@ -39,6 +39,30 @@
     margin-top: 250px;
 }
 
+@media (max-width: 900px) {
+    .stall-numbers {
+        padding: 2rem;
+        height: auto;
+    }
+
+    .stall-numbers .back-link {
+        top: 100px;
+    }
+
+    .stall-numbers h3 {
+        font-size: 30px;
+        padding: 1rem;
+    }
+
+    .stall-numbers h6 {
+        font-size: 18px;
+    }
+
+    .stall-numbers .foot-note,
+    .stall-names .foot-note {
+        margin-top: 150px;
+    }
+}
 
 /* Stall Names */
 .stall-names {
@@ -73,6 +97,26 @@
     font-size: 20px;
     font-family: var(--descriptive-font);
     color: var(--navbar-blue);
+}
+
+@media (max-width: 900px) {
+    .stall-names {
+        padding: 2rem;
+        height: auto;
+    }
+
+    .stall-names .back-link {
+        top: 100px;
+    }
+
+    .stall-names h3 {
+        font-size: 30px;
+        padding: 1rem;
+    }
+
+    .stall-names h6 {
+        font-size: 18px;
+    }
 }
 
 /* Stall Display */
@@ -135,5 +179,36 @@
     color: var(--green-one);
 }
 
+@media (max-width: 900px) {
+    .stall-display {
+        padding: 2rem;
+        height: auto;
+    }
 
+    .stall-display h3 {
+        font-size: 30px;
+        padding: 1rem;
+    }
 
+    .stall-display p {
+        font-size: 16px;
+    }
+
+    .stall-display h6 {
+        font-size: 18px;
+        padding: 1rem;
+    }
+
+    .stall-display h4 {
+        font-size: 18px;
+    }
+
+    .stall-display .foot-note {
+        padding: 0.5rem;
+        margin-top: 150px;
+    }
+
+    .stall-display .back-link {
+        top: 100px;
+    }
+}
