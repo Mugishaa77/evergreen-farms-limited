@@ -354,14 +354,31 @@ input {
                         color: var(--green-one);
                         font-size: 32px;
                         text-align: center;
+                        text-decoration: underline;
+                        padding: 1rem 1rem;
                  }
 
                                  .grocer-summary p {
                                      font-family: var(--descriptive-font);
                                      text-transform: capitalize;
-                                     color: var(--navbar-blue);
-                                     font-size: 28px;
-                                     text-align: center;
+                                     color: var(--checkout-green);
+                                     font-size: 26px;
+                                     text-align: left;
+                                     padding: 1rem 1rem;
+
+                                 }
+
+                                 .grocer-summary ul {
+                                    padding: 1rem 1rem;
+                                 }
+
+                                 .grocer-summary li {
+                                    font-family: var(--headings);
+                                    color: var(--orange);
+                                    text-align: left;
+                                    font-size: 22px;
+                                    opacity: 0.9;
+                                    list-style: circle;
                                  }
 
                  /* create product */
