@@ -27,14 +27,16 @@
 
 
 /* homepage */
+
 .homepage {
     background-image: url("./images/new.jpg");
     background-repeat: no-repeat;
     background-color: var(--green-one);
     background-size: cover;
     background-position: center;
-    height: 600px;
-   
+   height: 650px;
+    
+       
 }
 
 .homepage .welcome {
@@ -44,6 +46,7 @@
     font-family: var(--welcome);
     color: var(--green-one);
     animation: bounce 2s infinite;
+   
 }
 
 .homepage a  {
@@ -56,15 +59,13 @@
     animation: bounce 2s infinite;
     text-align: right;
     margin-right: 20px;
-    padding-top: 10px;
+   padding-top: 10px;
    
 }
 
 .homepage .down:hover {
     color: var(--checkout-green);
 }
-
-
 
 @keyframes bounce {
 
@@ -84,13 +85,15 @@
   
         background-image: url("./images/new-small.jpg");
         width: 900px;
-        height: 321px;
+        height: 350px;
             }
     
 
     .homepage .welcome {
         font-size: 36px;
-        padding: 100px;
+       padding: 50px;
+       top: 20px;
+       left: 20px;
     }
 
     .homepage .down {
@@ -104,7 +107,7 @@
     width: 180px;
     height: 50px;
     border-radius: 1px;
-    margin-top: 2rem;
+   margin-top: 2rem;
     margin-left: 100px;
     border: 1.5px solid var(--green-five);
     outline: none;
@@ -177,6 +180,8 @@
 }
 
 @media (max-width: 900px) {
+    
+
     .homepage button {
         margin-left: 20px;
         font-size: 24px;
@@ -189,9 +194,6 @@
         height: calc(100% + 8px);
     }
 
-    .homepage .cta {
-        animation: none;
-    }
 
     .homepage a .last-note {
         padding: 1rem;
@@ -338,6 +340,7 @@
     color: var(--green-one);
     text-align: center;
     padding: 40px 0;
+
 }
 
 .about h3 {
@@ -363,7 +366,6 @@
 
 .about .container {
     max-width: 800px;
-    margin: 0 auto;
 }
 
 .about .section {
@@ -401,6 +403,7 @@ p {
 
 
 
+
 @keyframes bounce {
 
     0%,
@@ -421,7 +424,7 @@ p {
 @media (max-width: 900px) {
     .about {
         font-size: 14px;
-        padding: 20px 0;
+        padding: 15px 0;
     }
 
     .about h3 {
@@ -515,4 +518,33 @@ p {
 .contact .container {
     max-width: 800px;
     margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .contact {
+        font-size: 16px;
+    }
+
+    .contact h3 {
+        font-size: 28px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .contact h4 {
+        font-size: 40px;
+    }
+
+    .contact p {
+        text-align: center;
+    }
+
+    .contact .socials {
+        margin-bottom: 10px;
+    }
+
+    .contact .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
 }
