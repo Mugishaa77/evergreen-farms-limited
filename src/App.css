@@ -447,6 +447,16 @@ p {
     p {
         margin-bottom: 5px;
     }
+
+    .about .up {
+        left: 0;
+        top: 0;
+    }
+
+    .about .down {
+        right: 0;
+        top: 0;
+    }
 }
 
 
@@ -475,6 +485,7 @@ p {
     text-align: center;
     font-size: 50px;
     animation: shine 4s ease-in infinite;
+   
     
     }
     
