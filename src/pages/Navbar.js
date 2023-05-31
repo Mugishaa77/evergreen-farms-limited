@@ -86,7 +86,7 @@ export default function Navbar () {
                 <a
                   href="/#about"
                   className={`nav-link text-light ${
-                    activeLink === '/' ? 'active' : ''
+                    activeLink === '/#about' ? 'active' : ''
                   }`}
                   onClick={() => setActiveLink('/#about')}
                 >
@@ -97,7 +97,7 @@ export default function Navbar () {
                 <a
                   href="/#contact"
                   className={`nav-link text-light ${
-                    activeLink === '/' ? 'active' : ''
+                    activeLink === '/#contact' ? 'active' : ''
                   }`}
                   onClick={() => setActiveLink('/#contact')}
                 >
